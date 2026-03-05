@@ -1,0 +1,2597 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="삼양미디어 데이터과학 교과서와 1:1 대응하는 구글 코랩 기반 실습 교재로, 비유로 시작해 코드로 확인하고 프로젝트로 완성하는 40차시 커리큘럼입니다.">
+      
+      
+        <meta name="author" content="Created with EduFlow">
+      
+      
+      
+        <link rel="prev" href="../chapter14/">
+      
+      
+        <link rel="next" href="../chapter16/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>연관 분석 - 고등학교 데이터과학 with Python</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-15" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="고등학교 데이터과학 with Python" class="md-header__button md-logo" aria-label="고등학교 데이터과학 with Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            고등학교 데이터과학 with Python
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              연관 분석
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter01/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 1 - [1권] 데이터 과학의 이해
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter05/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 2 - [1권] 데이터 준비와 분석
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter11/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 3 - [1권] 데이터 모델링과 평가
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter16/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 4 - [2권] 데이터 과학 프로젝트 — 교과서 주제 실습
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter21/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 5 - [2권] 나만의 데이터 과학 프로젝트
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="고등학교 데이터과학 with Python" class="md-nav__button md-logo" aria-label="고등학교 데이터과학 with Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    고등학교 데이터과학 with Python
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - [1권] 데이터 과학의 이해
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 - [1권] 데이터 과학의 이해
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 과학과 문제 해결
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터의 형태와 속성
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터셋과 데이터베이스
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    세상을 바꾸는 데이터 과학
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - [1권] 데이터 준비와 분석
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 - [1권] 데이터 준비와 분석
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 수집 및 특성 분석 (1) — 데이터 수집과 탐색
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 수집 및 특성 분석 (2) — 기술통계와 시각화
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 전처리 (1) — 결측치와 이상치 처리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 전처리 (2) — 데이터 변환과 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 속성 간의 관계 파악
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    동일한 데이터의 다양한 분석 및 비교
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - [1권] 데이터 모델링과 평가
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 - [1권] 데이터 모델링과 평가
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 모델과 모델링
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    회귀 분석 (1) — 단순 선형 회귀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    회귀 분석 (2) — 모델 평가와 다중 회귀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    군집 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    연관 분석
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    연관 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 이 장에서 배우는 것
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 1: 연관 분석과 장바구니 분석
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 1: 연관 분석과 장바구니 분석">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 2: 지지도 (Support) — "얼마나 자주 함께 등장하나?"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 2: 지지도 (Support) — &#34;얼마나 자주 함께 등장하나?&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-confidence-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 3: 신뢰도 (Confidence) — "A를 사면 B도 살 확률은?"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 3: 신뢰도 (Confidence) — &#34;A를 사면 B도 살 확률은?&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-lift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 4: 향상도 (Lift) — "우연 이상의 관계인가?"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 4: 향상도 (Lift) — &#34;우연 이상의 관계인가?&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apriori" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 보충: Apriori 알고리즘의 원리
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 따라하기: Python으로 연관 분석 실습
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔨 따라하기: Python으로 연관 분석 실습">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: 라이브러리 설치 및 불러오기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: 편의점 구매 데이터 만들기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: 데이터를 분석 가능한 형태로 변환하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-apriori" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Apriori 알고리즘으로 빈발 항목집합 찾기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: 연관 규칙 생성 및 해석
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: 결과 시각화 및 비즈니스 적용
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - [2권] 데이터 과학 프로젝트 — 교과서 주제 실습
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4 - [2권] 데이터 과학 프로젝트 — 교과서 주제 실습
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 과학 적용과 데이터 적합성
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    슬기로운 의사 생활 (1) — 문제 정의와 데이터 준비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    슬기로운 의사 생활 (2) — 모델링과 결과 해석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    지혜로운 어부 생활 (1) — 문제 정의와 데이터 준비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    지혜로운 어부 생활 (2) — 모델링과 결과 해석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5 - [2권] 나만의 데이터 과학 프로젝트
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 5 - [2권] 나만의 데이터 과학 프로젝트
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 기획 — 주제 선정과 계획 수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 실행 (1) — 데이터 수집과 전처리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 실행 (2) — 분석과 모델링
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 마무리 — 보고서 작성과 최종 발표
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 이 장에서 배우는 것
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 1: 연관 분석과 장바구니 분석
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 1: 연관 분석과 장바구니 분석">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 2: 지지도 (Support) — "얼마나 자주 함께 등장하나?"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 2: 지지도 (Support) — &#34;얼마나 자주 함께 등장하나?&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-confidence-a-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 3: 신뢰도 (Confidence) — "A를 사면 B도 살 확률은?"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 3: 신뢰도 (Confidence) — &#34;A를 사면 B도 살 확률은?&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-lift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 4: 향상도 (Lift) — "우연 이상의 관계인가?"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 4: 향상도 (Lift) — &#34;우연 이상의 관계인가?&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apriori" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 보충: Apriori 알고리즘의 원리
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 따라하기: Python으로 연관 분석 실습
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔨 따라하기: Python으로 연관 분석 실습">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: 라이브러리 설치 및 불러오기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: 편의점 구매 데이터 만들기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: 데이터를 분석 가능한 형태로 변환하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-apriori" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Apriori 알고리즘으로 빈발 항목집합 찾기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: 연관 규칙 생성 및 해석
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: 결과 시각화 및 비즈니스 적용
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-15">Chapter 15: 연관 분석<a class="headerlink" href="#chapter-15" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="_1">🎯 이 장에서 배우는 것<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 연관 분석이 무엇이고 어디에 쓰이는지 설명할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 핵심 지표 3가지(지지도, 신뢰도, 향상도)를 직접 계산할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 장바구니 분석 사례를 통해 연관 규칙의 의미를 해석할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Python으로 연관 규칙을 도출하고, 결과를 실생활에 적용할 수 있다</li>
+</ul>
+<hr />
+<h2 id="_2">💡 왜 이걸 배우나요?<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>생각해보기</strong> 🤔</p>
+<p>편의점에서 삼각김밥을 사는 사람은 음료도 함께 살까?
+이걸 <strong>데이터로 확인</strong>할 수 있다면, 어떤 일이 가능할까요?</p>
+</blockquote>
+<p>여러분이 편의점 점장이라고 상상해 봅시다. 매일 수백 건의 구매가 일어나는데, 어떤 상품을 나란히 진열하면 매출이 오를까요? "감"으로 결정하는 것보다, <strong>실제 구매 데이터</strong>에서 패턴을 찾으면 훨씬 정확합니다.</p>
+<p>이것이 바로 <strong>연관 분석(Association Analysis)</strong> 입니다.</p>
+<p><strong>연관 분석이 실제로 활용되는 곳들:</strong></p>
+<ul>
+<li>🛒 <strong>마트·편의점</strong>: "이 상품을 산 고객에게 저 상품을 추천" → 묶음 할인 전략</li>
+<li>🎬 <strong>넷플릭스·유튜브</strong>: "이 영상을 본 사람은 이것도 봤습니다"</li>
+<li>🏥 <strong>의료 분야</strong>: "이 증상이 함께 나타나면 특정 질병 가능성이 높다"</li>
+<li>📱 <strong>앱스토어</strong>: "이 앱을 설치한 사람은 이 앱도 설치했습니다"</li>
+</ul>
+<p>가장 유명한 사례가 있습니다. 미국의 대형마트 월마트에서 데이터를 분석했더니 <strong>"기저귀를 사는 사람이 맥주도 함께 산다"</strong> 는 규칙이 발견되었습니다. 실제로 두 상품을 가까이 진열했더니 매출이 올랐다는 이야기입니다. 이것이 바로 연관 분석의 힘입니다.</p>
+<p>이번 장에서는 이 분석을 <strong>직접 해보면서</strong> 원리를 완전히 이해해 봅시다!</p>
+<hr />
+<h2 id="_3">📚 핵심 개념<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="1">개념 1: 연관 분석과 장바구니 분석<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<h4 id="1_1">1. 비유로 시작<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h4>
+<p>학교 매점을 떠올려 봅시다. 여러분이 매점 관찰 일지를 쓴다고 가정합니다.</p>
+<blockquote>
+<p>"1번 학생: 빵, 우유 구매"
+"2번 학생: 빵, 주스, 과자 구매"
+"3번 학생: 우유, 과자 구매"
+...</p>
+</blockquote>
+<p>이렇게 모은 데이터에서 <strong>"빵을 사면 우유도 함께 사는 경향이 있네?"</strong> 같은 패턴을 찾는 것이 <strong>연관 분석</strong>입니다.</p>
+<h4 id="2">2. 정확한 정의<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<p><strong>연관 분석(Association Analysis)</strong> 이란, 대규모 데이터에서 <strong>항목들 사이의 흥미로운 관계(규칙)</strong> 를 찾아내는 데이터 마이닝 기법입니다.</p>
+<p>그중에서 가장 대표적인 것이 <strong>장바구니 분석(Market Basket Analysis)</strong> 입니다. 고객이 한 번에 구매한 상품 목록(=장바구니)을 분석하여, 함께 구매되는 상품 조합을 발견합니다.</p>
+<p><strong>연관 규칙</strong>은 다음과 같은 형태로 표현됩니다:</p>
+<blockquote>
+<p><strong>{삼각김밥} → {음료}</strong></p>
+<p>"삼각김밥을 사면, 음료도 함께 산다"</p>
+</blockquote>
+<p>여기서 왼쪽 <code>{삼각김밥}</code>을 <strong>선행 항목(Antecedent)</strong>, 오른쪽 <code>{음료}</code>를 <strong>후행 항목(Consequent)</strong> 이라고 부릅니다.</p>
+<h4 id="3">3. 예시로 확인<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<p>아래는 편의점 5건의 거래 데이터입니다.</p>
+<ul>
+<li><strong>거래 1</strong>: 삼각김밥, 음료, 껌</li>
+<li><strong>거래 2</strong>: 삼각김밥, 음료</li>
+<li><strong>거래 3</strong>: 음료, 과자</li>
+<li><strong>거래 4</strong>: 삼각김밥, 과자, 껌</li>
+<li><strong>거래 5</strong>: 삼각김밥, 음료, 과자</li>
+</ul>
+<p>이 데이터에서 "삼각김밥 → 음료" 규칙이 얼마나 믿을 만한지, 어떻게 판단할까요? 바로 다음에 배울 <strong>3가지 핵심 지표</strong>로 판단합니다!</p>
+<hr />
+<h3 id="2-support">개념 2: 지지도 (Support) — "얼마나 자주 함께 등장하나?"<a class="headerlink" href="#2-support" title="Permanent link">&para;</a></h3>
+<h4 id="1_2">1. 비유로 시작<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h4>
+<p>학교에서 설문조사를 했는데, 전체 100명 중 30명이 "떡볶이와 순대를 둘 다 좋아한다"고 답했습니다. 그러면 이 조합의 <strong>인기도</strong>는 30/100 = 30%입니다. 이것이 바로 <strong>지지도</strong>의 개념입니다.</p>
+<h4 id="2_1">2. 정확한 정의<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h4>
+<p><strong>지지도(Support)</strong> 는 전체 거래 중에서 <strong>특정 항목 조합이 함께 등장하는 비율</strong>입니다.</p>
+<blockquote>
+<p><strong>지지도(A → B) = A와 B가 함께 포함된 거래 수 ÷ 전체 거래 수</strong></p>
+</blockquote>
+<p>지지도는 해당 규칙이 <strong>데이터 전체에서 얼마나 보편적인지</strong>를 나타냅니다.</p>
+<h4 id="3_1">3. 예시로 확인<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h4>
+<p>위의 편의점 데이터(총 5건)에서 계산해 봅시다.</p>
+<p><strong>{삼각김밥, 음료}가 함께 등장한 거래</strong>: 거래1, 거래2, 거래5 → <strong>3건</strong></p>
+<blockquote>
+<p><strong>지지도(삼각김밥 → 음료) = 3 / 5 = 0.6 (60%)</strong></p>
+</blockquote>
+<p>이는 "전체 거래의 60%에서 삼각김밥과 음료가 함께 구매된다"는 뜻입니다.</p>
+<blockquote>
+<p><strong>알아보기</strong> 📘</p>
+<p>지지도가 너무 낮은 규칙은 우연의 일치일 수 있어서, 보통 <strong>최소 지지도(minimum support)</strong> 를 설정하여 걸러냅니다. 예를 들어 "지지도 10% 이상인 규칙만 보겠다"고 기준을 세우는 것입니다.</p>
+</blockquote>
+<hr />
+<h3 id="3-confidence-a-b">개념 3: 신뢰도 (Confidence) — "A를 사면 B도 살 확률은?"<a class="headerlink" href="#3-confidence-a-b" title="Permanent link">&para;</a></h3>
+<h4 id="1_3">1. 비유로 시작<a class="headerlink" href="#1_3" title="Permanent link">&para;</a></h4>
+<p>"비가 오면 우산을 가져올 확률은 얼마일까?"를 생각해 봅시다. 비가 온 날이 10일이고, 그중 우산을 가져온 날이 8일이라면 80%입니다. 이것이 <strong>조건부 확률</strong> 개념이고, 연관 분석에서는 이것을 <strong>신뢰도</strong>라고 부릅니다.</p>
+<h4 id="2_2">2. 정확한 정의<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h4>
+<p><strong>신뢰도(Confidence)</strong> 는 A를 포함한 거래 중에서 <strong>B도 함께 포함된 거래의 비율</strong>입니다.</p>
+<blockquote>
+<p><strong>신뢰도(A → B) = A와 B가 함께 포함된 거래 수 ÷ A가 포함된 거래 수</strong></p>
+</blockquote>
+<p>신뢰도는 "A를 산 사람이 B도 살 <strong>조건부 확률</strong>"입니다.</p>
+<h4 id="3_2">3. 예시로 확인<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h4>
+<p>편의점 데이터에서 계산합니다.</p>
+<p><strong>삼각김밥이 포함된 거래</strong>: 거래1, 거래2, 거래4, 거래5 → <strong>4건</strong></p>
+<p><strong>삼각김밥과 음료가 함께 포함된 거래</strong>: 거래1, 거래2, 거래5 → <strong>3건</strong></p>
+<blockquote>
+<p><strong>신뢰도(삼각김밥 → 음료) = 3 / 4 = 0.75 (75%)</strong></p>
+</blockquote>
+<p>"삼각김밥을 산 사람 중 75%가 음료도 함께 샀다"는 의미입니다.</p>
+<blockquote>
+<p><strong>생각해보기</strong> 💭</p>
+<p>그런데 잠깐! 만약 음료 자체가 워낙 인기가 많아서 <strong>누구나</strong> 80%는 음료를 사는 거라면? 신뢰도 75%라고 해서 삼각김밥과 음료 사이에 특별한 관계가 있다고 말할 수 있을까요? 이 의문을 해결하는 것이 바로 다음 지표, <strong>향상도</strong>입니다!</p>
+</blockquote>
+<hr />
+<h3 id="4-lift">개념 4: 향상도 (Lift) — "우연 이상의 관계인가?"<a class="headerlink" href="#4-lift" title="Permanent link">&para;</a></h3>
+<h4 id="1_4">1. 비유로 시작<a class="headerlink" href="#1_4" title="Permanent link">&para;</a></h4>
+<p>전교생의 90%가 스마트폰을 가지고 있다고 합시다. "안경을 쓰는 학생 중 88%가 스마트폰을 가지고 있다"는 규칙이 발견되었습니다. 이건 의미 있는 관계일까요? <strong>아닙니다!</strong> 어차피 거의 모든 학생이 스마트폰을 가지고 있으니까요. 향상도는 이런 <strong>"어차피 그럴 거"와 "진짜 관계가 있는 것"을 구분</strong>해 줍니다.</p>
+<h4 id="2_3">2. 정확한 정의<a class="headerlink" href="#2_3" title="Permanent link">&para;</a></h4>
+<p><strong>향상도(Lift)</strong> 는 A와 B가 <strong>서로 독립일 때 기대되는 수준 대비, 실제로 얼마나 더 자주 함께 나타나는지</strong>를 나타냅니다.</p>
+<blockquote>
+<p><strong>향상도(A → B) = 신뢰도(A → B) ÷ 지지도(B)</strong></p>
+<p>또는 동일하게: <strong>지지도(A∩B) ÷ (지지도(A) × 지지도(B))</strong></p>
+</blockquote>
+<p><strong>향상도 해석 기준:</strong></p>
+<ul>
+<li><strong>향상도 &gt; 1</strong>: A와 B는 서로 <strong>양의 관계</strong> (함께 구매 경향 ↑) ✅</li>
+<li><strong>향상도 = 1</strong>: A와 B는 <strong>독립</strong> (관계 없음) ➖</li>
+<li><strong>향상도 &lt; 1</strong>: A와 B는 서로 <strong>음의 관계</strong> (함께 구매 경향 ↓) ❌</li>
+</ul>
+<h4 id="3_3">3. 예시로 확인<a class="headerlink" href="#3_3" title="Permanent link">&para;</a></h4>
+<p>편의점 데이터에서 계산합니다.</p>
+<p><strong>음료의 지지도</strong>: 음료가 포함된 거래는 거래1, 거래2, 거래3, 거래5 → 4건 → <strong>4/5 = 0.8</strong></p>
+<blockquote>
+<p><strong>향상도(삼각김밥 → 음료) = 신뢰도 ÷ 지지도(음료) = 0.75 ÷ 0.8 = 0.9375</strong></p>
+</blockquote>
+<p>향상도가 약 <strong>0.94</strong>로 1보다 약간 작습니다. 이는 삼각김밥과 음료 사이에 <strong>특별히 강한 양의 관계는 아니라는 의미</strong>입니다. 음료 자체가 워낙 자주 팔리기 때문이죠!</p>
+<blockquote>
+<p><strong>정리하기</strong> 📋</p>
+<p><strong>3대 지표 한눈에 보기</strong></p>
+<ul>
+<li><strong>지지도(Support)</strong>: 전체에서 A와 B가 <strong>함께</strong> 나오는 비율 → "얼마나 흔한 조합인가?"</li>
+<li><strong>신뢰도(Confidence)</strong>: A를 산 사람 중 B도 산 비율 → "A를 사면 B도 살 확률은?"</li>
+<li><strong>향상도(Lift)</strong>: 우연 대비 실제 동시 출현 정도 → "진짜 관련이 있는가?"</li>
+</ul>
+</blockquote>
+<div class="mermaid">flowchart LR
+    A["🛒 거래 데이터"] --&gt; B["지지도\nSupport\n함께 산 비율"]
+    A --&gt; C["신뢰도\nConfidence\n조건부 확률"]
+    B --&gt; D["향상도\nLift\n우연 이상인지 확인"]
+    C --&gt; D
+    D --&gt; E{"향상도 &gt; 1?"}
+    E --&gt;|Yes| F["✅ 의미 있는 규칙"]
+    E --&gt;|No| G["❌ 관계 약함"]</div>
+<hr />
+<h2 id="apriori">📚 보충: Apriori 알고리즘의 원리<a class="headerlink" href="#apriori" title="Permanent link">&para;</a></h2>
+<p>연관 규칙을 찾으려면, 가능한 <strong>모든 상품 조합</strong>을 검사해야 합니다. 상품이 10개만 되어도 조합의 수는 폭발적으로 늘어납니다. 이 문제를 효율적으로 해결하는 것이 <strong>Apriori 알고리즘</strong>입니다.</p>
+<p><strong>Apriori의 핵심 아이디어는 단순합니다:</strong></p>
+<blockquote>
+<p>"만약 어떤 항목 집합의 지지도가 기준보다 낮으면, 그 항목 집합을 포함하는 더 큰 집합도 기준을 넘을 수 없다."</p>
+</blockquote>
+<p>비유하자면, 학교에서 <strong>수학 동아리 회원이 5명</strong>밖에 안 된다면, "수학 동아리 <strong>이면서</strong> 과학 동아리인 학생"은 5명보다 <strong>절대 많을 수 없습니다</strong>. 따라서 수학 동아리의 지지도가 기준 이하라면, 수학+과학 조합은 검사할 필요가 없죠!</p>
+<div class="mermaid">flowchart TD
+    A["1단계: 개별 상품의 지지도 계산"] --&gt; B["기준 미달 상품 제거"]
+    B --&gt; C["2단계: 2개 조합의 지지도 계산"]
+    C --&gt; D["기준 미달 조합 제거"]
+    D --&gt; E["3단계: 3개 조합의 지지도 계산"]
+    E --&gt; F["...반복..."]
+    F --&gt; G["더 이상 기준을 넘는 조합이 없으면 종료"]
+    G --&gt; H["남은 빈발 항목집합에서\n연관 규칙 생성"]</div>
+<p>이 방법 덕분에 <strong>검사해야 할 조합 수가 대폭 줄어들어</strong> 효율적으로 연관 규칙을 찾을 수 있습니다.</p>
+<hr />
+<h2 id="python">🔨 따라하기: Python으로 연관 분석 실습<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
+<p>이제 Google Colab에서 직접 연관 분석을 수행해 봅시다! 편의점 구매 데이터를 활용합니다.</p>
+<h3 id="step-1">Step 1: 라이브러리 설치 및 불러오기<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h3>
+<p><code>mlxtend</code>라는 라이브러리를 사용합니다. 연관 분석에 특화된 도구입니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># mlxtend 설치 (Colab에서 실행)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">mlxtend</span> <span class="o">-</span><span class="n">q</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># 필요한 라이브러리 불러오기</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mlxtend.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TransactionEncoder</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mlxtend.frequent_patterns</span><span class="w"> </span><span class="kn">import</span> <span class="n">apriori</span><span class="p">,</span> <span class="n">association_rules</span>
+</span></code></pre></div>
+<blockquote>
+<p><strong>알아보기</strong> 📘</p>
+<p><code>mlxtend</code>는 "machine learning extensions"의 줄임말로, 사이킷런(scikit-learn)을 보완하는 라이브러리입니다. 연관 분석의 Apriori 알고리즘이 잘 구현되어 있습니다.</p>
+</blockquote>
+<hr />
+<h3 id="step-2">Step 2: 편의점 구매 데이터 만들기<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h3>
+<p>실제 편의점 거래를 모방한 가상 데이터를 만듭니다. 각 리스트가 한 건의 거래(장바구니)입니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 편의점 거래 데이터 (각 리스트 = 한 고객의 장바구니)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">transactions</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="p">[</span><span class="s1">&#39;삼각김밥&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;껌&#39;</span><span class="p">],</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="p">[</span><span class="s1">&#39;삼각김밥&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">],</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="p">[</span><span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">,</span> <span class="s1">&#39;아이스크림&#39;</span><span class="p">],</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="p">[</span><span class="s1">&#39;삼각김밥&#39;</span><span class="p">,</span> <span class="s1">&#39;컵라면&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">],</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="p">[</span><span class="s1">&#39;컵라면&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;껌&#39;</span><span class="p">],</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="p">[</span><span class="s1">&#39;삼각김밥&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">],</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="p">[</span><span class="s1">&#39;과자&#39;</span><span class="p">,</span> <span class="s1">&#39;아이스크림&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">],</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="p">[</span><span class="s1">&#39;삼각김밥&#39;</span><span class="p">,</span> <span class="s1">&#39;컵라면&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">],</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="p">[</span><span class="s1">&#39;삼각김밥&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">,</span> <span class="s1">&#39;껌&#39;</span><span class="p">],</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="p">[</span><span class="s1">&#39;컵라면&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;아이스크림&#39;</span><span class="p">],</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="p">[</span><span class="s1">&#39;삼각김밥&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">],</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="p">[</span><span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;껌&#39;</span><span class="p">],</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="p">[</span><span class="s1">&#39;삼각김밥&#39;</span><span class="p">,</span> <span class="s1">&#39;컵라면&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">],</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="p">[</span><span class="s1">&#39;과자&#39;</span><span class="p">,</span> <span class="s1">&#39;아이스크림&#39;</span><span class="p">],</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="p">[</span><span class="s1">&#39;삼각김밥&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;아이스크림&#39;</span><span class="p">],</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">]</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;총 거래 수: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">transactions</span><span class="p">)</span><span class="si">}</span><span class="s2">건&quot;</span><span class="p">)</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;첫 번째 거래: </span><span class="si">{</span><span class="n">transactions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong>실행 결과:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>총 거래 수: 15건
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>첫 번째 거래: [&#39;삼각김밥&#39;, &#39;음료&#39;, &#39;껌&#39;]
+</span></code></pre></div></p>
+<hr />
+<h3 id="step-3">Step 3: 데이터를 분석 가능한 형태로 변환하기<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h3>
+<p><code>mlxtend</code>가 분석할 수 있도록, 거래 데이터를 <strong>True/False 표(원-핫 인코딩)</strong> 로 변환합니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># TransactionEncoder로 변환</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">te</span> <span class="o">=</span> <span class="n">TransactionEncoder</span><span class="p">()</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">te_array</span> <span class="o">=</span> <span class="n">te</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">transactions</span><span class="p">)</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">transactions</span><span class="p">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1"># DataFrame으로 변환</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">te_array</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">te</span><span class="o">.</span><span class="n">columns_</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1"># 결과 확인 (처음 5건)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== 변환된 데이터 (처음 5건) ===&quot;</span><span class="p">)</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">데이터 크기: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">행 × </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">열&quot;</span><span class="p">)</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;상품 목록: </span><span class="si">{</span><span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong>실행 결과:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>=== 변환된 데이터 (처음 5건) ===
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>      껌    과자  삼각김밥  아이스크림    음료   컵라면
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>0   True  False   True    False   True  False
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>1  False   True   True    False   True  False
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>2  False   True  False     True   True  False
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>3  False  False   True    False   True   True
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>4   True  False  False    False   True   True
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>데이터 크기: 15행 × 6열
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>상품 목록: [&#39;껌&#39;, &#39;과자&#39;, &#39;삼각김밥&#39;, &#39;아이스크림&#39;, &#39;음료&#39;, &#39;컵라면&#39;]
+</span></code></pre></div></p>
+<p>각 행이 하나의 거래이고, 해당 상품을 샀으면 <code>True</code>, 안 샀으면 <code>False</code>로 표시됩니다.</p>
+<blockquote>
+<p><strong>알아보기</strong> 📘</p>
+<p>이 변환 과정을 <strong>원-핫 인코딩(One-Hot Encoding)</strong> 이라고 합니다. 이전 챕터에서 배운 것처럼, 범주형 데이터를 0/1(또는 True/False)로 바꾸는 기법입니다. 여기서는 "이 상품을 샀는가?"를 표현하는 데 사용합니다.</p>
+</blockquote>
+<hr />
+<h3 id="step-4-apriori">Step 4: Apriori 알고리즘으로 빈발 항목집합 찾기<a class="headerlink" href="#step-4-apriori" title="Permanent link">&para;</a></h3>
+<p>이제 <strong>최소 지지도</strong>를 설정하고, 이를 넘는 상품 조합(빈발 항목집합)을 찾습니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Apriori 알고리즘 적용 (최소 지지도 = 20%)</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">frequent_itemsets</span> <span class="o">=</span> <span class="n">apriori</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">min_support</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">use_colnames</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># 항목 개수 열 추가</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">frequent_itemsets</span><span class="p">[</span><span class="s1">&#39;항목수&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">frequent_itemsets</span><span class="p">[</span><span class="s1">&#39;itemsets&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># 지지도 기준 내림차순 정렬</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">frequent_itemsets</span> <span class="o">=</span> <span class="n">frequent_itemsets</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;support&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== 빈발 항목집합 (지지도 20% 이상) ===&quot;</span><span class="p">)</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">frequent_itemsets</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">총 </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">frequent_itemsets</span><span class="p">)</span><span class="si">}</span><span class="s2">개의 빈발 항목집합 발견!&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong>실행 결과 (일부):</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>=== 빈발 항목집합 (지지도 20% 이상) ===
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>   support          itemsets  항목수
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>  0.800000           (음료)      1
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  0.600000         (삼각김밥)      1
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>  0.533333           (과자)      1
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>  0.333333          (컵라면)      1
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>  0.333333            (껌)      1
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>  0.266667       (아이스크림)      1
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>  0.533333      (삼각김밥, 음료)      2
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>  0.333333        (과자, 음료)      2
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>  0.266667      (삼각김밥, 과자)      2
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>  ...
+</span></code></pre></div></p>
+<p>가장 많이 팔리는 상품은 <strong>음료(80%)</strong>, 그 다음이 <strong>삼각김밥(60%)</strong> 입니다. 2개짜리 조합 중에서는 <strong>{삼각김밥, 음료}</strong> 가 지지도 53.3%로 가장 높네요!</p>
+<hr />
+<h3 id="step-5">Step 5: 연관 규칙 생성 및 해석<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h3>
+<p>빈발 항목집합에서 <strong>연관 규칙</strong>을 생성하고, 향상도 기준으로 의미 있는 규칙을 필터링합니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># 연관 규칙 생성 (최소 신뢰도 = 50%)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">rules</span> <span class="o">=</span> <span class="n">association_rules</span><span class="p">(</span><span class="n">frequent_itemsets</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;confidence&quot;</span><span class="p">,</span> <span class="n">min_threshold</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># 보기 좋게 정리</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">rules_display</span> <span class="o">=</span> <span class="n">rules</span><span class="p">[[</span><span class="s1">&#39;antecedents&#39;</span><span class="p">,</span> <span class="s1">&#39;consequents&#39;</span><span class="p">,</span> <span class="s1">&#39;support&#39;</span><span class="p">,</span> <span class="s1">&#39;confidence&#39;</span><span class="p">,</span> <span class="s1">&#39;lift&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">rules_display</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;선행항목&#39;</span><span class="p">,</span> <span class="s1">&#39;후행항목&#39;</span><span class="p">,</span> <span class="s1">&#39;지지도&#39;</span><span class="p">,</span> <span class="s1">&#39;신뢰도&#39;</span><span class="p">,</span> <span class="s1">&#39;향상도&#39;</span><span class="p">]</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="c1"># 향상도 기준 내림차순 정렬</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">rules_display</span> <span class="o">=</span> <span class="n">rules_display</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;향상도&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="c1"># 소수점 3자리로 반올림</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="n">rules_display</span><span class="p">[</span><span class="s1">&#39;지지도&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rules_display</span><span class="p">[</span><span class="s1">&#39;지지도&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="n">rules_display</span><span class="p">[</span><span class="s1">&#39;신뢰도&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rules_display</span><span class="p">[</span><span class="s1">&#39;신뢰도&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="n">rules_display</span><span class="p">[</span><span class="s1">&#39;향상도&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rules_display</span><span class="p">[</span><span class="s1">&#39;향상도&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== 연관 규칙 (신뢰도 50% 이상, 향상도 순) ===&quot;</span><span class="p">)</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">rules_display</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</span></code></pre></div>
+<p><strong>결과 해석 방법:</strong></p>
+<p>결과에서 향상도가 높은 규칙을 찾아봅시다. 예를 들어:</p>
+<blockquote>
+<p><strong>{껌} → {삼각김밥}</strong> : 지지도=0.2, 신뢰도=0.6, 향상도=1.0</p>
+</blockquote>
+<p>이 규칙의 의미:
+- <strong>지지도 0.2</strong>: 전체 거래의 20%에서 껌과 삼각김밥이 함께 구매됨
+- <strong>신뢰도 0.6</strong>: 껌을 산 사람 중 60%가 삼각김밥도 샀음
+- <strong>향상도 1.0</strong>: 우연히 기대되는 수준과 동일 → 특별한 관계 아님</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># 향상도 &gt; 1인 규칙만 필터링 (의미 있는 규칙)</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">meaningful_rules</span> <span class="o">=</span> <span class="n">rules_display</span><span class="p">[</span><span class="n">rules_display</span><span class="p">[</span><span class="s1">&#39;향상도&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">1.0</span><span class="p">]</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== ✅ 의미 있는 규칙 (향상도 &gt; 1) ===&quot;</span><span class="p">)</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">meaningful_rules</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">meaningful_rules</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;향상도 &gt; 1인 규칙이 없습니다.&quot;</span><span class="p">)</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">전체 </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rules_display</span><span class="p">)</span><span class="si">}</span><span class="s2">개 규칙 중 </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">meaningful_rules</span><span class="p">)</span><span class="si">}</span><span class="s2">개가 의미 있음&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<blockquote>
+<p><strong>알아보기</strong> 📘</p>
+<p>향상도가 1보다 큰 규칙이 적을 수도 있습니다! 이는 데이터가 적거나, 음료처럼 워낙 인기 있는 상품이 포함되어 있기 때문입니다. 실제 분석에서는 수천~수만 건의 거래 데이터를 사용하며, 더 다양하고 의미 있는 규칙이 발견됩니다.</p>
+</blockquote>
+<hr />
+<h3 id="step-6">Step 6: 결과 시각화 및 비즈니스 적용<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h3>
+<p>발견한 규칙을 시각화하고, 실제 마케팅 전략으로 연결해 봅시다.</p>
+<p>```python
+import matplotlib.pyplot as plt</p>
+<h1 id="colab">한글 폰트 설정 (Colab용)<a class="headerlink" href="#colab" title="Permanent link">&para;</a></h1>
+<p>plt.rcParams['font.family'] = 'DejaVu Sans'</p>
+<h1 id="vs">전체 규칙의 신뢰도 vs 향상도 산점도<a class="headerlink" href="#vs" title="Permanent link">&para;</a></h1>
+<p>fig, axes = plt.subplots(1, 2, figsize=(14, 5))</p>
+<h1 id="1-vs">1) 신뢰도 vs 향상도 산점도<a class="headerlink" href="#1-vs" title="Permanent link">&para;</a></h1>
+<p>scatter = axes[0].scatter(
+    rules['confidence'],
+    rules['lift'],
+    c=rules['support'],
+    cmap='YlOrRd',
+    s=100,
+    alpha=0.7,
+    edgecolors='black'
+)
+axes[0].axhline(y=1, color='blue', linestyle='--', alpha=0.5, label='Lift = 1')
+axes[0].set_xlabel('Confidence (신뢰도)', fontsize=12)
+axes[0].set_ylabel('Lift (향상도)', fontsize=12)
+axes[0].set_title('Association Rules: Confidence vs Lift', fontsize=13)
+axes[0].legend()
+plt.colorbar(scatter, ax=axes[0], label='Support')</p>
+<h1 id="2_4">2) 상품별 등장 빈도<a class="headerlink" href="#2_4" title="Permanent link">&para;</a></h1>
+<p>item_freq = df.sum().sort_values(ascending=True)
+colors = plt.cm.Set2(range(len(item_freq)))
+axes[1].barh(range(len(item_</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/title-link.js"></script>
+      
+    
+  </body>
+</html>

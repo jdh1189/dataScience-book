@@ -1,0 +1,2625 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="삼양미디어 데이터과학 교과서와 1:1 대응하는 구글 코랩 기반 실습 교재로, 비유로 시작해 코드로 확인하고 프로젝트로 완성하는 40차시 커리큘럼입니다.">
+      
+      
+        <meta name="author" content="Created with EduFlow">
+      
+      
+      
+        <link rel="prev" href="../chapter02/">
+      
+      
+        <link rel="next" href="../chapter04/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>데이터셋과 데이터베이스 - 고등학교 데이터과학 with Python</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-03" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="고등학교 데이터과학 with Python" class="md-header__button md-logo" aria-label="고등학교 데이터과학 with Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            고등학교 데이터과학 with Python
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              데이터셋과 데이터베이스
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter01/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 1 - [1권] 데이터 과학의 이해
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter05/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 2 - [1권] 데이터 준비와 분석
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter11/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 3 - [1권] 데이터 모델링과 평가
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter16/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 4 - [2권] 데이터 과학 프로젝트 — 교과서 주제 실습
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter21/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 5 - [2권] 나만의 데이터 과학 프로젝트
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="고등학교 데이터과학 with Python" class="md-nav__button md-logo" aria-label="고등학교 데이터과학 with Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    고등학교 데이터과학 with Python
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - [1권] 데이터 과학의 이해
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 - [1권] 데이터 과학의 이해
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 과학과 문제 해결
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터의 형태와 속성
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터셋과 데이터베이스
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터셋과 데이터베이스
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 이 장에서 배우는 것
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 1: 데이터셋의 구조 — 행, 열, 값
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 1: 데이터셋의 구조 — 행, 열, 값">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 📖
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의 📐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인 ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-csv-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 2: 데이터 파일 형식 — CSV와 Excel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 2: 데이터 파일 형식 — CSV와 Excel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 📖
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의 📐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인 ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 3: pandas로 데이터 불러오기와 탐색
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 3: pandas로 데이터 불러오기와 탐색">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 📖
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의 📐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인 ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 4: 데이터베이스 — 데이터셋과 무엇이 다를까?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 4: 데이터베이스 — 데이터셋과 무엇이 다를까?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 📖
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의 📐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인 ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 따라하기: 공공데이터를 코랩에서 탐색하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔨 따라하기: 공공데이터를 코랩에서 탐색하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: 실습용 데이터 준비하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: CSV 파일 불러오기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-head" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: head()로 미리보기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: shape으로 크기 확인하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: info()로 상세 정보 확인하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: 파일로 저장하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    세상을 바꾸는 데이터 과학
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - [1권] 데이터 준비와 분석
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 - [1권] 데이터 준비와 분석
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 수집 및 특성 분석 (1) — 데이터 수집과 탐색
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 수집 및 특성 분석 (2) — 기술통계와 시각화
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 전처리 (1) — 결측치와 이상치 처리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 전처리 (2) — 데이터 변환과 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 속성 간의 관계 파악
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    동일한 데이터의 다양한 분석 및 비교
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - [1권] 데이터 모델링과 평가
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 - [1권] 데이터 모델링과 평가
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 모델과 모델링
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    회귀 분석 (1) — 단순 선형 회귀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    회귀 분석 (2) — 모델 평가와 다중 회귀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    군집 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    연관 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - [2권] 데이터 과학 프로젝트 — 교과서 주제 실습
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4 - [2권] 데이터 과학 프로젝트 — 교과서 주제 실습
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 과학 적용과 데이터 적합성
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    슬기로운 의사 생활 (1) — 문제 정의와 데이터 준비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    슬기로운 의사 생활 (2) — 모델링과 결과 해석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    지혜로운 어부 생활 (1) — 문제 정의와 데이터 준비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    지혜로운 어부 생활 (2) — 모델링과 결과 해석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5 - [2권] 나만의 데이터 과학 프로젝트
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 5 - [2권] 나만의 데이터 과학 프로젝트
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 기획 — 주제 선정과 계획 수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 실행 (1) — 데이터 수집과 전처리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 실행 (2) — 분석과 모델링
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 마무리 — 보고서 작성과 최종 발표
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 이 장에서 배우는 것
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 1: 데이터셋의 구조 — 행, 열, 값
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 1: 데이터셋의 구조 — 행, 열, 값">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 📖
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의 📐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인 ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-csv-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 2: 데이터 파일 형식 — CSV와 Excel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 2: 데이터 파일 형식 — CSV와 Excel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 📖
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의 📐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인 ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 3: pandas로 데이터 불러오기와 탐색
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 3: pandas로 데이터 불러오기와 탐색">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 📖
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의 📐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인 ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 4: 데이터베이스 — 데이터셋과 무엇이 다를까?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 4: 데이터베이스 — 데이터셋과 무엇이 다를까?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 📖
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의 📐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인 ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 따라하기: 공공데이터를 코랩에서 탐색하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔨 따라하기: 공공데이터를 코랩에서 탐색하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: 실습용 데이터 준비하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: CSV 파일 불러오기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-head" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: head()로 미리보기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: shape으로 크기 확인하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: info()로 상세 정보 확인하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: 파일로 저장하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-03">Chapter 03. 데이터셋과 데이터베이스<a class="headerlink" href="#chapter-03" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="_1">🎯 이 장에서 배우는 것<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터셋의 구조(행·열·값)를 이해하고 용어를 정확히 사용할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CSV, Excel 등 파일 형태의 데이터셋을 pandas로 불러오고 저장할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>head()</code>, <code>shape</code>, <code>info()</code> 등으로 데이터를 탐색할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터베이스의 개념을 이해하고, 데이터셋과의 차이를 설명할 수 있다</li>
+</ul>
+<hr />
+<h2 id="_2">💡 왜 이걸 배우나요?<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>생각해보기 🤔</strong></p>
+<p>여러분 학교 도서관에는 수천 권의 책이 있습니다. 이 책들의 목록을 관리한다고 생각해보세요.</p>
+<p><em>"엑셀 파일 하나면 충분할까요? 아니면 더 체계적인 시스템이 필요할까요?"</em></p>
+</blockquote>
+<p>우리는 매일 데이터와 함께 살고 있습니다. 시험 성적표, 출석부, 급식 메뉴표, 음악 플레이리스트… 이 모든 것이 <strong>데이터</strong>입니다. 그런데 이 데이터가 어디에, 어떤 모양으로 저장되어 있느냐에 따라 활용 방법이 완전히 달라집니다.</p>
+<p>친구 5명의 연락처를 저장할 때는 메모장이면 충분하지만, 전교생 1,000명의 정보를 관리하려면 더 체계적인 도구가 필요합니다. 이번 장에서는 데이터를 담는 두 가지 대표적인 그릇인 <strong>데이터셋</strong>과 <strong>데이터베이스</strong>를 배웁니다. 이것을 이해하면, 앞으로 어떤 데이터를 만나도 "아, 이건 이런 구조구나!"라고 바로 파악할 수 있게 됩니다.</p>
+<hr />
+<h2 id="_3">📚 핵심 개념<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="1">개념 1: 데이터셋의 구조 — 행, 열, 값<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<h4 id="1_1">1) 비유로 시작 📖<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h4>
+<p>여러분의 <strong>시험 성적표</strong>를 떠올려보세요.</p>
+<ul>
+<li>세로로 쭉 나열된 <strong>학생 이름</strong>이 있고</li>
+<li>가로로 쭉 나열된 <strong>과목</strong>이 있고</li>
+<li>그 교차점에 <strong>점수</strong>가 적혀 있죠</li>
+</ul>
+<p>이것이 바로 데이터셋의 구조입니다! 성적표는 사실 완벽한 데이터셋이었던 거예요.</p>
+<h4 id="2">2) 정확한 정의 📐<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<p><strong>데이터셋(Dataset)</strong> 이란 분석을 위해 체계적으로 정리된 데이터의 모음입니다. 데이터셋은 다음 세 가지 요소로 구성됩니다.</p>
+<ul>
+<li><strong>행(Row)</strong> — 관측치(Observation)라고도 부릅니다. 하나의 대상에 대한 정보 묶음입니다. 성적표에서 "김민수" 한 줄 전체가 하나의 행입니다.</li>
+<li><strong>열(Column)</strong> — 변수(Variable)라고도 부릅니다. 측정하거나 기록한 항목의 종류입니다. "국어", "수학", "영어" 같은 과목명이 열에 해당합니다.</li>
+<li><strong>값(Value)</strong> — 특정 행과 열이 만나는 지점의 데이터입니다. "김민수의 국어 점수 = 85"에서 "85"가 값입니다.</li>
+</ul>
+<div class="mermaid">graph TB
+    subgraph 데이터셋의_구조
+        direction TB
+        A["📊 데이터셋&lt;br/&gt;(Dataset)"] --&gt; B["↔️ 열 = 변수&lt;br/&gt;(Column = Variable)&lt;br/&gt;예: 이름, 국어, 수학"]
+        A --&gt; C["↕️ 행 = 관측치&lt;br/&gt;(Row = Observation)&lt;br/&gt;예: 학생 한 명의 정보"]
+        A --&gt; D["⭐ 값&lt;br/&gt;(Value)&lt;br/&gt;예: 85점, 92점"]
+    end</div>
+<h4 id="3">3) 예시로 확인 ✅<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<p>우리 반 성적 데이터셋을 예로 들어보겠습니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 성적 데이터셋을 파이썬으로 표현하면 이렇습니다</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="s1">&#39;이름&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;김민수&#39;</span><span class="p">,</span> <span class="s1">&#39;이서연&#39;</span><span class="p">,</span> <span class="s1">&#39;박지호&#39;</span><span class="p">,</span> <span class="s1">&#39;최유진&#39;</span><span class="p">],</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="s1">&#39;국어&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">95</span><span class="p">],</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="s1">&#39;수학&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">82</span><span class="p">],</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="s1">&#39;영어&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span></code></pre></div>
+<p>실행 결과:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>   이름  국어  수학  영어
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>0  김민수  85  90  88
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>1  이서연  92  88  95
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>2  박지호  78  95  80
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>3  최유진  95  82  90
+</span></code></pre></div>
+<p>이 데이터셋에서 각 요소를 짚어보면 다음과 같습니다.</p>
+<ul>
+<li><strong>행 수</strong>: 4개 (학생 4명 = 관측치 4개)</li>
+<li><strong>열 수</strong>: 4개 (이름, 국어, 수학, 영어 = 변수 4개)</li>
+<li><strong>값의 예</strong>: 1행 2열의 값은 90 (김민수의 수학 점수)</li>
+</ul>
+<blockquote>
+<p><strong>알아보기 💡</strong></p>
+<p>같은 것을 다른 말로 부르는 경우가 많아서 헷갈릴 수 있습니다. 정리하면 이렇습니다.</p>
+<ul>
+<li><strong>행</strong> = 관측치 = 레코드(record) = 샘플(sample) → 모두 "가로 한 줄"</li>
+<li><strong>열</strong> = 변수 = 필드(field) = 속성(attribute) = 특성(feature) → 모두 "세로 한 줄"</li>
+</ul>
+<p>분야마다 선호하는 용어가 다르지만, 가리키는 것은 같습니다!</p>
+</blockquote>
+<hr />
+<h3 id="2-csv-excel">개념 2: 데이터 파일 형식 — CSV와 Excel<a class="headerlink" href="#2-csv-excel" title="Permanent link">&para;</a></h3>
+<h4 id="1_2">1) 비유로 시작 📖<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h4>
+<p>사진을 저장할 때 JPG, PNG, GIF 등 다양한 형식이 있듯이, 데이터를 저장하는 파일 형식도 여러 가지입니다. 그중 가장 많이 쓰이는 두 가지가 <strong>CSV</strong>와 <strong>Excel</strong>입니다.</p>
+<h4 id="2_1">2) 정확한 정의 📐<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h4>
+<p><strong>CSV (Comma-Separated Values)</strong></p>
+<ul>
+<li>데이터를 <strong>쉼표(,)</strong> 로 구분하여 저장하는 텍스트 파일입니다</li>
+<li>확장자: <code>.csv</code></li>
+<li>메모장으로 열어보면 내용을 직접 읽을 수 있습니다</li>
+<li>가장 보편적이고 가벼운 데이터 교환 형식입니다</li>
+</ul>
+<p>CSV 파일을 메모장으로 열면 이렇게 생겼습니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>이름,국어,수학,영어
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>김민수,85,90,88
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>이서연,92,88,95
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>박지호,78,95,80
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>최유진,95,82,90
+</span></code></pre></div>
+<p>쉼표로 구분되어 있기 때문에 "Comma-Separated Values(쉼표로 분리된 값)"이라는 이름이 붙었습니다.</p>
+<p><strong>Excel 파일</strong></p>
+<ul>
+<li>마이크로소프트 엑셀 전용 형식입니다</li>
+<li>확장자: <code>.xlsx</code> 또는 <code>.xls</code></li>
+<li>셀 서식, 수식, 여러 시트 등 다양한 기능을 포함할 수 있습니다</li>
+<li>CSV보다 파일 크기가 크지만, 기능이 풍부합니다</li>
+</ul>
+<h4 id="3_1">3) 예시로 확인 ✅<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h4>
+<p>두 형식의 핵심 차이를 정리하면 이렇습니다.</p>
+<div class="mermaid">graph LR
+    subgraph CSV
+        A1["📄 텍스트 파일"]
+        A2["가볍고 빠름"]
+        A3["어디서든 열림"]
+        A4["서식 정보 없음"]
+    end
+    subgraph Excel
+        B1["📗 전용 파일"]
+        B2["기능이 풍부"]
+        B3["엑셀 필요"]
+        B4["서식·수식 포함"]
+    end
+    CSV -- "데이터만 필요하면" --&gt; A2
+    Excel -- "서식도 필요하면" --&gt; B4</div>
+<blockquote>
+<p><strong>알아보기 💡</strong></p>
+<p>데이터 과학에서는 <strong>CSV 파일</strong>을 압도적으로 많이 사용합니다. 이유는 간단합니다.
+- 가볍습니다 (같은 데이터라도 파일 크기가 작음)
+- 어떤 프로그래밍 언어에서든 쉽게 읽을 수 있습니다
+- 공공데이터 포털, 캐글(Kaggle) 등에서 제공하는 표준 형식입니다</p>
+<p>그래서 이번 장에서도 CSV를 중심으로 배우겠습니다!</p>
+</blockquote>
+<hr />
+<h3 id="3-pandas">개념 3: pandas로 데이터 불러오기와 탐색<a class="headerlink" href="#3-pandas" title="Permanent link">&para;</a></h3>
+<h4 id="1_3">1) 비유로 시작 📖<a class="headerlink" href="#1_3" title="Permanent link">&para;</a></h4>
+<p>CSV 파일은 <strong>재료</strong>이고, pandas는 그 재료를 다루는 <strong>요리 도구</strong>입니다. 아무리 좋은 식재료가 있어도 칼과 도마가 없으면 요리를 할 수 없듯이, 데이터 파일이 있어도 pandas가 없으면 분석을 시작할 수 없습니다.</p>
+<h4 id="2_2">2) 정확한 정의 📐<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h4>
+<p><strong>pandas</strong>는 파이썬에서 데이터를 불러오고, 탐색하고, 가공하는 데 사용하는 라이브러리(도구 모음)입니다.</p>
+<p>pandas에서 데이터를 다루는 핵심 도구가 <strong>DataFrame(데이터프레임)</strong> 입니다. 데이터프레임은 앞에서 배운 데이터셋을 파이썬 안에서 표현한 것이라고 생각하면 됩니다. 행과 열로 이루어진 2차원 표 구조를 그대로 가지고 있습니다.</p>
+<p>데이터를 다루는 핵심 함수 4가지를 알아보겠습니다.</p>
+<ul>
+<li><strong><code>pd.read_csv('파일명')</code></strong> — CSV 파일을 읽어서 DataFrame으로 만듭니다</li>
+<li><strong><code>df.head(n)</code></strong> — 위에서 n개 행만 미리보기 합니다 (기본값 5)</li>
+<li><strong><code>df.shape</code></strong> — (행 수, 열 수)를 알려줍니다</li>
+<li><strong><code>df.info()</code></strong> — 열 이름, 데이터 타입, 비어있는 값 개수 등 전체 요약 정보를 보여줍니다</li>
+</ul>
+<h4 id="3_2">3) 예시로 확인 ✅<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># 예시: 위에서 만든 데이터를 CSV로 저장 후 다시 읽기</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="s1">&#39;이름&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;김민수&#39;</span><span class="p">,</span> <span class="s1">&#39;이서연&#39;</span><span class="p">,</span> <span class="s1">&#39;박지호&#39;</span><span class="p">,</span> <span class="s1">&#39;최유진&#39;</span><span class="p">],</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="s1">&#39;국어&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">95</span><span class="p">],</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="s1">&#39;수학&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">82</span><span class="p">],</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="s1">&#39;영어&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">})</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c1"># CSV로 저장</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;성적표.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="c1"># CSV 읽기</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="n">df_loaded</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;성적표.csv&#39;</span><span class="p">)</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="c1"># 탐색하기</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="nb">print</span><span class="p">(</span><span class="n">df_loaded</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>     <span class="c1"># 처음 5행 보기</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">df_loaded</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>      <span class="c1"># (4, 4) → 4행 4열</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="nb">print</span><span class="p">(</span><span class="n">df_loaded</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>     <span class="c1"># 전체 구조 요약</span>
+</span></code></pre></div>
+<blockquote>
+<p><strong>알아보기 💡</strong></p>
+<p><code>to_csv()</code>에서 <code>index=False</code>를 쓰는 이유가 궁금하죠?</p>
+<p>pandas는 자동으로 행 번호(0, 1, 2, ...)를 만들어주는데, 이걸 <strong>인덱스(index)</strong> 라고 합니다. <code>index=False</code>를 안 쓰면 CSV 파일에 이 행 번호가 별도 열로 저장되어 나중에 읽을 때 불필요한 열이 하나 더 생깁니다.</p>
+</blockquote>
+<hr />
+<h3 id="4">개념 4: 데이터베이스 — 데이터셋과 무엇이 다를까?<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<h4 id="1_4">1) 비유로 시작 📖<a class="headerlink" href="#1_4" title="Permanent link">&para;</a></h4>
+<p>학교 도서관을 생각해봅시다.</p>
+<ul>
+<li>
+<p><strong>CSV 파일 = 종이에 손으로 쓴 도서 목록표</strong> 📋: 한 사람이 보기엔 괜찮지만, 여러 사람이 동시에 수정하면 엉망이 됩니다. 책이 1만 권이면 원하는 책을 찾기도 힘듭니다.</p>
+</li>
+<li>
+<p><strong>데이터베이스 = 도서관 검색 컴퓨터 시스템</strong> 🖥️: 여러 학생이 동시에 검색해도 문제없고, "2024년에 출판된 과학 분야 도서"처럼 복잡한 조건으로도 빠르게 찾아줍니다.</p>
+</li>
+</ul>
+<h4 id="2_3">2) 정확한 정의 📐<a class="headerlink" href="#2_3" title="Permanent link">&para;</a></h4>
+<p><strong>데이터베이스(Database)</strong> 란 데이터를 체계적으로 저장하고 효율적으로 관리·검색할 수 있게 해주는 시스템입니다.</p>
+<p>단순한 파일이 아니라 다음과 같은 기능을 갖춘 소프트웨어 시스템입니다.</p>
+<ul>
+<li><strong>대용량 처리</strong>: 수백만, 수억 건의 데이터도 빠르게 처리합니다</li>
+<li><strong>동시 접근</strong>: 여러 사용자가 동시에 데이터를 읽고 쓸 수 있습니다</li>
+<li><strong>검색 최적화</strong>: 원하는 데이터를 조건에 맞게 빠르게 찾아줍니다</li>
+<li><strong>안전성</strong>: 데이터가 손상되거나 유실되지 않도록 보호합니다</li>
+</ul>
+<p>데이터베이스를 관리하는 소프트웨어를 <strong>DBMS(Database Management System)</strong> 라고 하며, MySQL, PostgreSQL, SQLite, Oracle 등이 대표적입니다.</p>
+<h4 id="3_3">3) 예시로 확인 ✅<a class="headerlink" href="#3_3" title="Permanent link">&para;</a></h4>
+<p>데이터셋(파일)과 데이터베이스의 차이를 비교해보겠습니다.</p>
+<div class="mermaid">graph TB
+    subgraph 데이터셋_파일
+        F1["📄 CSV / Excel 파일"]
+        F2["✅ 간단하고 가벼움"]
+        F3["✅ 바로 열어볼 수 있음"]
+        F4["❌ 대용량에 느림"]
+        F5["❌ 동시 수정 어려움"]
+        F6["📌 소규모 분석에 적합"]
+    end
+    subgraph 데이터베이스
+        D1["🗄️ DBMS 시스템"]
+        D2["✅ 대용량도 빠름"]
+        D3["✅ 여러 명 동시 사용"]
+        D4["❌ 설치·설정 필요"]
+        D5["❌ SQL 언어 학습 필요"]
+        D6["📌 서비스·운영에 적합"]
+    end</div>
+<blockquote>
+<p><strong>생각해보기 🤔</strong></p>
+<p>다음 상황에서 데이터셋(CSV)과 데이터베이스 중 어떤 것이 더 적합할까요?</p>
+<ol>
+<li>과학 실험 결과 30건을 정리해서 분석하기 → <strong>CSV</strong>가 적합! (소규모, 혼자 사용)</li>
+<li>전국 학교 급식 메뉴를 매일 업데이트하고 학생·학부모가 검색하기 → <strong>데이터베이스</strong>가 적합! (대규모, 다수 사용)</li>
+<li>캐글에서 다운로드한 데이터로 분석 연습하기 → <strong>CSV</strong>가 적합!</li>
+</ol>
+<p>이 수업에서는 주로 <strong>CSV 파일 형태의 데이터셋</strong>을 다룹니다. 데이터베이스는 나중에 더 깊이 배우게 됩니다.</p>
+</blockquote>
+<hr />
+<h2 id="_4">🔨 따라하기: 공공데이터를 코랩에서 탐색하기<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>이제 실제 데이터를 가지고 실습해봅시다! Google Colab(코랩)에서 공공데이터를 불러와 탐색하는 과정을 단계별로 따라해보겠습니다.</p>
+<h3 id="step-1">Step 1: 실습용 데이터 준비하기<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h3>
+<p>실제 공공데이터 포털에서 데이터를 다운로드하는 방법도 있지만, 이번 실습에서는 코랩에서 바로 실행할 수 있도록 샘플 데이터를 직접 만들어 사용하겠습니다. 이 데이터는 실제 서울시 공공도서관 데이터의 형식을 따른 것입니다.</p>
+<p>Google Colab에 접속하여 새 노트북을 열고, 아래 코드를 첫 번째 셀에 입력하세요.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># 서울시 공공도서관 샘플 데이터 만들기</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">library_data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="s1">&#39;도서관명&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;서울도서관&#39;</span><span class="p">,</span> <span class="s1">&#39;남산도서관&#39;</span><span class="p">,</span> <span class="s1">&#39;강남도서관&#39;</span><span class="p">,</span> <span class="s1">&#39;마포중앙도서관&#39;</span><span class="p">,</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>               <span class="s1">&#39;송파도서관&#39;</span><span class="p">,</span> <span class="s1">&#39;영등포도서관&#39;</span><span class="p">,</span> <span class="s1">&#39;종로도서관&#39;</span><span class="p">,</span> <span class="s1">&#39;도봉도서관&#39;</span><span class="p">,</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>               <span class="s1">&#39;서대문도서관&#39;</span><span class="p">,</span> <span class="s1">&#39;양천도서관&#39;</span><span class="p">],</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="s1">&#39;자치구&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;중구&#39;</span><span class="p">,</span> <span class="s1">&#39;용산구&#39;</span><span class="p">,</span> <span class="s1">&#39;강남구&#39;</span><span class="p">,</span> <span class="s1">&#39;마포구&#39;</span><span class="p">,</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>             <span class="s1">&#39;송파구&#39;</span><span class="p">,</span> <span class="s1">&#39;영등포구&#39;</span><span class="p">,</span> <span class="s1">&#39;종로구&#39;</span><span class="p">,</span> <span class="s1">&#39;도봉구&#39;</span><span class="p">,</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>             <span class="s1">&#39;서대문구&#39;</span><span class="p">,</span> <span class="s1">&#39;양천구&#39;</span><span class="p">],</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="s1">&#39;장서수&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">268130</span><span class="p">,</span> <span class="mi">215000</span><span class="p">,</span> <span class="mi">189500</span><span class="p">,</span> <span class="mi">312000</span><span class="p">,</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>             <span class="mi">178600</span><span class="p">,</span> <span class="mi">145200</span><span class="p">,</span> <span class="mi">198700</span><span class="p">,</span> <span class="mi">167300</span><span class="p">,</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>             <span class="mi">156800</span><span class="p">,</span> <span class="mi">143900</span><span class="p">],</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="s1">&#39;좌석수&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">824</span><span class="p">,</span> <span class="mi">512</span><span class="p">,</span> <span class="mi">680</span><span class="p">,</span> <span class="mi">1020</span><span class="p">,</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>             <span class="mi">456</span><span class="p">,</span> <span class="mi">380</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">340</span><span class="p">,</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>             <span class="mi">420</span><span class="p">,</span> <span class="mi">360</span><span class="p">],</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    <span class="s1">&#39;개관연도&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2012</span><span class="p">,</span> <span class="mi">1965</span><span class="p">,</span> <span class="mi">2003</span><span class="p">,</span> <span class="mi">2014</span><span class="p">,</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>              <span class="mi">1990</span><span class="p">,</span> <span class="mi">2001</span><span class="p">,</span> <span class="mi">1920</span><span class="p">,</span> <span class="mi">2012</span><span class="p">,</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>              <span class="mi">1976</span><span class="p">,</span> <span class="mi">2008</span><span class="p">]</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="p">}</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="c1"># DataFrame으로 만들기</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">library_data</span><span class="p">)</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="c1"># CSV 파일로 저장하기</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;서울시_공공도서관.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8-sig&#39;</span><span class="p">)</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ CSV 파일이 생성되었습니다!&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<blockquote>
+<p><strong>알아보기 💡</strong></p>
+<p><code>encoding='utf-8-sig'</code>는 한글이 깨지지 않도록 하는 설정입니다. 한글 데이터를 CSV로 저장할 때는 이 옵션을 붙여주는 것이 좋습니다.</p>
+</blockquote>
+<hr />
+<h3 id="step-2-csv">Step 2: CSV 파일 불러오기<a class="headerlink" href="#step-2-csv" title="Permanent link">&para;</a></h3>
+<p>이제 방금 저장한 CSV 파일을 다시 읽어보겠습니다. 새 셀에 아래 코드를 입력하세요.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># CSV 파일 불러오기</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;서울시_공공도서관.csv&#39;</span><span class="p">)</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># 잘 불러왔는지 확인</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span></code></pre></div>
+<p>실행 결과:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>       도서관명   자치구    장서수  좌석수  개관연도
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>0     서울도서관    중구  268130   824  2012
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>1     남산도서관   용산구  215000   512  1965
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>2     강남도서관   강남구  189500   680  2003
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>3  마포중앙도서관   마포구  312000  1020  2014
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>4     송파도서관   송파구  178600   456  1990
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>5    영등포도서관  영등포구  145200   380  2001
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>6     종로도서관   종로구  198700   520  1920
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>7     도봉도서관   도봉구  167300   340  2012
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>8    서대문도서관  서대문구  156800   420  1976
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>9     양천도서관   양천구  143900   360  2008
+</span></code></pre></div>
+<p>축하합니다! 🎉 CSV 파일을 성공적으로 불러왔습니다. <code>pd.read_csv()</code> 단 한 줄로 파일을 데이터프레임으로 변환할 수 있습니다.</p>
+<hr />
+<h3 id="step-3-head">Step 3: head()로 미리보기<a class="headerlink" href="#step-3-head" title="Permanent link">&para;</a></h3>
+<p>데이터가 수천, 수만 행이라면 전부 출력하면 화면이 가득 차버립니다. <code>head()</code>를 사용하면 앞부분만 살짝 볼 수 있습니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># 처음 3개 행만 보기</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</span></code></pre></div>
+<p>실행 결과:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>      도서관명  자치구    장서수  좌석수  개관연도
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>0    서울도서관   중구  268130   824  2012
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>1    남산도서관  용산구  215000   512  1965
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>2    강남도서관  강남구  189500   680  2003
+</span></code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># 기본값은 5개 행</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</span></code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># 반대로 마지막 행을 보고 싶다면 tail() 사용</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</span></code></pre></div>
+<p>실행 결과:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>      도서관명   자치구    장서수  좌석수  개관연도
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>7    도봉도서관   도봉구  167300   340  2012
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>8   서대문도서관  서대문구  156800   420  1976
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>9    양천도서관   양천구  143900   360  2008
+</span></code></pre></div>
+<blockquote>
+<p><strong>알아보기 💡</strong></p>
+<ul>
+<li><code>head(n)</code> — 위에서 n개 행 (기본 5개)</li>
+<li><code>tail(n)</code> — 아래에서 n개 행 (기본 5개)</li>
+</ul>
+<p>데이터를 처음 받았을 때 <code>head()</code>로 "이 데이터가 어떻게 생겼나?" 확인하는 것은 데이터 분석의 첫걸음입니다!</p>
+</blockquote>
+<hr />
+<h3 id="step-4-shape">Step 4: shape으로 크기 확인하기<a class="headerlink" href="#step-4-shape" title="Permanent link">&para;</a></h3>
+<p>데이터가 몇 행 몇 열인지 숫자로 한눈에 파악해봅시다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># 데이터셋의 크기 확인</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span></code></pre></div>
+<p>실행 결과:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>(10, 5)
+</span></code></pre></div>
+<p>이 결과는 <strong>(행 수, 열 수)</strong> 를 의미합니다.</p>
+<ul>
+<li><strong>10</strong>: 관측치(도서관)가 10개</li>
+<li><strong>5</strong>: 변수(도서관명, 자치구, 장서수, 좌석수, 개관연도)가 5개</li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># 행 수만 따로 알고 싶을 때</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;행 수: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;열 수: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>실행 결과:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>행 수: 10
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>열 수: 5
+</span></code></pre></div>
+<blockquote>
+<p><strong>주의 ⚠️</strong></p>
+<p><code>shape</code>는 함수가 아니라 <strong>속성(property)</strong> 이므로 괄호 <code>()</code>를 붙이지 않습니다!
+- ✅ <code>df.shape</code> (올바름)
+- ❌ <code>df.shape()</code> (오류 발생)</p>
+</blockquote>
+<hr />
+<h3 id="step-5-info">Step 5: info()로 상세 정보 확인하기<a class="headerlink" href="#step-5-info" title="Permanent link">&para;</a></h3>
+<p><code>info()</code>는 데이터셋의 "건강 진단서" 같은 역할을 합니다. 각 열의 이름, 데이터 타입, 비어있는 값이 있는지 한꺼번에 알려줍니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># 데이터셋 상세 정보</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</span></code></pre></div>
+<p>실행 결과:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>RangeIndex: 10 entries, 0 to 9
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>Data columns (total 5 columns):
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a> #   Column  Non-Null Count  Dtype
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>---  ------  --------------  -----
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a> 0   도서관명    10 non-null     object
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a> 1   자치구     10 non-null     object
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a> 2   장서수     10 non-null     int64
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a> 3   좌석수     10 non-null     int64
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a> 4   개관연도    10 non-null     int64
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>dtypes: int64(3), object(2)
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>memory usage: 528.0+ bytes
+</span></code></pre></div>
+<p>이 결과를 해석해봅시다.</p>
+<ul>
+<li><strong>RangeIndex: 10 entries</strong> → 행이 10개 (0번~9번)</li>
+<li><strong>total 5 columns</strong> → 열이 5개</li>
+<li><strong>Non-Null Count</strong> → 비어있지 않은 값의 수 (10 non-null이면 빈 값 없음 ✅)</li>
+<li><strong>Dtype</strong> → 데이터 타입</li>
+<li><code>object</code> → 문자열 (도서관명, 자치구)</li>
+<li><code>int64</code> → 정수 (장서수, 좌석수, 개관연도)</li>
+</ul>
+<blockquote>
+<p><strong>정리하기 📋</strong></p>
+<p>데이터를 처음 받았을 때 반드시 확인해야 할 세 가지 "탐색 루틴"을 기억하세요!</p>
+<ol>
+<li><strong><code>df.head()</code></strong> — "데이터가 어떻게 생겼지?" (모양 확인)</li>
+<li><strong><code>df.shape</code></strong> — "몇 행 몇 열이지?" (크기 확인)</li>
+<li><strong><code>df.info()</code></strong> — "데이터 타입은? 빈 값은 없나?" (건강 확인)</li>
+</ol>
+<p>이 세 가지는 앞으로 모든 데이터 분석에서 습관처럼 실행하게 됩니다!</p>
+</blockquote>
+<hr />
+<h3 id="step-6">Step 6: 파일로 저장하기<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h3>
+<p>분석한 데이터를 다시 파일로 저장하는 방법도 알아두어야 합니다.</p>
+<p>```python</p>
+<h1 id="csv">CSV로 저장하기<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h1>
+<p>df.to_csv('도서관_데이터_저장.csv', index=False, encoding='utf-8-sig')
+print("✅ CSV 파일로 저장 완료!")</p>
+<h1 id="excel-openpyxl">Excel로 저장하기 (openpyxl<a class="headerlink" href="#excel-openpyxl" title="Permanent link">&para;</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/title-link.js"></script>
+      
+    
+  </body>
+</html>

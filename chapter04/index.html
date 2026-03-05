@@ -1,0 +1,2451 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="삼양미디어 데이터과학 교과서와 1:1 대응하는 구글 코랩 기반 실습 교재로, 비유로 시작해 코드로 확인하고 프로젝트로 완성하는 40차시 커리큘럼입니다.">
+      
+      
+        <meta name="author" content="Created with EduFlow">
+      
+      
+      
+        <link rel="prev" href="../chapter03/">
+      
+      
+        <link rel="next" href="../chapter05/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>세상을 바꾸는 데이터 과학 - 고등학교 데이터과학 with Python</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-4" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="고등학교 데이터과학 with Python" class="md-header__button md-logo" aria-label="고등학교 데이터과학 with Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            고등학교 데이터과학 with Python
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              세상을 바꾸는 데이터 과학
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chapter01/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 1 - [1권] 데이터 과학의 이해
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter05/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 2 - [1권] 데이터 준비와 분석
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter11/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 3 - [1권] 데이터 모델링과 평가
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter16/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 4 - [2권] 데이터 과학 프로젝트 — 교과서 주제 실습
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter21/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 5 - [2권] 나만의 데이터 과학 프로젝트
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="고등학교 데이터과학 with Python" class="md-nav__button md-logo" aria-label="고등학교 데이터과학 with Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    고등학교 데이터과학 with Python
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - [1권] 데이터 과학의 이해
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 - [1권] 데이터 과학의 이해
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 과학과 문제 해결
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터의 형태와 속성
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터셋과 데이터베이스
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    세상을 바꾸는 데이터 과학
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    세상을 바꾸는 데이터 과학
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 이 장에서 배우는 것
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 왜 이걸 배우나요?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        넷플릭스는 어떻게 내가 좋아할 영화를 알까?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 1: 데이터 과학의 실제 활용 — 의료 분야 🏥
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 1: 데이터 과학의 실제 활용 — 의료 분야 🏥">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 2: 데이터 과학의 실제 활용 — 환경·스포츠·문화 🌍⚽🎵
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 2: 데이터 과학의 실제 활용 — 환경·스포츠·문화 🌍⚽🎵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 3: 추천 시스템의 원리 🎬
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 3: 추천 시스템의 원리 🎬">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 4: 데이터 과학의 윤리 ⚖️
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 4: 데이터 과학의 윤리 ⚖️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 따라하기: 영화 평점 데이터로 추천의 원리 맛보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔨 따라하기: 영화 평점 데이터로 추천의 원리 맛보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: 영화 평점 데이터 만들기 🎬
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: 평점을 시각화하기 📊
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: "나와 취향이 비슷한 사람" 찾기 🤝
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - [1권] 데이터 준비와 분석
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 - [1권] 데이터 준비와 분석
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 수집 및 특성 분석 (1) — 데이터 수집과 탐색
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 수집 및 특성 분석 (2) — 기술통계와 시각화
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 전처리 (1) — 결측치와 이상치 처리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 전처리 (2) — 데이터 변환과 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 속성 간의 관계 파악
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    동일한 데이터의 다양한 분석 및 비교
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - [1권] 데이터 모델링과 평가
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 - [1권] 데이터 모델링과 평가
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 모델과 모델링
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    회귀 분석 (1) — 단순 선형 회귀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    회귀 분석 (2) — 모델 평가와 다중 회귀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    군집 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    연관 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - [2권] 데이터 과학 프로젝트 — 교과서 주제 실습
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4 - [2권] 데이터 과학 프로젝트 — 교과서 주제 실습
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 과학 적용과 데이터 적합성
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    슬기로운 의사 생활 (1) — 문제 정의와 데이터 준비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    슬기로운 의사 생활 (2) — 모델링과 결과 해석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    지혜로운 어부 생활 (1) — 문제 정의와 데이터 준비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    지혜로운 어부 생활 (2) — 모델링과 결과 해석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5 - [2권] 나만의 데이터 과학 프로젝트
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 5 - [2권] 나만의 데이터 과학 프로젝트
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 기획 — 주제 선정과 계획 수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 실행 (1) — 데이터 수집과 전처리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 실행 (2) — 분석과 모델링
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 마무리 — 보고서 작성과 최종 발표
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 이 장에서 배우는 것
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 왜 이걸 배우나요?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        넷플릭스는 어떻게 내가 좋아할 영화를 알까?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 1: 데이터 과학의 실제 활용 — 의료 분야 🏥
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 1: 데이터 과학의 실제 활용 — 의료 분야 🏥">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 2: 데이터 과학의 실제 활용 — 환경·스포츠·문화 🌍⚽🎵
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 2: 데이터 과학의 실제 활용 — 환경·스포츠·문화 🌍⚽🎵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 3: 추천 시스템의 원리 🎬
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 3: 추천 시스템의 원리 🎬">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        개념 4: 데이터 과학의 윤리 ⚖️
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="개념 4: 데이터 과학의 윤리 ⚖️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 비유로 시작
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 따라하기: 영화 평점 데이터로 추천의 원리 맛보기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔨 따라하기: 영화 평점 데이터로 추천의 원리 맛보기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: 영화 평점 데이터 만들기 🎬
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: 평점을 시각화하기 📊
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: "나와 취향이 비슷한 사람" 찾기 🤝
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-4">Chapter 4. 세상을 바꾸는 데이터 과학<a class="headerlink" href="#chapter-4" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="_1">🎯 이 장에서 배우는 것<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>이 장을 마치면 다음을 할 수 있습니다.</p>
+</blockquote>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 의료·환경·스포츠·문화 분야에서 데이터 과학이 활용되는 실제 사례를 3가지 이상 설명할 수 있다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 추천 시스템의 기본 원리를 이해하고, 간단한 영화 평점 데이터를 탐색할 수 있다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터 과학의 윤리적 쟁점(개인정보 보호, 알고리즘 편향)을 이해하고 자신의 의견을 표현할 수 있다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터 과학이 자신의 진로·관심 분야에 어떻게 연결되는지 탐색하고 아이디어를 정리할 수 있다.</li>
+</ul>
+<hr />
+<h2 id="_2">💡 왜 이걸 배우나요?<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">넷플릭스는 어떻게 내가 좋아할 영화를 알까?<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>금요일 저녁, 넷플릭스를 켰더니 화면 맨 위에 <strong>"OO님을 위한 추천"</strong> 이라는 목록이 뜹니다. 신기하게도 거기 있는 영화들이 정말 내 취향입니다. 어떻게 이런 일이 가능할까요?</p>
+<p>비밀은 바로 <strong>데이터</strong>에 있습니다. 넷플릭스는 전 세계 2억 명이 넘는 사용자가 어떤 영화를 봤는지, 언제 멈췄는지, 어떤 장면을 되감기했는지까지 모두 기록합니다. 이 엄청난 데이터를 분석해서 <strong>"이 사람은 다음에 이 영화를 좋아할 확률이 높다"</strong> 고 예측하는 것이죠.</p>
+<p>이것이 바로 <strong>데이터 과학</strong>의 힘입니다.</p>
+<blockquote>
+<p>🤔 <strong>생각해보기:</strong> 오늘 하루 동안 여러분이 만든 데이터는 무엇이 있을까요? 스마트폰 검색 기록, 카드 결제 내역, SNS 좋아요, 걸음 수… 우리는 매일 수백 개의 데이터를 만들어내고 있습니다.</p>
+</blockquote>
+<p>데이터 과학은 더 이상 과학자들만의 이야기가 아닙니다. 의사가 환자를 진단할 때, 기상청이 태풍 경로를 예측할 때, 축구 감독이 선수를 선발할 때, 심지어 작곡가가 히트곡을 만들 때도 데이터 과학이 활용됩니다. 이번 장에서는 데이터 과학이 <strong>세상의 다양한 분야를 어떻게 바꾸고 있는지</strong> 생생한 사례와 함께 알아보겠습니다.</p>
+<hr />
+<h2 id="_4">📚 핵심 개념<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="1">개념 1: 데이터 과학의 실제 활용 — 의료 분야 🏥<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<h4 id="1_1">1. 비유로 시작<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h4>
+<p>여러분이 감기에 걸려 병원에 갔다고 상상해봅시다. 의사 선생님은 여러분의 증상을 듣고, 체온을 재고, 목 안쪽을 살펴봅니다. 그런데 만약 의사 선생님이 <strong>전 세계 수백만 명의 환자 기록</strong>을 순식간에 참고할 수 있다면 어떨까요? "이 증상 조합이라면 90% 확률로 A 질환이고, 이 약이 가장 효과적이었다"는 것을 바로 알 수 있겠죠.</p>
+<p>이것이 바로 <strong>의료 데이터 과학</strong>이 하는 일입니다. 마치 수백만 명의 경험을 가진 <strong>슈퍼 의사</strong>를 옆에 두는 것과 같습니다.</p>
+<h4 id="2">2. 정확한 정의<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<p><strong>의료 데이터 과학</strong>이란, 환자의 진료 기록, 의료 영상(X-ray, CT, MRI), 유전자 정보, 생활 습관 데이터 등을 수집·분석하여 <strong>질병의 예측, 진단, 치료 방법 결정</strong>에 활용하는 분야입니다.</p>
+<h4 id="3">3. 예시로 확인<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<p><strong>사례 ① 피부암 진단 AI</strong></p>
+<p>2017년 스탠퍼드 대학교 연구팀은 약 13만 장의 피부 병변(피부에 생긴 이상 부위) 사진을 AI에게 학습시켰습니다. 결과는 놀라웠습니다. AI의 피부암 판별 정확도가 <strong>전문 피부과 의사 21명과 동등한 수준</strong>이었습니다.</p>
+<p><strong>사례 ② 코로나19 감염병 예측</strong></p>
+<p>2020년 코로나19가 전 세계로 퍼질 때, 캐나다의 AI 기업 '블루닷(BlueDot)'은 WHO(세계보건기구)보다 <strong>9일 먼저</strong> 감염병 확산을 경고했습니다. 항공권 예매 데이터, 뉴스 기사, 동물 질병 보고서 등 다양한 데이터를 종합 분석한 덕분이었습니다.</p>
+<div class="mermaid">flowchart LR
+    A["🗂️ 데이터 수집\n진료 기록, 의료 영상\n유전자 정보"] --&gt; B["🔍 데이터 분석\n패턴 발견\n이상 징후 탐지"]
+    B --&gt; C["🤖 AI 모델\n질병 예측\n진단 보조"]
+    C --&gt; D["💊 의료 현장 적용\n조기 진단\n맞춤형 치료"]</div>
+<blockquote>
+<p>📌 <strong>알아보기:</strong> "맞춤형 의료(Precision Medicine)"란 환자 개개인의 유전자, 생활환경, 생활 습관 데이터를 분석하여 그 사람에게 <strong>가장 적합한 치료법</strong>을 찾아주는 의료 방식입니다. 같은 암이라도 환자마다 효과적인 약이 다를 수 있기 때문입니다.</p>
+</blockquote>
+<hr />
+<h3 id="2_1">개념 2: 데이터 과학의 실제 활용 — 환경·스포츠·문화 🌍⚽🎵<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
+<h4 id="1_2">1. 비유로 시작<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h4>
+<p>데이터 과학을 <strong>만능 돋보기</strong>에 비유해 봅시다. 돋보기를 어디에 갖다 대느냐에 따라 보이는 것이 달라지죠? 돋보기를 <strong>지구</strong>에 갖다 대면 환경 문제가 보이고, <strong>운동장</strong>에 대면 선수들의 움직임이 보이고, <strong>무대</strong>에 대면 사람들의 취향이 보입니다.</p>
+<h4 id="2_2">2. 정확한 정의<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h4>
+<p>데이터 과학은 특정 분야에 국한되지 않는 <strong>범용 도구(general-purpose tool)</strong> 입니다. 어떤 분야든 데이터가 존재하는 곳이라면 데이터 과학을 적용하여 <strong>새로운 통찰(insight)</strong> 을 얻을 수 있습니다. 통찰이란 "데이터 속에 숨어 있는 의미 있는 발견"을 뜻합니다.</p>
+<h4 id="3_1">3. 예시로 확인<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h4>
+<p><strong>🌿 환경 분야 — 산불 예측과 대기오염 분석</strong></p>
+<p>미국 캘리포니아에서는 위성 사진, 온도, 습도, 바람 방향 데이터를 분석해 <strong>산불 발생 위험 지역을 미리 예측</strong>합니다. 한국에서도 미세먼지 데이터를 분석하여 "내일 어느 지역의 공기질이 나쁠지"를 예보하고 있습니다.</p>
+<p><strong>⚽ 스포츠 분야 — 머니볼 혁명</strong></p>
+<p>2002년 미국 프로야구 오클랜드 어슬레틱스 팀은 리그에서 가장 적은 예산을 가지고 있었습니다. 단장 빌리 빈은 <strong>선수들의 통계 데이터</strong>를 철저히 분석하여, 다른 팀이 주목하지 않는 저평가된 선수들을 영입했습니다. 결과는? <strong>20연승이라는 역사적 기록</strong>을 세웠습니다. 이 이야기는 영화 &lt;머니볼&gt;로도 만들어졌죠.</p>
+<p>현재 축구에서도 선수의 달리기 거리, 패스 성공률, 슈팅 각도 등을 실시간으로 추적하여 전술을 세웁니다. 2022 카타르 월드컵에서는 <strong>반자동 오프사이드 판독 기술(SAOT)</strong> 이 도입되어, 선수 신체의 29개 포인트를 초당 50회 추적했습니다.</p>
+<p><strong>🎵 문화 분야 — 음악 추천과 콘텐츠 제작</strong></p>
+<p>스포티파이(Spotify)는 사용자가 어떤 노래를 듣고, 어디서 건너뛰고, 어떤 플레이리스트에 저장하는지 분석합니다. 이 데이터로 매주 월요일 <strong>"Discover Weekly"</strong> 라는 개인 맞춤 플레이리스트를 만들어주는데, 전 세계 사용자의 <strong>30억 개 이상의 플레이리스트 데이터</strong>가 활용됩니다.</p>
+<div class="mermaid">flowchart TB
+    CENTER["🔍 데이터 과학"]
+    CENTER --&gt; ENV["🌿 환경\n산불 예측\n대기오염 분석\n기후변화 모니터링"]
+    CENTER --&gt; SPORTS["⚽ 스포츠\n선수 성과 분석\n전술 최적화\n부상 예방"]
+    CENTER --&gt; CULTURE["🎵 문화\n음악·영화 추천\n트렌드 분석\n관객 반응 예측"]
+    CENTER --&gt; MEDICAL["🏥 의료\n질병 예측\n신약 개발\n맞춤형 치료"]</div>
+<blockquote>
+<p>🤔 <strong>생각해보기:</strong> 여러분의 관심 분야(게임, 요리, 패션, 여행 등)에 데이터 과학이 어떻게 활용될 수 있을까요? 30초만 생각해 보세요!</p>
+</blockquote>
+<hr />
+<h3 id="3_2">개념 3: 추천 시스템의 원리 🎬<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h3>
+<h4 id="1_3">1. 비유로 시작<a class="headerlink" href="#1_3" title="Permanent link">&para;</a></h4>
+<p>학교에서 점심 메뉴를 고를 때, 가장 친한 친구가 "이거 진짜 맛있어!"라고 추천하면 믿음이 가죠? 그런데 만약 <strong>나와 입맛이 비슷한 친구 100명</strong>이 모두 "이거 맛있어!"라고 한다면요? 거의 확신하게 됩니다.</p>
+<p>추천 시스템도 정확히 같은 원리입니다. 나와 <strong>취향이 비슷한 수천, 수만 명의 사람들</strong>이 좋아한 것을 찾아서 "너도 이거 좋아할 거야"라고 알려주는 것이죠.</p>
+<h4 id="2_3">2. 정확한 정의<a class="headerlink" href="#2_3" title="Permanent link">&para;</a></h4>
+<p><strong>추천 시스템(Recommendation System)</strong> 이란, 사용자의 과거 행동 데이터(클릭, 구매, 평점 등)를 분석하여 해당 사용자가 <strong>아직 접하지 않았지만 좋아할 만한 항목을 예측하고 제안</strong>하는 시스템입니다.</p>
+<p>대표적인 추천 방식은 크게 두 가지입니다.</p>
+<p><strong>① 협업 필터링(Collaborative Filtering) — "나와 비슷한 사람은 뭘 좋아했지?"</strong></p>
+<ul>
+<li>나와 <strong>비슷한 취향의 사용자 그룹</strong>을 찾습니다.</li>
+<li>그 그룹이 높게 평가했지만 <strong>내가 아직 보지 않은 항목</strong>을 추천합니다.</li>
+<li>핵심 가정: 과거에 비슷한 취향을 보인 사람들은 미래에도 비슷한 취향을 가질 것이다.</li>
+</ul>
+<p><strong>② 콘텐츠 기반 필터링(Content-based Filtering) — "내가 좋아한 것과 비슷한 건 뭐지?"</strong></p>
+<ul>
+<li>내가 좋아한 항목의 <strong>특성(장르, 감독, 키워드 등)</strong> 을 분석합니다.</li>
+<li>그 특성과 <strong>유사한 다른 항목</strong>을 추천합니다.</li>
+</ul>
+<h4 id="3_3">3. 예시로 확인<a class="headerlink" href="#3_3" title="Permanent link">&para;</a></h4>
+<div class="mermaid">flowchart LR
+    subgraph 협업필터링["🤝 협업 필터링"]
+        U1["👤 나\n액션 ⭐5 로맨스 ⭐2"]
+        U2["👥 비슷한 취향의 사용자\n액션 ⭐5 로맨스 ⭐2\nSF ⭐5"]
+        U1 --&gt;|"취향 유사!"| U2
+        U2 --&gt;|"SF 영화 추천"| U1
+    end
+
+    subgraph 콘텐츠기반["📋 콘텐츠 기반 필터링"]
+        M1["🎬 내가 좋아한 영화\n장르: 액션\n감독: A"]
+        M2["🎬 비슷한 영화\n장르: 액션\n감독: A"]
+        M1 --&gt;|"특성 유사!"| M2
+    end</div>
+<p>더 구체적인 예를 들어볼까요?</p>
+<ul>
+<li><strong>영희</strong>는 영화 A에 ⭐5점, 영화 B에 ⭐4점, 영화 C에 ⭐1점을 줬습니다.</li>
+<li><strong>철수</strong>는 영화 A에 ⭐5점, 영화 B에 ⭐5점을 줬는데, 영화 C는 아직 보지 않았습니다.</li>
+<li><strong>민수</strong>는 영화 A에 ⭐1점, 영화 B에 ⭐2점, 영화 C에 ⭐5점을 줬습니다.</li>
+</ul>
+<p>협업 필터링 시스템은 이렇게 판단합니다:
+- 철수는 영희와 취향이 비슷하다 (A, B 평점이 유사).
+- 영희는 영화 C에 1점을 줬다.
+- 따라서 <strong>철수에게는 영화 C를 추천하지 않는다.</strong></p>
+<blockquote>
+<p>📌 <strong>알아보기:</strong> 넷플릭스는 2006년에 "추천 알고리즘의 정확도를 10% 이상 개선하는 팀에게 100만 달러(약 13억 원)를 주겠다"는 대회를 열었습니다. 3년 후 한 팀이 이 상금을 받았는데, 이 대회가 추천 시스템 기술 발전에 큰 기여를 했습니다.</p>
+</blockquote>
+<hr />
+<h3 id="4">개념 4: 데이터 과학의 윤리 ⚖️<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<h4 id="1_4">1. 비유로 시작<a class="headerlink" href="#1_4" title="Permanent link">&para;</a></h4>
+<p>칼은 요리할 때 쓰면 맛있는 음식을 만들 수 있지만, 잘못 사용하면 다칠 수 있습니다. 데이터 과학도 마찬가지입니다. 강력한 도구일수록 <strong>어떻게 사용하느냐</strong>가 중요합니다.</p>
+<h4 id="2_4">2. 정확한 정의<a class="headerlink" href="#2_4" title="Permanent link">&para;</a></h4>
+<p><strong>데이터 윤리(Data Ethics)</strong> 란, 데이터를 수집·저장·분석·활용하는 모든 과정에서 <strong>개인의 권리를 보호하고, 공정성을 유지하며, 사회에 해를 끼치지 않도록</strong> 지켜야 할 도덕적 원칙과 기준을 말합니다.</p>
+<p>주요 쟁점은 다음과 같습니다.</p>
+<p><strong>🔒 쟁점 1: 개인정보 보호</strong></p>
+<ul>
+<li>우리가 앱을 사용할 때 동의하는 "개인정보 처리방침"을 끝까지 읽어본 적이 있나요?</li>
+<li>2018년 페이스북의 캠브리지 애널리티카 사건에서 약 8,700만 명의 사용자 데이터가 동의 없이 정치 캠페인에 활용되었습니다.</li>
+<li>한국에서는 <strong>개인정보보호법</strong>으로 개인정보 수집·이용에 반드시 본인의 동의를 받도록 규정하고 있습니다.</li>
+</ul>
+<p><strong>⚖️ 쟁점 2: 알고리즘 편향(Bias)</strong></p>
+<ul>
+<li>AI가 학습하는 데이터에 편향이 있으면, AI의 판단도 편향됩니다.</li>
+<li>미국의 한 채용 AI가 과거 채용 데이터(남성 비율이 높은)를 학습한 결과, <strong>여성 지원자에게 불리한 점수</strong>를 매기는 문제가 발생했습니다.</li>
+<li>얼굴 인식 AI가 <strong>피부색이 어두운 사람을 잘 인식하지 못하는</strong> 문제도 보고되었습니다.</li>
+</ul>
+<p><strong>🫧 쟁점 3: 필터 버블(Filter Bubble)</strong></p>
+<ul>
+<li>추천 시스템이 내가 좋아하는 것만 계속 보여주면, 마치 <strong>거품 속에 갇힌 것처럼</strong> 다양한 관점을 접할 기회가 줄어듭니다.</li>
+<li>뉴스 추천에서 이 문제가 심각할 수 있습니다. 내 생각과 같은 뉴스만 계속 보게 되면, 세상을 균형 있게 바라보기 어려워집니다.</li>
+</ul>
+<h4 id="3_4">3. 예시로 확인<a class="headerlink" href="#3_4" title="Permanent link">&para;</a></h4>
+<div class="mermaid">flowchart TB
+    DATA["📊 데이터 과학의 힘"]
+    DATA --&gt; GOOD["✅ 긍정적 활용"]
+    DATA --&gt; BAD["❌ 부정적 위험"]
+
+    GOOD --&gt; G1["질병 조기 발견으로\n생명 구하기"]
+    GOOD --&gt; G2["환경 오염 감시로\n지구 보호"]
+    GOOD --&gt; G3["맞춤형 교육으로\n학습 효율 향상"]
+
+    BAD --&gt; B1["개인정보 유출\n사생활 침해"]
+    BAD --&gt; B2["편향된 AI\n차별 강화"]
+    BAD --&gt; B3["필터 버블\n시야 축소"]</div>
+<blockquote>
+<p>🤔 <strong>생각해보기:</strong> "더 좋은 추천을 받기 위해 나의 모든 인터넷 사용 기록을 기업에 제공해도 괜찮을까?" 여러분의 생각은 어떤가요? 정답은 없습니다. 중요한 것은 <strong>이 문제에 대해 스스로 생각해보는 것</strong>입니다.</p>
+</blockquote>
+<hr />
+<h2 id="_5">🔨 따라하기: 영화 평점 데이터로 추천의 원리 맛보기<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>이번 실습에서는 Google Colab에서 간단한 영화 평점 데이터를 만들고, <strong>"나와 취향이 비슷한 사람"</strong> 을 찾아보겠습니다. 추천 시스템의 핵심 원리인 협업 필터링을 직접 체험하는 것이 목표입니다.</p>
+<h3 id="step-1">Step 1: 영화 평점 데이터 만들기 🎬<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h3>
+<p>먼저, 5명의 사용자가 6편의 영화에 매긴 평점 데이터를 만들어봅시다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># pandas 라이브러리를 불러옵니다</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># 5명의 사용자가 6편의 영화에 매긴 평점 (1~5점, 0은 아직 안 봄)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="s1">&#39;사용자&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;영희&#39;</span><span class="p">,</span> <span class="s1">&#39;철수&#39;</span><span class="p">,</span> <span class="s1">&#39;민수&#39;</span><span class="p">,</span> <span class="s1">&#39;지은&#39;</span><span class="p">,</span> <span class="s1">&#39;태호&#39;</span><span class="p">],</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="s1">&#39;어벤져스&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="s1">&#39;타이타닉&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="s1">&#39;인터스텔라&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="s1">&#39;노트북&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="s1">&#39;다크나이트&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="s1">&#39;라라랜드&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>  <span class="c1"># 0 = 아직 보지 않음</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1"># 데이터프레임 만들기</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;사용자&#39;</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🎬 영화 평점 데이터&quot;</span><span class="p">)</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span></code></pre></div>
+<blockquote>
+<p>💡 <strong>코드 설명:</strong> <code>set_index('사용자')</code>는 '사용자' 열을 행의 이름(인덱스)으로 지정합니다. 이렇게 하면 "영희의 어벤져스 평점"처럼 직관적으로 데이터를 찾을 수 있습니다.</p>
+</blockquote>
+<p>실행하면 이런 결과가 나옵니다:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>🎬 영화 평점 데이터
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>      어벤져스  타이타닉  인터스텔라  노트북  다크나이트  라라랜드
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>사용자                                              
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>영희       5       2        5      1        4       2
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>철수       5       1        4      2        5       0
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>민수       1       5        2      5        1       4
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>지은       4       2        5      1        4       0
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>태호       2       5        1      4        2       5
+</span></code></pre></div>
+<p>데이터를 보면 패턴이 보이시나요? 영희, 철수, 지은은 액션·SF 영화(어벤져스, 인터스텔라, 다크나이트)를 좋아하고, 민수와 태호는 로맨스 영화(타이타닉, 노트북, 라라랜드)를 좋아하는 것 같습니다.</p>
+<hr />
+<h3 id="step-2">Step 2: 평점을 시각화하기 📊<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h3>
+<p>숫자만 보면 패턴을 파악하기 어려울 수 있습니다. <strong>히트맵(Heatmap)</strong> 으로 시각화하면 한눈에 볼 수 있습니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># 한글 폰트 설정 (Colab 환경)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NanumGothic&#39;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.unicode_minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1"># 한글 폰트가 안 될 경우를 대비한 설치 코드</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;apt-get&#39;</span><span class="p">,</span> <span class="s1">&#39;-qq&#39;</span><span class="p">,</span> <span class="s1">&#39;install&#39;</span><span class="p">,</span> <span class="s1">&#39;-y&#39;</span><span class="p">,</span> <span class="s1">&#39;fonts-nanum&#39;</span><span class="p">],</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.font_manager</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">fm</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">fm</span><span class="o">.</span><span class="n">fontManager</span><span class="o">.</span><span class="n">addfont</span><span class="p">(</span><span class="s1">&#39;/usr/share/fonts/truetype/nanum/NanumGothic.ttf&#39;</span><span class="p">)</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NanumGothic&#39;</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="c1"># 히트맵 그리기</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;YlOrRd&#39;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> 
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>            <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;평점&#39;</span><span class="p">})</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;🎬 사용자별 영화 평점 히트맵&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;사용자&#39;</span><span class="p">)</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;영화&#39;</span><span class="p">)</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<blockquote>
+<p>💡 <strong>코드 설명:</strong>
+- <code>sns.heatmap()</code>: 숫자를 <strong>색상의 진하기</strong>로 표현합니다. 평점이 높을수록 진한 색!
+- <code>annot=True</code>: 각 칸에 숫자를 표시합니다.
+- <code>cmap='YlOrRd'</code>: 노란색(낮음)→빨간색(높음)으로 색상을 표현합니다.</p>
+</blockquote>
+<p>히트맵을 보면, 비슷한 색깔 패턴을 가진 사용자들이 눈에 들어올 것입니다!</p>
+<hr />
+<h3 id="step-3">Step 3: "나와 취향이 비슷한 사람" 찾기 🤝<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h3>
+<p>추천 시스템의 핵심! <strong>사용자 간의 유사도</strong>를 계산해봅시다. 여기서는 <strong>코사인 유사도(Cosine Similarity)</strong> 라는 방법을 사용합니다.</p>
+<p>코사인 유사도란 쉽게 말해 <strong>"두 사람의 평점 패턴이 얼마나 같은 방향을 가리키는지"</strong> 를 측정하는 것입니다. 1에 가까우면 취향이 비슷하고, 0에 가까우면 관련이 없고, -1에 가까우면 취향이 정반대입니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics.pairwise</span><span class="w"> </span><span class="kn">import</span> <span class="n">cosine_similarity</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># 0(안 봄)을 제외하고 유사도를 계산하기 위해, </span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1"># 여기서는 간단히 0을 포함하여 계산합니다</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">similarity</span> <span class="o">=</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1"># 유사도 결과를 데이터프레임으로 만들기</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">sim_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">similarity</span><span class="p">,</span> 
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>                       <span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> 
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>                       <span class="n">columns</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🤝 사용자 간 취향 유사도 (코사인 유사도)&quot;</span><span class="p">)</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">sim_df</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>  <span class="c1"># 소수점 2자리까지 표시</span>
+</span></code></pre></div>
+<p>실행 결과 예시:</p>
+<p>```
+🤝 사용자 간 취향 유사도 (코사인 유사도)
+      영희    철수    민수    지은    태호
+영희  1.00   0.97   0.42   0.99   0.38
+철수  0.97   1.00</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/title-link.js"></script>
+      
+    
+  </body>
+</html>

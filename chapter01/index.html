@@ -1,0 +1,2600 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="삼양미디어 데이터과학 교과서와 1:1 대응하는 구글 코랩 기반 실습 교재로, 비유로 시작해 코드로 확인하고 프로젝트로 완성하는 40차시 커리큘럼입니다.">
+      
+      
+        <meta name="author" content="Created with EduFlow">
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../chapter02/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>데이터 과학과 문제 해결 - 고등학교 데이터과학 with Python</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-01" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="고등학교 데이터과학 with Python" class="md-header__button md-logo" aria-label="고등학교 데이터과학 with Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            고등학교 데이터과학 with Python
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              데이터 과학과 문제 해결
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 1 - [1권] 데이터 과학의 이해
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter05/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 2 - [1권] 데이터 준비와 분석
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter11/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 3 - [1권] 데이터 모델링과 평가
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter16/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 4 - [2권] 데이터 과학 프로젝트 — 교과서 주제 실습
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chapter21/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Part 5 - [2권] 나만의 데이터 과학 프로젝트
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="고등학교 데이터과학 with Python" class="md-nav__button md-logo" aria-label="고등학교 데이터과학 with Python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    고등학교 데이터과학 with Python
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1 - [1권] 데이터 과학의 이해
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 1 - [1권] 데이터 과학의 이해
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 과학과 문제 해결
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 과학과 문제 해결
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 이 장에서 배우는 것
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 개념 1: 데이터 과학이란?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="핵심 개념 1: 데이터 과학이란?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 — "데이터라는 재료로 요리하는 셰프"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ppdac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 개념 2: PPDAC — 데이터 과학의 문제 해결 프로세스
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="핵심 개념 2: PPDAC — 데이터 과학의 문제 해결 프로세스">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 — "여행 계획 세우기"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 개념 3: 데이터 과학자는 어떤 사람인가?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="핵심 개념 3: 데이터 과학자는 어떤 사람인가?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 — "세 가지 언어를 하는 통역사"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 개념 4: 일상 문제를 데이터 과학적 질문으로 바꾸기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="핵심 개념 4: 일상 문제를 데이터 과학적 질문으로 바꾸기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 — "돋보기로 초점 맞추기"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인 — 질문 변환 연습
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ppdac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 따라하기: 음원 차트 데이터로 PPDAC 첫 단계 체험하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔨 따라하기: 음원 차트 데이터로 PPDAC 첫 단계 체험하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 사전 준비
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-ppdac-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: 우리의 문제 정의하기 (PPDAC의 P)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-ppdac-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: 데이터 만들고 불러오기 (PPDAC의 D)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: 데이터의 기본 정보 확인하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: 데이터를 눈으로 보기 — 시각화 첫 경험
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-ppdac-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: 간단한 분석 — 아티스트별 곡 수 세기 (PPDAC의 A)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-ppdac-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: 결론 정리하기 (PPDAC의 C)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터의 형태와 속성
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터셋과 데이터베이스
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    세상을 바꾸는 데이터 과학
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2 - [1권] 데이터 준비와 분석
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 2 - [1권] 데이터 준비와 분석
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 수집 및 특성 분석 (1) — 데이터 수집과 탐색
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 수집 및 특성 분석 (2) — 기술통계와 시각화
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 전처리 (1) — 결측치와 이상치 처리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 전처리 (2) — 데이터 변환과 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 속성 간의 관계 파악
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    동일한 데이터의 다양한 분석 및 비교
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3 - [1권] 데이터 모델링과 평가
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 3 - [1권] 데이터 모델링과 평가
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 모델과 모델링
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    회귀 분석 (1) — 단순 선형 회귀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    회귀 분석 (2) — 모델 평가와 다중 회귀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    군집 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    연관 분석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4 - [2권] 데이터 과학 프로젝트 — 교과서 주제 실습
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 4 - [2권] 데이터 과학 프로젝트 — 교과서 주제 실습
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    데이터 과학 적용과 데이터 적합성
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    슬기로운 의사 생활 (1) — 문제 정의와 데이터 준비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    슬기로운 의사 생활 (2) — 모델링과 결과 해석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    지혜로운 어부 생활 (1) — 문제 정의와 데이터 준비
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    지혜로운 어부 생활 (2) — 모델링과 결과 해석
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5 - [2권] 나만의 데이터 과학 프로젝트
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Part 5 - [2권] 나만의 데이터 과학 프로젝트
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 기획 — 주제 선정과 계획 수립
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 실행 (1) — 데이터 수집과 전처리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 실행 (2) — 분석과 모델링
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    프로젝트 마무리 — 보고서 작성과 최종 발표
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 이 장에서 배우는 것
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 왜 이걸 배우나요?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 핵심 개념
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 핵심 개념">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 개념 1: 데이터 과학이란?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="핵심 개념 1: 데이터 과학이란?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 — "데이터라는 재료로 요리하는 셰프"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ppdac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 개념 2: PPDAC — 데이터 과학의 문제 해결 프로세스
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="핵심 개념 2: PPDAC — 데이터 과학의 문제 해결 프로세스">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 — "여행 계획 세우기"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 개념 3: 데이터 과학자는 어떤 사람인가?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="핵심 개념 3: 데이터 과학자는 어떤 사람인가?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 — "세 가지 언어를 하는 통역사"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        핵심 개념 4: 일상 문제를 데이터 과학적 질문으로 바꾸기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="핵심 개념 4: 일상 문제를 데이터 과학적 질문으로 바꾸기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1) 비유로 시작 — "돋보기로 초점 맞추기"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2) 정확한 정의
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3) 예시로 확인 — 질문 변환 연습
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ppdac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔨 따라하기: 음원 차트 데이터로 PPDAC 첫 단계 체험하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔨 따라하기: 음원 차트 데이터로 PPDAC 첫 단계 체험하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ 사전 준비
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-ppdac-p" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: 우리의 문제 정의하기 (PPDAC의 P)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-ppdac-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: 데이터 만들고 불러오기 (PPDAC의 D)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: 데이터의 기본 정보 확인하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: 데이터를 눈으로 보기 — 시각화 첫 경험
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-ppdac-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: 간단한 분석 — 아티스트별 곡 수 세기 (PPDAC의 A)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-ppdac-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: 결론 정리하기 (PPDAC의 C)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-01">📘 Chapter 01: 데이터 과학과 문제 해결<a class="headerlink" href="#chapter-01" title="Permanent link">&para;</a></h1>
+<p><strong>Part 1 | [1권] 데이터 과학의 이해 — 1차시</strong></p>
+<hr />
+<h2 id="_1">🎯 이 장에서 배우는 것<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>이 장을 마치면 다음을 할 수 있습니다.</p>
+</blockquote>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터 과학의 정의를 자신의 말로 설명할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> PPDAC 프로세스 5단계를 순서대로 나열하고 각 단계의 역할을 설명할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 일상 속 궁금증을 데이터 과학적 문제로 바꿔 표현할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 구글 코랩에서 간단한 데이터를 불러와 확인하는 코드를 실행할 수 있다</li>
+</ul>
+<hr />
+<h2 id="_2">💡 왜 이걸 배우나요?<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>생각해보기</strong> 🤔</p>
+<p><em>"내가 좋아하는 아이돌이 진짜 인기 있다"는 걸 친구에게 어떻게 증명할 수 있을까요?</em></p>
+<p>"느낌적으로 인기 있어!"라고 말하면 친구는 고개를 갸우뚱할 겁니다. 하지만 <strong>음원 차트 순위</strong>, <strong>스트리밍 횟수</strong>, <strong>SNS 언급량</strong> 같은 <strong>숫자(데이터)</strong>를 보여주면 어떨까요? 이제 친구도 "오, 진짜네?" 하고 납득하겠죠.</p>
+</blockquote>
+<p>이것이 바로 <strong>데이터 과학</strong>의 출발점입니다.</p>
+<p>우리는 매일 수많은 궁금증 속에서 살아갑니다.</p>
+<ul>
+<li>"이번 시험, 어떤 과목에 시간을 더 투자해야 할까?"</li>
+<li>"우리 동네 미세먼지가 정말 점점 심해지고 있을까?"</li>
+<li>"어떤 운동을 해야 체력이 가장 빨리 늘까?"</li>
+</ul>
+<p>이런 질문에 <strong>감(感)이 아닌 근거(데이터)</strong>로 답하는 힘, 그것이 데이터 과학입니다. 이 역량은 진로와 상관없이 <strong>21세기를 살아가는 모든 사람에게 필요한 기초 체력</strong>과 같습니다. 첫 번째 수업인 오늘, 그 여정의 출발선에 함께 서 봅시다.</p>
+<hr />
+<h2 id="_3">📚 핵심 개념<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="1">핵심 개념 1: 데이터 과학이란?<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<h4 id="1_1">1) 비유로 시작 — "데이터라는 재료로 요리하는 셰프"<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h4>
+<p>여러분이 셰프라고 상상해 보세요.</p>
+<div class="mermaid">flowchart LR
+    A["🥕 재료 = 데이터"] --&gt; B["🔪 손질·조리 = 분석"]
+    B --&gt; C["🍽️ 요리 = 인사이트·해결책"]</div>
+<ul>
+<li><strong>재료(데이터)</strong> 가 신선하고 풍부해야 좋은 요리가 나옵니다.</li>
+<li><strong>조리법(분석 방법)</strong> 을 알아야 재료를 맛있게 바꿀 수 있습니다.</li>
+<li>최종 목표는 <strong>맛있는 한 접시(의미 있는 결론)</strong> 를 내놓는 것입니다.</li>
+</ul>
+<p>데이터 과학은 이 과정 전체를 가리킵니다. 재료 고르기(수집)부터 요리 완성(소통)까지, <strong>처음부터 끝까지 데이터를 다루는 학문이자 실천</strong>입니다.</p>
+<h4 id="2">2) 정확한 정의<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>📖 정의</strong></p>
+<p><strong>데이터 과학(Data Science)</strong> 이란, 다양한 형태의 데이터를 <strong>수집 → 정리 → 분석 → 시각화 → 소통</strong>하여 유용한 지식과 통찰(인사이트)을 끌어내고, 이를 통해 <strong>현실 문제를 해결</strong>하는 융합 학문이다.</p>
+</blockquote>
+<p>여기서 핵심 키워드 세 가지를 기억하세요.</p>
+<ul>
+<li><strong>데이터(Data)</strong>: 관찰이나 측정으로 얻은 값. 숫자, 텍스트, 이미지, 영상 모두 포함</li>
+<li><strong>인사이트(Insight)</strong>: 데이터 분석을 통해 발견한 <strong>"아하!" 하는 의미 있는 패턴이나 결론</strong></li>
+<li><strong>융합(Convergence)</strong>: 수학·통계 + 컴퓨터 프로그래밍 + 해당 분야 전문 지식이 만나는 교차점</li>
+</ul>
+<h4 id="3">3) 예시로 확인<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>알아보기</strong> 📌</p>
+<p>넷플릭스는 여러분이 어떤 영상을 몇 분 봤는지, 어디서 일시정지했는지, 어떤 썸네일을 클릭했는지 등의 <strong>데이터</strong>를 수집합니다. 이 데이터를 <strong>분석</strong>해서 "이 사용자는 로맨스 장르를 좋아하고, 저녁 10시에 주로 시청한다"라는 <strong>인사이트</strong>를 얻습니다. 그 결과 여러분의 홈 화면에는 취향 저격 콘텐츠가 쫘악 뜨는 것이죠. 이것이 데이터 과학이 실생활에서 작동하는 대표적 사례입니다.</p>
+</blockquote>
+<hr />
+<h3 id="2-ppdac">핵심 개념 2: PPDAC — 데이터 과학의 문제 해결 프로세스<a class="headerlink" href="#2-ppdac" title="Permanent link">&para;</a></h3>
+<h4 id="1_2">1) 비유로 시작 — "여행 계획 세우기"<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h4>
+<p>여행을 떠나려면 어떻게 하나요?</p>
+<ol>
+<li><strong>어디로 갈까?</strong> (목적지 정하기)</li>
+<li><strong>무엇을 준비할까?</strong> (짐 싸기)</li>
+<li><strong>어떤 교통편을 탈까?</strong> (이동 수단 결정)</li>
+<li><strong>여행지에서 뭘 할까?</strong> (활동 계획)</li>
+<li><strong>돌아와서 후기 쓰기</strong> (공유)</li>
+</ol>
+<p>데이터 과학에서도 문제를 해결할 때 이와 비슷한 <strong>정해진 순서(프로세스)</strong>를 따릅니다. 그것이 바로 <strong>PPDAC</strong>입니다.</p>
+<h4 id="2_1">2) 정확한 정의<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>📖 정의</strong></p>
+<p><strong>PPDAC</strong>은 데이터 과학에서 문제를 체계적으로 해결하기 위한 <strong>5단계 프로세스</strong>입니다.
+각 단계의 영어 첫 글자를 딴 이름입니다.</p>
+</blockquote>
+<div class="mermaid">flowchart LR
+    P1["🔍 Problem\n문제 정의"]
+    P2["📋 Plan\n계획 수립"]
+    D["📦 Data\n데이터 수집"]
+    A["📊 Analysis\n분석"]
+    C["📢 Conclusion\n결론 및 소통"]
+
+    P1 --&gt; P2 --&gt; D --&gt; A --&gt; C
+    C -.-&gt;|"필요하면\n다시 돌아가기"| P1</div>
+<p>각 단계를 좀 더 자세히 살펴봅시다.</p>
+<p><strong>🔍 1단계 — Problem (문제 정의)</strong>
+- "정확히 무엇을 알고 싶은가?"를 명확하게 정합니다.
+- 막연한 궁금증을 <strong>구체적인 질문</strong>으로 바꾸는 단계입니다.
+- ❌ "아이돌 인기 궁금해" → ⭕ "2024년 상반기 멜론 차트에서 A그룹의 곡이 TOP 10에 며칠간 머물렀을까?"</p>
+<p><strong>📋 2단계 — Plan (계획 수립)</strong>
+- 어떤 데이터를 어디서, 어떻게 모을지 <strong>전략</strong>을 세웁니다.
+- 분석에 사용할 <strong>도구</strong>(예: 구글 코랩, 엑셀)도 이 단계에서 결정합니다.</p>
+<p><strong>📦 3단계 — Data (데이터 수집)</strong>
+- 계획에 따라 실제로 데이터를 <strong>모으고 정리</strong>합니다.
+- 빠진 값은 없는지, 잘못된 값은 없는지 <strong>품질 검사</strong>도 포함됩니다.</p>
+<p><strong>📊 4단계 — Analysis (분석)</strong>
+- 수집한 데이터를 <strong>그래프, 통계, 프로그래밍</strong> 등으로 분석합니다.
+- 패턴이나 추세를 발견하는 단계입니다.</p>
+<p><strong>📢 5단계 — Conclusion (결론 및 소통)</strong>
+- 분석 결과를 <strong>다른 사람이 이해할 수 있도록</strong> 정리하고 전달합니다.
+- 시각화(그래프, 대시보드), 보고서, 발표 등의 형태가 됩니다.</p>
+<h4 id="3_1">3) 예시로 확인<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>알아보기</strong> 📌</p>
+<p><strong>질문</strong>: "우리 반 학생들은 하루에 스마트폰을 얼마나 사용할까?"</p>
+<ul>
+<li><strong>Problem</strong>: 우리 반 30명의 일 평균 스마트폰 사용 시간은 몇 시간인가?</li>
+<li><strong>Plan</strong>: 스마트폰 '스크린 타임' 기능의 지난 7일 평균을 수집하기로 한다. 구글 설문지로 모으자.</li>
+<li><strong>Data</strong>: 30명의 응답을 스프레드시트에 정리한다. 미응답자 3명은 제외.</li>
+<li><strong>Analysis</strong>: 평균, 최솟값, 최댓값을 구하고 히스토그램을 그린다.</li>
+<li><strong>Conclusion</strong>: "우리 반 평균 사용 시간은 4.2시간이며, 3~5시간 구간에 가장 많이 몰려 있다." → 학급 게시판에 인포그래픽으로 공유</li>
+</ul>
+</blockquote>
+<hr />
+<h3 id="3_2">핵심 개념 3: 데이터 과학자는 어떤 사람인가?<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h3>
+<h4 id="1_3">1) 비유로 시작 — "세 가지 언어를 하는 통역사"<a class="headerlink" href="#1_3" title="Permanent link">&para;</a></h4>
+<p>데이터 과학자는 세 가지 세계의 말을 동시에 할 줄 아는 사람입니다.</p>
+<div class="mermaid">flowchart TD
+    subgraph 데이터 과학자의 역량
+        A["🔢 수학·통계\n데이터를 요약하고\n패턴을 찾는 힘"]
+        B["💻 프로그래밍\n컴퓨터에게 일을\n시키는 힘"]
+        C["🌍 도메인 지식\n해당 분야를\n이해하는 힘"]
+    end
+
+    A --- D((("🧑‍🔬\n데이터\n과학자")))
+    B --- D
+    C --- D</div>
+<ul>
+<li><strong>수학·통계</strong>: 평균, 확률, 추세선 등 데이터를 요약하고 판단하는 기초 도구</li>
+<li><strong>프로그래밍</strong>: Python 같은 언어로 대량의 데이터를 빠르게 처리하는 능력</li>
+<li><strong>도메인 지식</strong>: 분석 대상 분야(음악, 의료, 스포츠 등)에 대한 배경 이해</li>
+</ul>
+<h4 id="2_2">2) 정확한 정의<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>📖 정의</strong></p>
+<p><strong>데이터 과학자(Data Scientist)</strong> 란, 수학·통계 지식과 프로그래밍 기술, 그리고 특정 분야의 전문 지식을 융합하여 데이터로부터 가치 있는 인사이트를 추출하고 의사결정을 돕는 전문가이다.</p>
+</blockquote>
+<h4 id="3_3">3) 예시로 확인<a class="headerlink" href="#3_3" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>알아보기</strong> 📌</p>
+<p>같은 데이터라도 <strong>도메인 지식</strong>에 따라 해석이 달라집니다.</p>
+<ul>
+<li><strong>의료 데이터 과학자</strong>: 환자 10,000명의 혈압 데이터를 분석해 고혈압 위험 요인을 발견</li>
+<li><strong>게임 데이터 과학자</strong>: 게임 플레이 로그를 분석해 유저가 이탈하는 구간을 찾고 난이도를 조절</li>
+<li><strong>스포츠 데이터 과학자</strong>: 선수의 경기 데이터를 분석해 최적의 전술을 제안 (야구의 머니볼이 유명하죠!)</li>
+</ul>
+<p>세 사람 모두 데이터를 분석하지만, <strong>어떤 분야를 이해하느냐</strong>에 따라 완전히 다른 일을 합니다.</p>
+</blockquote>
+<hr />
+<h3 id="4">핵심 개념 4: 일상 문제를 데이터 과학적 질문으로 바꾸기<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<h4 id="1_4">1) 비유로 시작 — "돋보기로 초점 맞추기"<a class="headerlink" href="#1_4" title="Permanent link">&para;</a></h4>
+<p>막연한 궁금증은 흐릿한 사진과 같습니다. <strong>데이터 과학적 질문</strong>으로 바꾸는 것은 돋보기로 초점을 맞춰 선명한 사진으로 만드는 과정입니다.</p>
+<h4 id="2_3">2) 정확한 정의<a class="headerlink" href="#2_3" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>📖 핵심 원칙</strong></p>
+<p>좋은 데이터 과학적 질문에는 <strong>세 가지 요소</strong>가 포함됩니다.</p>
+<ul>
+<li><strong>측정 가능성</strong>: 숫자나 범주로 표현할 수 있는가?</li>
+<li><strong>구체성</strong>: 대상, 기간, 범위가 명확한가?</li>
+<li><strong>데이터 확보 가능성</strong>: 실제로 데이터를 구할 수 있는가?</li>
+</ul>
+</blockquote>
+<h4 id="3_4">3) 예시로 확인 — 질문 변환 연습<a class="headerlink" href="#3_4" title="Permanent link">&para;</a></h4>
+<p><strong>변환 전 → 변환 후</strong></p>
+<blockquote>
+<p><strong>생각해보기</strong> 🤔</p>
+<p>❌ "요즘 날씨가 이상한 것 같아"
+⭕ "서울의 2014~2024년 1월 평균 기온은 상승 추세를 보이는가?"</p>
+<p>❌ "카페 음료 중에 뭐가 제일 잘 팔려?"
+⭕ "우리 학교 앞 카페에서 지난달 가장 많이 팔린 음료 TOP 5는 무엇인가?"</p>
+<p>❌ "잠을 많이 자면 성적이 오를까?"
+⭕ "우리 반 학생의 일 평균 수면 시간과 중간고사 평균 점수 사이에 양의 상관관계가 있는가?"</p>
+</blockquote>
+<p>세 가지 변환 모두 <strong>측정 가능 + 구체적 + 데이터 확보 가능</strong>이라는 조건을 만족합니다.</p>
+<hr />
+<blockquote>
+<p><strong>정리하기</strong> 📋</p>
+<p>지금까지 배운 핵심 개념 4가지를 한눈에 정리합니다.</p>
+<ul>
+<li><strong>데이터 과학</strong>: 데이터로 현실 문제를 해결하는 융합 학문</li>
+<li><strong>PPDAC</strong>: Problem → Plan → Data → Analysis → Conclusion의 5단계 프로세스</li>
+<li><strong>데이터 과학자의 역량</strong>: 수학·통계 + 프로그래밍 + 도메인 지식</li>
+<li><strong>데이터 과학적 질문</strong>: 측정 가능 + 구체적 + 데이터 확보 가능한 질문으로 변환</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="ppdac">🔨 따라하기: 음원 차트 데이터로 PPDAC 첫 단계 체험하기<a class="headerlink" href="#ppdac" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>이제 직접 코드를 실행해 봅시다!
+<strong>구글 코랩(Google Colab)</strong>을 사용합니다. 설치가 필요 없고, 웹 브라우저만 있으면 됩니다.</p>
+</blockquote>
+<h3 id="_4">🛠️ 사전 준비<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>구글 계정에 로그인합니다.</li>
+<li>웹 브라우저에서 <strong><a href="https://colab.research.google.com">colab.research.google.com</a></strong> 에 접속합니다.</li>
+<li><strong>"새 노트"</strong> 를 클릭하면 빈 코드 실행 환경이 열립니다.</li>
+</ol>
+<blockquote>
+<p><strong>알아보기</strong> 📌</p>
+<p><strong>구글 코랩(Google Colab)</strong> 이란?
+구글이 무료로 제공하는 클라우드 기반 Python 실행 환경입니다. 내 컴퓨터에 아무것도 설치하지 않아도 브라우저에서 바로 코드를 작성하고 실행할 수 있습니다. 마치 구글 문서(Google Docs)가 온라인 워드프로세서인 것처럼, 코랩은 <strong>온라인 코딩 도구</strong>입니다.</p>
+</blockquote>
+<hr />
+<h3 id="step-1-ppdac-p">Step 1: 우리의 문제 정의하기 (PPDAC의 P)<a class="headerlink" href="#step-1-ppdac-p" title="Permanent link">&para;</a></h3>
+<p>오늘 우리가 답하고 싶은 질문은 이것입니다.</p>
+<blockquote>
+<p><strong>🔍 문제(Problem)</strong></p>
+<p>"2024년 상반기, K-POP 그룹별 음원 차트 성적은 어떤 차이가 있을까?"</p>
+</blockquote>
+<p>실제 멜론 차트 데이터를 구하려면 복잡한 과정이 필요하므로, 오늘은 <strong>학습용 샘플 데이터</strong>를 직접 만들어서 사용합니다. 실제 데이터와 형식이 동일하므로 연습에 충분합니다.</p>
+<hr />
+<h3 id="step-2-ppdac-d">Step 2: 데이터 만들고 불러오기 (PPDAC의 D)<a class="headerlink" href="#step-2-ppdac-d" title="Permanent link">&para;</a></h3>
+<p>코랩의 코드 셀에 아래 코드를 복사-붙여넣기한 후, <strong>▶ 실행 버튼</strong>(또는 <code>Shift + Enter</code>)을 누르세요.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># pandas 라이브러리 불러오기</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># pandas는 데이터를 표(테이블) 형태로 다루는 도구입니다</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># 학습용 샘플 음원 차트 데이터 만들기</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="s1">&#39;순위&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="s1">&#39;곡명&#39;</span><span class="p">:</span> <span class="p">[</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="s1">&#39;Supernova&#39;</span><span class="p">,</span> <span class="s1">&#39;How Sweet&#39;</span><span class="p">,</span> <span class="s1">&#39;Magnetic&#39;</span><span class="p">,</span> 
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="s1">&#39;Armageddon&#39;</span><span class="p">,</span> <span class="s1">&#39;Supernatural&#39;</span><span class="p">,</span> <span class="s1">&#39;Steady&#39;</span><span class="p">,</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="s1">&#39;Love Wins All&#39;</span><span class="p">,</span> <span class="s1">&#39;Smart&#39;</span><span class="p">,</span> <span class="s1">&#39;SPOT!&#39;</span><span class="p">,</span>  <span class="s1">&#39;Fate&#39;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="p">],</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="s1">&#39;아티스트&#39;</span><span class="p">:</span> <span class="p">[</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        <span class="s1">&#39;aespa&#39;</span><span class="p">,</span> <span class="s1">&#39;NewJeans&#39;</span><span class="p">,</span> <span class="s1">&#39;ILLIT&#39;</span><span class="p">,</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        <span class="s1">&#39;aespa&#39;</span><span class="p">,</span> <span class="s1">&#39;NewJeans&#39;</span><span class="p">,</span> <span class="s1">&#39;LE SSERAFIM&#39;</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        <span class="s1">&#39;IU&#39;</span><span class="p">,</span> <span class="s1">&#39;LE SSERAFIM&#39;</span><span class="p">,</span> <span class="s1">&#39;ZICO(feat.JENNIE)&#39;</span><span class="p">,</span> <span class="s1">&#39;ENHYPEN&#39;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="p">],</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="s1">&#39;스트리밍수_만&#39;</span><span class="p">:</span> <span class="p">[</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        <span class="mi">4820</span><span class="p">,</span> <span class="mi">4510</span><span class="p">,</span> <span class="mi">4230</span><span class="p">,</span> 
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        <span class="mi">3980</span><span class="p">,</span> <span class="mi">3750</span><span class="p">,</span> <span class="mi">3620</span><span class="p">,</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        <span class="mi">3540</span><span class="p">,</span> <span class="mi">3380</span><span class="p">,</span> <span class="mi">3210</span><span class="p">,</span> <span class="mi">3050</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="p">],</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="s1">&#39;차트진입월&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">}</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="c1"># DataFrame(데이터프레임) 만들기 — 엑셀 시트와 비슷한 표 구조</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="c1"># 데이터 출력해서 확인하기</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🎵 2024 상반기 음원 차트 TOP 10 (샘플 데이터)&quot;</span><span class="p">)</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">55</span><span class="p">)</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span></code></pre></div>
+<blockquote>
+<p><strong>알아보기</strong> 📌</p>
+<p><strong>pandas(판다스)</strong> 란?
+Python에서 데이터를 표(테이블) 형태로 쉽게 다룰 수 있게 해주는 도구(라이브러리)입니다. 엑셀의 스프레드시트를 코드로 다룬다고 생각하면 됩니다. 데이터 과학에서 가장 많이 사용하는 핵심 도구 중 하나입니다.</p>
+<p><strong>DataFrame(데이터프레임)</strong> 이란?
+pandas에서 사용하는 <strong>2차원 표</strong> 형태의 데이터 구조입니다. 행(row)과 열(column)로 이루어져 있어서 엑셀 시트와 거의 같은 모양입니다.</p>
+</blockquote>
+<hr />
+<h3 id="step-3">Step 3: 데이터의 기본 정보 확인하기<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h3>
+<p>데이터를 수집했으면 "이 데이터가 어떻게 생겼는지" 먼저 파악해야 합니다. 새로운 코드 셀을 추가하고(<code>+ 코드</code> 버튼) 아래를 실행하세요.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 데이터의 크기 확인: (행 수, 열 수)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📐 데이터 크기:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># 각 열(column)의 이름과 데이터 타입 확인</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📋 데이터 정보:&quot;</span><span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># 숫자 데이터의 기본 통계 확인</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📊 기본 통계:&quot;</span><span class="p">)</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+</span></code></pre></div>
+<p>실행하면 다음과 같은 정보를 얻을 수 있습니다.</p>
+<ul>
+<li><code>shape</code>: 이 데이터는 <strong>10행 × 5열</strong>, 즉 곡 10개에 대해 5가지 정보가 있다</li>
+<li><code>info()</code>: 각 열의 이름, 데이터 타입(숫자인지 문자인지) 등을 보여준다</li>
+<li><code>describe()</code>: 숫자 열에 대해 평균(mean), 최솟값(min), 최댓값(max) 등을 자동 계산해준다</li>
+</ul>
+<blockquote>
+<p><strong>생각해보기</strong> 🤔</p>
+<p><code>describe()</code> 결과에서 스트리밍수_만 열의 <strong>mean</strong>(평균)은 얼마로 나왔나요? 이 숫자가 의미하는 것은 "TOP 10 곡의 평균 스트리밍 수"입니다. 벌써 데이터에서 정보를 읽어낸 거예요!</p>
+</blockquote>
+<hr />
+<h3 id="step-4">Step 4: 데이터를 눈으로 보기 — 시각화 첫 경험<a class="headerlink" href="#step-4" title="Permanent link">&para;</a></h3>
+<p>숫자만 보면 감이 잘 안 올 수 있습니다. <strong>그래프</strong>로 바꿔 봅시다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># matplotlib: 그래프를 그리는 도구</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># 한글 폰트 설정 (코랩 환경)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;NanumBarunGothic&#39;</span><span class="p">)</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.unicode_minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1"># 한글 폰트 설치 (코랩에서 최초 1회 필요)</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;apt-get&#39;</span><span class="p">,</span> <span class="s1">&#39;-qq&#39;</span><span class="p">,</span> <span class="s1">&#39;-y&#39;</span><span class="p">,</span> <span class="s1">&#39;install&#39;</span><span class="p">,</span> <span class="s1">&#39;fonts-nanum&#39;</span><span class="p">],</span> 
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>               <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.font_manager</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">fm</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="n">fm</span><span class="o">.</span><span class="n">fontManager</span><span class="o">.</span><span class="n">addfont</span><span class="p">(</span><span class="s1">&#39;/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf&#39;</span><span class="p">)</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;NanumBarunGothic&#39;</span><span class="p">)</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1"># 막대그래프 그리기</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;곡명&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;스트리밍수_만&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#FF6B6B&#39;</span><span class="p">)</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;스트리밍 수 (만)&#39;</span><span class="p">)</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;곡명&#39;</span><span class="p">)</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;🎵 2024 상반기 음원 차트 TOP 10 스트리밍 수&#39;</span><span class="p">)</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>  <span class="c1"># 1위가 위로 오도록</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<p>실행하면 <strong>가로 막대그래프</strong>가 나타납니다. 어떤 곡의 막대가 가장 긴가요? 시각화를 통해 순위 차이를 <strong>한눈에</strong> 파악할 수 있습니다.</p>
+<hr />
+<h3 id="step-5-ppdac-a">Step 5: 간단한 분석 — 아티스트별 곡 수 세기 (PPDAC의 A)<a class="headerlink" href="#step-5-ppdac-a" title="Permanent link">&para;</a></h3>
+<p>"어떤 아티스트가 TOP 10에 곡을 가장 많이 올렸을까?"라는 새로운 질문에 답해 봅시다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># 아티스트별 곡 수 세기</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">artist_count</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;아티스트&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🏆 TOP 10 안에 곡을 가장 많이 올린 아티스트&quot;</span><span class="p">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">40</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">artist_count</span><span class="p">)</span>
+</span></code></pre></div>
+<p><code>value_counts()</code>는 <strong>각 값이 몇 번 등장하는지</strong> 세어주는 함수입니다. 결과를 보면 어떤 아티스트가 2곡 이상 차트에 올렸는지 바로 알 수 있습니다.</p>
+<hr />
+<h3 id="step-6-ppdac-c">Step 6: 결론 정리하기 (PPDAC의 C)<a class="headerlink" href="#step-6-ppdac-c" title="Permanent link">&para;</a></h3>
+<p>지금까지의 과정을 PPDAC으로 정리해 봅시다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📢 PPDAC 과정 정리&quot;</span><span class="p">)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🔍 Problem (문제):&quot;</span><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   2024 상반기 K-POP 그룹별 음원 차트 성적 차이는?&quot;</span><span class="p">)</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📋 Plan (계획):&quot;</span><span class="p">)</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   TOP 10 샘플 데이터를 만들어 pandas로 분석&quot;</span><span class="p">)</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📦 Data (데이터):&quot;</span><span class="p">)</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">개 곡, </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">가지 항목 수집 완료&quot;</span><span class="p">)</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📊 Analysis (분석):&quot;</span><span class="p">)</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   평균 스트리밍 수: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;스트리밍수_만&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">만 회&quot;</span><span class="p">)</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   TOP 10 내 최다 곡 아티스트: </span><span class="si">{</span><span class="n">artist_count</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">artist_count</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">곡)&quot;</span><span class="p">)</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📢 Conclusion (결론):&quot;</span><span class="p">)</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   aespa와 NewJeans가 각 2곡으로 가장 많은 곡을 차트에 올렸고,&quot;</span><span class="p">)</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   스트리밍 수 기준으로는 aespa의 &#39;Supernova&#39;가 1위를 차지했다.&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>🎉 축하합니다! 여러분은 방</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/title-link.js"></script>
+      
+    
+  </body>
+</html>
