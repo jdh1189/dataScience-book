@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-12-1" class="md-skip">
+        <a href="#chapter-12" class="md-skip">
           콘텐츠로 이동
         </a>
       
@@ -1023,7 +1023,7 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 1: 회귀 분석이란?
+        개념 1: 연관 규칙이란?
       
     </span>
   </a>
@@ -1031,10 +1031,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-support" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 2: 직선의 방정식 — 기울기와 절편
+        개념 2: 지지도(Support) — "얼마나 자주?"
       
     </span>
   </a>
@@ -1042,10 +1042,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-confidence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 3: 최소제곱법 — "가장 잘 맞는 직선"을 찾는 방법
+        개념 3: 신뢰도(Confidence) — "얼마나 확실히?"
       
     </span>
   </a>
@@ -1053,10 +1053,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-scikit-learn-linearregression" class="md-nav__link">
+  <a href="#4-lift" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 4: scikit-learn의 LinearRegression
+        개념 4: 향상도(Lift) — "우연보다 얼마나 강한지?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 손으로 풀어보는 연습
       
     </span>
   </a>
@@ -1069,22 +1080,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#python" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔨 따라하기
+        🔨 따라하기: Python으로 연관 규칙 추출하기
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔨 따라하기">
+    <nav class="md-nav" aria-label="🔨 따라하기: Python으로 연관 규칙 추출하기">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#step-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: 데이터 준비 — 공부 시간과 시험 점수
+        Step 1: 라이브러리 설치 및 임포트
       
     </span>
   </a>
@@ -1095,7 +1106,7 @@
   <a href="#step-2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: 산점도로 데이터 확인
+        Step 2: 편의점 거래 데이터 만들기
       
     </span>
   </a>
@@ -1103,10 +1114,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-linearregression" class="md-nav__link">
+  <a href="#step-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: 모델 학습 — LinearRegression
+        Step 3: 데이터를 분석 가능한 형태로 변환
       
     </span>
   </a>
@@ -1114,10 +1125,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4" class="md-nav__link">
+  <a href="#step-4-apriori" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: 예측해보기
+        Step 4: 빈번 항목집합 찾기 (Apriori 알고리즘)
       
     </span>
   </a>
@@ -1128,7 +1139,7 @@
   <a href="#step-5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: 회귀선 시각화
+        Step 5: 연관 규칙 생성 및 해석
       
     </span>
   </a>
@@ -1139,7 +1150,7 @@
   <a href="#step-6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: 잔차 시각화 — 예측이 얼마나 정확한지 확인
+        Step 6: 결과 시각화
       
     </span>
   </a>
@@ -1171,36 +1182,47 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ 스스로 점검하기
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 더 해보기
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 더 해보기">
+    <nav class="md-nav" aria-label="⚠️ 자주 하는 실수">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#1_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        도전 과제: 야구 타자 데이터로 회귀 분석 ⚾
+        실수 1: 연관을 인과관계로 해석 🚫
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 2: 지지도만 보고 판단하기 🚫
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-min_support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 3: min_support를 너무 낮게 설정하기 🚫
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 4: 신뢰도의 방향을 무시하기 🚫
       
     </span>
   </a>
@@ -1213,7 +1235,68 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 스스로 점검하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 스스로 점검하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기본 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        응용 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        심화 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 더 해보기: 넷플릭스 시청 이력 추천 규칙
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       
         🔗 다음 장으로
@@ -1779,7 +1862,7 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 1: 회귀 분석이란?
+        개념 1: 연관 규칙이란?
       
     </span>
   </a>
@@ -1787,10 +1870,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-support" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 2: 직선의 방정식 — 기울기와 절편
+        개념 2: 지지도(Support) — "얼마나 자주?"
       
     </span>
   </a>
@@ -1798,10 +1881,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
+  <a href="#3-confidence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 3: 최소제곱법 — "가장 잘 맞는 직선"을 찾는 방법
+        개념 3: 신뢰도(Confidence) — "얼마나 확실히?"
       
     </span>
   </a>
@@ -1809,10 +1892,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-scikit-learn-linearregression" class="md-nav__link">
+  <a href="#4-lift" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 4: scikit-learn의 LinearRegression
+        개념 4: 향상도(Lift) — "우연보다 얼마나 강한지?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 손으로 풀어보는 연습
       
     </span>
   </a>
@@ -1825,22 +1919,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#python" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔨 따라하기
+        🔨 따라하기: Python으로 연관 규칙 추출하기
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔨 따라하기">
+    <nav class="md-nav" aria-label="🔨 따라하기: Python으로 연관 규칙 추출하기">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#step-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: 데이터 준비 — 공부 시간과 시험 점수
+        Step 1: 라이브러리 설치 및 임포트
       
     </span>
   </a>
@@ -1851,7 +1945,7 @@
   <a href="#step-2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: 산점도로 데이터 확인
+        Step 2: 편의점 거래 데이터 만들기
       
     </span>
   </a>
@@ -1859,10 +1953,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-linearregression" class="md-nav__link">
+  <a href="#step-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: 모델 학습 — LinearRegression
+        Step 3: 데이터를 분석 가능한 형태로 변환
       
     </span>
   </a>
@@ -1870,10 +1964,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4" class="md-nav__link">
+  <a href="#step-4-apriori" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: 예측해보기
+        Step 4: 빈번 항목집합 찾기 (Apriori 알고리즘)
       
     </span>
   </a>
@@ -1884,7 +1978,7 @@
   <a href="#step-5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: 회귀선 시각화
+        Step 5: 연관 규칙 생성 및 해석
       
     </span>
   </a>
@@ -1895,7 +1989,7 @@
   <a href="#step-6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: 잔차 시각화 — 예측이 얼마나 정확한지 확인
+        Step 6: 결과 시각화
       
     </span>
   </a>
@@ -1927,36 +2021,47 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ 스스로 점검하기
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 더 해보기
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 더 해보기">
+    <nav class="md-nav" aria-label="⚠️ 자주 하는 실수">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#1_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        도전 과제: 야구 타자 데이터로 회귀 분석 ⚾
+        실수 1: 연관을 인과관계로 해석 🚫
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 2: 지지도만 보고 판단하기 🚫
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-min_support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 3: min_support를 너무 낮게 설정하기 🚫
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 4: 신뢰도의 방향을 무시하기 🚫
       
     </span>
   </a>
@@ -1969,7 +2074,68 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 스스로 점검하기
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ 스스로 점검하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        기본 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        응용 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        심화 문제
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 더 해보기: 넷플릭스 시청 이력 추천 규칙
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       
         🔗 다음 장으로
@@ -1996,437 +2162,628 @@
 
 
 
-<h1 id="chapter-12-1">Chapter 12. 회귀 분석 (1) — 단순 선형 회귀<a class="headerlink" href="#chapter-12-1" title="Permanent link">&para;</a></h1>
-<p><strong>Part 3 | [1권] 데이터 모델링과 평가</strong></p>
+<h1 id="chapter-12">Chapter 12: 연관 분석 — 함께 등장하는 패턴 찾기<a class="headerlink" href="#chapter-12" title="Permanent link">&para;</a></h1>
 <hr />
 <h2 id="_1">🎯 이 장에서 배우는 것<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 회귀 분석이 무엇이고, 언제 사용하는지 설명할 수 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 최소제곱법의 원리를 직관적으로 이해할 수 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> scikit-learn의 <code>LinearRegression</code>으로 모델을 학습하고 예측할 수 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 회귀선을 산점도 위에 시각화할 수 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 기울기(<code>coef_</code>)와 절편(<code>intercept_</code>)의 의미를 해석할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 연관 분석의 핵심 지표(지지도·신뢰도·향상도)를 정의하고 직접 계산할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 장바구니 분석 사례를 통해 연관 규칙의 비즈니스 활용을 설명할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Python(mlxtend)을 활용하여 연관 규칙을 추출하고 해석할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 추출된 규칙을 지표 기준으로 필터링하여 유의미한 패턴을 선별할 수 있다</li>
 </ul>
 <hr />
 <h2 id="_2">💡 왜 이걸 배우나요?<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p><strong>생각해보기 🤔</strong>
-"하루에 공부를 1시간 더 하면, 시험 점수는 몇 점이나 오를까?"</p>
+<p><strong>🤔 생각해보기:</strong> 편의점에서 라면을 집어 든 사람이 계란도 함께 살 확률은 얼마나 될까요?</p>
 </blockquote>
-<p>이 질문에 답하려면 <strong>공부 시간과 성적 사이의 관계</strong>를 데이터로 파악해야 합니다. 단순히 "많이 하면 잘 본다"가 아니라, <strong>구체적인 숫자</strong>로 표현할 수 있다면 얼마나 좋을까요?</p>
-<p><strong>"공부 시간이 1시간 늘면, 점수는 약 8점 오른다."</strong></p>
-<p>이처럼 <strong>숫자(연속적인 값)를 예측</strong>하는 것이 바로 <strong>회귀 분석</strong>입니다.</p>
+<p>여러분이 편의점 점주라고 상상해보세요. 하루에 수백 건의 거래가 일어납니다. 어떤 손님은 라면과 계란을, 어떤 손님은 과자와 음료를, 또 어떤 손님은 삼각김밥과 우유를 함께 삽니다. 이런 <strong>"함께 구매하는 패턴"</strong> 을 알아낼 수 있다면 어떨까요?</p>
 <ul>
-<li>🏠 집 크기로 <strong>집값</strong> 예측</li>
-<li>🌡️ 기온으로 <strong>아이스크림 판매량</strong> 예측</li>
-<li>⚾ 안타 수로 <strong>타율</strong> 예측</li>
+<li>라면 옆에 계란을 진열하면 매출이 올라갈 수 있습니다</li>
+<li>"라면 + 계란 세트" 할인 행사를 기획할 수 있습니다</li>
+<li>온라인 쇼핑몰에서 "이 상품을 산 사람이 함께 산 상품"을 추천할 수 있습니다</li>
 </ul>
-<p>이전 장에서 배운 분류(Classification)가 "어떤 그룹에 속하나?"를 맞히는 것이었다면, 회귀(Regression)는 <strong>"얼마나?"를 맞히는 것</strong>입니다. 데이터 과학에서 가장 기본이 되는 기법이니, 이번 장에서 확실히 익혀봅시다!</p>
+<p>이것이 바로 <strong>연관 분석(Association Analysis)</strong> 입니다. 아마존의 "이 상품을 구매한 고객이 함께 구매한 상품", 넷플릭스의 "이 영화를 본 사용자가 좋아한 영화"가 모두 연관 분석에서 출발합니다.</p>
+<p>이번 장에서는 <strong>세 가지 핵심 지표</strong>를 배우고, 실제 데이터에서 <strong>숨겨진 패턴을 코드로 찾아내는 방법</strong>을 익힙니다.</p>
 <hr />
 <h2 id="_3">📚 핵심 개념<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="1">개념 1: 회귀 분석이란?<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p><strong>① 비유로 시작</strong></p>
-<p>키가 170cm인 사람의 몸무게를 맞혀야 한다고 해봅시다. 주변 친구들의 키와 몸무게 데이터가 있다면, "키가 클수록 몸무게도 나가더라"라는 <strong>경향</strong>을 발견할 수 있습니다. 이 경향을 <strong>하나의 직선(수식)</strong>으로 정리하면, 새로운 키 값이 주어졌을 때 몸무게를 <strong>예측</strong>할 수 있습니다.</p>
-<p><strong>② 정확한 정의</strong></p>
+<h3 id="1">개념 1: 연관 규칙이란?<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p><strong>🍱 비유로 시작 — 급식 메뉴 조합</strong></p>
+<p>학교 급식에서 떡볶이가 나오는 날, 유독 우유 소비량이 늘어난다는 걸 영양사 선생님이 발견했다고 합시다. 이것을 규칙으로 표현하면 이렇습니다.</p>
 <blockquote>
-<p><strong>회귀 분석(Regression Analysis)</strong> 이란, 입력 변수(X)와 출력 변수(Y) 사이의 관계를 수학적 함수로 모델링하여, <strong>연속적인 숫자 값을 예측</strong>하는 통계 기법입니다.</p>
+<p><strong>"떡볶이를 먹으면 → 우유도 마신다"</strong></p>
 </blockquote>
-<p>특히 입력 변수가 <strong>1개</strong>이고, 관계를 <strong>직선</strong>으로 표현하는 것을 <strong>단순 선형 회귀(Simple Linear Regression)</strong> 라고 합니다.</p>
-<p><strong>③ 예시로 확인</strong></p>
+<p>이것이 바로 <strong>연관 규칙(Association Rule)</strong> 입니다.</p>
+<p><strong>📖 정확한 정의</strong></p>
+<p>연관 규칙은 <strong>"A가 일어나면 B도 함께 일어나는 경향이 있다"</strong> 는 패턴을 표현한 것입니다.</p>
 <ul>
-<li><strong>입력(X)</strong>: 공부 시간 → <strong>출력(Y)</strong>: 시험 점수</li>
-<li>수식: <code>Y = 8 × X + 30</code> (공부 0시간이면 30점, 1시간당 8점 증가)</li>
+<li><strong>선행 항목(Antecedent)</strong>: 조건이 되는 항목 → "떡볶이" (if 부분)</li>
+<li><strong>후행 항목(Consequent)</strong>: 결과가 되는 항목 → "우유" (then 부분)</li>
+<li><strong>표기</strong>: {떡볶이} → {우유}</li>
 </ul>
-<div class="mermaid">graph LR
-    A["입력 X&lt;br/&gt;공부 시간"] --&gt;|"Y = 8X + 30"| B["출력 Y&lt;br/&gt;시험 점수"]
-    style A fill:#e3f2fd,stroke:#1565c0,color:#000
-    style B fill:#fff3e0,stroke:#e65100,color:#000</div>
-<hr />
-<h3 id="2">개념 2: 직선의 방정식 — 기울기와 절편<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<p><strong>① 비유로 시작</strong></p>
-<p>에스컬레이터를 떠올려 보세요. 에스컬레이터의 <strong>경사(기울기)</strong>가 급하면 같은 거리를 이동해도 높이 차이가 크고, <strong>출발 높이(절편)</strong>가 다르면 시작점이 달라집니다.</p>
-<p><strong>② 정확한 정의</strong></p>
-<p>단순 선형 회귀의 핵심 수식은 중학교 때 배운 1차 함수와 같습니다.</p>
-<blockquote>
-<p><strong>Y = wX + b</strong></p>
+<p><strong>✅ 예시로 확인</strong></p>
+<p>편의점 거래 데이터에서 찾을 수 있는 연관 규칙 예시입니다.</p>
 <ul>
-<li><strong>w (기울기, weight)</strong>: X가 1 증가할 때 Y가 변하는 양</li>
-<li><strong>b (절편, bias/intercept)</strong>: X가 0일 때 Y의 값 (시작점)</li>
-</ul>
-</blockquote>
-<p><strong>③ 예시로 확인</strong></p>
-<p><code>Y = 8X + 30</code>에서</p>
-<ul>
-<li><strong>기울기 8</strong>: 공부 1시간 증가 → 점수 <strong>8점 상승</strong></li>
-<li><strong>절편 30</strong>: 공부를 전혀 안 해도 기본 점수 <strong>30점</strong> (찍기 점수?)</li>
+<li>{라면} → {계란}: "라면을 사는 사람은 계란도 산다"</li>
+<li>{맥주, 기저귀} → {과자}: "맥주와 기저귀를 사는 사람은 과자도 산다"</li>
+<li>{콜라} → {팝콘}: "콜라를 사는 사람은 팝콘도 산다"</li>
 </ul>
 <blockquote>
-<p><strong>정리하기 📌</strong>
-회귀 분석의 목표는 데이터에 가장 잘 맞는 <strong>w(기울기)와 b(절편)</strong>를 찾는 것입니다!</p>
+<p><strong>📌 알아보기:</strong> 연관 규칙은 <strong>인과관계(원인→결과)가 아니라 동시 발생 패턴</strong>입니다. "라면을 사서 계란을 산다"가 아니라 "라면과 계란이 함께 등장하는 빈도가 높다"는 의미입니다. 이 차이를 꼭 기억하세요!</p>
 </blockquote>
 <hr />
-<h3 id="3">개념 3: 최소제곱법 — "가장 잘 맞는 직선"을 찾는 방법<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
-<p><strong>① 비유로 시작</strong></p>
-<p>운동장에 친구들이 흩어져 서 있습니다. 모든 친구에게서 <strong>가장 가까운 위치</strong>에 줄을 하나 긋는다고 상상해보세요. 줄에서 각 친구까지의 거리를 모두 합했을 때, 그 합이 <strong>가장 작은 줄</strong>이 최고의 줄입니다.</p>
-<p><strong>② 정확한 정의</strong></p>
-<blockquote>
-<p><strong>최소제곱법(Ordinary Least Squares, OLS)</strong> 은 각 데이터 점에서 회귀선까지의 <strong>수직 거리(잔차, residual)의 제곱 합</strong>을 최소화하는 기울기(w)와 절편(b)을 찾는 방법입니다.</p>
-</blockquote>
-<p>"왜 제곱을 할까?" → 거리에는 양수와 음수가 섞여서 단순 합산하면 서로 상쇄됩니다. <strong>제곱하면 모두 양수</strong>가 되어 정확한 비교가 가능합니다!</p>
-<p><strong>③ 예시로 확인</strong></p>
-<div class="mermaid">graph TD
-    subgraph 최소제곱법의 원리
-        A["실제 데이터 점들이 흩어져 있음"] --&gt; B["직선 하나를 그어봄"]
-        B --&gt; C["각 점에서 직선까지 거리 = 잔차"]
-        C --&gt; D["잔차를 제곱해서 모두 합산"]
-        D --&gt; E["이 합이 가장 작은 직선 = 최적의 회귀선 ✅"]
-    end
-    style E fill:#c8e6c9,stroke:#2e7d32,color:#000</div>
-<blockquote>
-<p><strong>알아보기 🔍</strong>
-잔차(residual)란? → <code>잔차 = 실제 값 - 예측 값</code>
-잔차가 작을수록 예측이 정확하다는 뜻입니다.</p>
-</blockquote>
-<hr />
-<h3 id="4-scikit-learn-linearregression">개념 4: scikit-learn의 LinearRegression<a class="headerlink" href="#4-scikit-learn-linearregression" title="Permanent link">&para;</a></h3>
-<p><strong>① 비유로 시작</strong></p>
-<p>최소제곱법의 수학 공식을 직접 계산하면 복잡하지만, scikit-learn은 이 과정을 <strong>버튼 하나</strong>로 자동 처리해주는 계산기와 같습니다.</p>
-<p><strong>② 정확한 정의</strong></p>
-<blockquote>
-<p><code>sklearn.linear_model.LinearRegression</code>은 최소제곱법으로 단순/다중 선형 회귀 모델을 학습하는 클래스입니다.</p>
-</blockquote>
-<p><strong>③ 핵심 메서드와 속성</strong></p>
+<h3 id="2-support">개념 2: 지지도(Support) — "얼마나 자주?"<a class="headerlink" href="#2-support" title="Permanent link">&para;</a></h3>
+<p><strong>🍱 비유로 시작</strong></p>
+<p>전교생 100명 중에서 떡볶이와 우유를 <strong>둘 다 선택한</strong> 학생이 30명이라면, 이 조합의 인기도는 30%입니다. 이것이 <strong>지지도</strong>입니다.</p>
+<p><strong>📖 정확한 정의</strong></p>
+<p>지지도는 <strong>전체 거래 중에서 A와 B가 함께 등장하는 거래의 비율</strong>입니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Support(A → B) = (A와 B가 함께 포함된 거래 수) / (전체 거래 수)
+</span></code></pre></div>
+<p><strong>✅ 예시로 확인</strong></p>
+<p>편의점에서 하루 동안 총 <strong>10건</strong>의 거래가 있었습니다.</p>
 <ul>
-<li><strong><code>.fit(X, y)</code></strong> — 데이터를 넣어 학습 (w, b를 찾음)</li>
-<li><strong><code>.predict(X)</code></strong> — 새로운 X에 대해 Y 예측</li>
-<li><strong><code>.coef_</code></strong> — 학습된 기울기(w)</li>
-<li><strong><code>.intercept_</code></strong> — 학습된 절편(b)</li>
+<li>거래 1: 라면, 계란, 음료</li>
+<li>거래 2: 과자, 음료</li>
+<li>거래 3: 라면, 계란</li>
+<li>거래 4: 빵, 우유</li>
+<li>거래 5: 라면, 음료</li>
+<li>거래 6: 계란, 빵</li>
+<li>거래 7: 라면, 계란, 과자</li>
+<li>거래 8: 음료, 과자</li>
+<li>거래 9: 라면, 계란</li>
+<li>거래 10: 빵, 우유, 음료</li>
 </ul>
-<div class="mermaid">graph LR
-    A["데이터 준비&lt;br/&gt;(X, y)"] --&gt; B[".fit( )으로&lt;br/&gt;모델 학습"]
-    B --&gt; C["coef_, intercept_&lt;br/&gt;확인"]
-    C --&gt; D[".predict( )로&lt;br/&gt;새 데이터 예측"]
-    style B fill:#e8eaf6,stroke:#283593,color:#000
-    style D fill:#fce4ec,stroke:#c62828,color:#000</div>
-<hr />
-<h2 id="_4">🔨 따라하기<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Google Colab에서 새 노트북을 열고 따라해 보세요!</p>
-</blockquote>
-<h3 id="step-1">Step 1: 데이터 준비 — 공부 시간과 시험 점수<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># 학생 10명의 공부 시간(X)과 시험 점수(y)</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">35</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">92</span><span class="p">])</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;공부 시간:&quot;</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">flatten</span><span class="p">())</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;시험 점수:&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<p>{라면, 계란}이 함께 등장한 거래: 1, 3, 7, 9번 → <strong>4건</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Support({라면} → {계란}) = 4 / 10 = 0.4 (40%)
 </span></code></pre></div>
 <blockquote>
-<p><strong>알아보기 🔍</strong>
-<code>.reshape(-1, 1)</code>은 1차원 배열을 <strong>세로 방향 2차원 배열</strong>로 바꿉니다. scikit-learn은 입력 X가 반드시 2차원이어야 하기 때문에 필요한 과정입니다.</p>
+<p><strong>💡 지지도의 의미:</strong> 지지도가 높을수록 이 조합이 자주 등장한다는 뜻입니다. 하지만 지지도만으로는 규칙이 강한지 약한지 알 수 없습니다. 라면을 사는 사람 중 정말 계란도 같이 사는 비율이 높은 건지를 알려면 <strong>신뢰도</strong>가 필요합니다.</p>
 </blockquote>
 <hr />
-<h3 id="step-2">Step 2: 산점도로 데이터 확인<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;royalblue&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Study Hours&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Exam Score&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Study Hours vs Exam Score&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<h3 id="3-confidence">개념 3: 신뢰도(Confidence) — "얼마나 확실히?"<a class="headerlink" href="#3-confidence" title="Permanent link">&para;</a></h3>
+<p><strong>🍱 비유로 시작</strong></p>
+<p>떡볶이를 선택한 학생이 50명인데, 그중 30명이 우유도 선택했다면? "떡볶이를 고른 학생이 우유도 고를 확률"은 60%입니다. 이것이 <strong>신뢰도</strong>입니다.</p>
+<p><strong>📖 정확한 정의</strong></p>
+<p>신뢰도는 <strong>A를 포함하는 거래 중에서 B도 함께 포함하는 거래의 비율</strong>입니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Confidence(A → B) = Support(A와 B) / Support(A)
 </span></code></pre></div>
-<p>산점도를 보면 공부 시간이 늘수록 점수가 <strong>대체로 올라가는 경향</strong>이 보입니다. 이 경향을 직선 하나로 표현해 봅시다!</p>
+<p><strong>✅ 예시로 확인</strong></p>
+<p>위의 편의점 데이터에서 계속해봅시다.</p>
+<ul>
+<li>라면이 포함된 거래: 1, 3, 5, 7, 9번 → <strong>5건</strong> → Support(라면) = 5/10 = 0.5</li>
+<li>라면과 계란이 함께 포함된 거래: 1, 3, 7, 9번 → <strong>4건</strong> → Support(라면, 계란) = 4/10 = 0.4</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Confidence({라면} → {계란}) = 0.4 / 0.5 = 0.8 (80%)
+</span></code></pre></div>
+<p><strong>해석:</strong> 라면을 산 사람 중 <strong>80%가 계란도 함께 구매</strong>합니다!</p>
+<blockquote>
+<p><strong>⚠️ 주의:</strong> 신뢰도의 방향에 따라 값이 달라집니다. {라면} → {계란}의 신뢰도와 {계란} → {라면}의 신뢰도는 다릅니다! 계란이 포함된 거래는 1, 3, 6, 7, 9번으로 5건이므로, Confidence({계란} → {라면}) = 0.4 / 0.5 = 0.8 (80%)... 이 경우는 우연히 같지만, 일반적으로는 다릅니다.</p>
+</blockquote>
 <hr />
-<h3 id="step-3-linearregression">Step 3: 모델 학습 — LinearRegression<a class="headerlink" href="#step-3-linearregression" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># 모델 생성 및 학습</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># 결과 확인</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;기울기 (coef_): </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;절편 (intercept_): </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<h3 id="4-lift">개념 4: 향상도(Lift) — "우연보다 얼마나 강한지?"<a class="headerlink" href="#4-lift" title="Permanent link">&para;</a></h3>
+<p><strong>🍱 비유로 시작</strong></p>
+<p>전교생의 60%가 우유를 마신다고 합시다. 떡볶이를 고른 학생 중 60%가 우유도 마신다면? 이건 떡볶이 때문이 아니라 <strong>원래 우유 소비가 많은 것</strong>일 뿐입니다. 그런데 떡볶이를 고른 학생 중 <strong>90%가 우유를 마신다면?</strong> 이건 우연이 아니라 진짜 연관이 있는 겁니다! 이 "우연 대비 강도"를 측정하는 것이 <strong>향상도</strong>입니다.</p>
+<p><strong>📖 정확한 정의</strong></p>
+<p>향상도는 <strong>A와 B가 함께 등장하는 비율이, 독립적으로 등장할 때의 기대 비율보다 얼마나 높은지</strong>를 나타냅니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Lift(A → B) = Confidence(A → B) / Support(B)
 </span></code></pre></div>
-<p><strong>출력 예시:</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>기울기 (coef_): 6.35
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>절편 (intercept_): 29.35
+<p><strong>향상도 해석 기준:</strong></p>
+<ul>
+<li><strong>Lift = 1</strong>: A와 B는 독립 (우연의 수준)</li>
+<li><strong>Lift &gt; 1</strong>: A와 B는 양의 연관 (함께 나타나는 경향)</li>
+<li><strong>Lift &lt; 1</strong>: A와 B는 음의 연관 (하나가 나타나면 다른 하나는 덜 나타남)</li>
+</ul>
+<p><strong>✅ 예시로 확인</strong></p>
+<ul>
+<li>계란이 포함된 거래: 1, 3, 6, 7, 9번 → <strong>5건</strong> → Support(계란) = 5/10 = 0.5</li>
+<li>Confidence({라면} → {계란}) = 0.8</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Lift({라면} → {계란}) = 0.8 / 0.5 = 1.6
+</span></code></pre></div>
+<p><strong>해석:</strong> 라면과 계란이 함께 등장하는 빈도는 우연보다 <strong>1.6배 높습니다</strong>. 즉, 이 둘 사이에는 의미 있는 연관이 존재합니다!</p>
+<blockquote>
+<p><strong>🧠 정리하기:</strong> 세 지표의 역할을 한마디로 요약하면 이렇습니다.
+- <strong>지지도</strong>: 이 조합이 얼마나 <strong>자주</strong> 등장하나? (인기도)
+- <strong>신뢰도</strong>: A가 나타났을 때 B도 나타날 가능성이 얼마나 <strong>확실</strong>한가? (예측력)
+- <strong>향상도</strong>: 이 연관이 <strong>우연이 아닌 진짜</strong>인가? (강도)</p>
+</blockquote>
+<p>아래 다이어그램으로 세 지표의 관계를 정리합니다.</p>
+<div class="mermaid">flowchart TD
+    A["🛒 전체 거래 데이터"] --&gt; B["지지도 Support\n전체 중 A∩B 비율\n'얼마나 자주?'"]
+    A --&gt; C["신뢰도 Confidence\nA 중 A∩B 비율\n'얼마나 확실히?'"]
+    A --&gt; D["향상도 Lift\n신뢰도 ÷ B의 지지도\n'우연보다 강한가?'"]
+
+    B --&gt;|"낮으면"| E["❌ 너무 드문 조합\n분석 가치 낮음"]
+    B --&gt;|"적절하면"| C
+    C --&gt;|"높으면"| D
+    D --&gt;|"Lift &gt; 1"| F["✅ 의미 있는 연관 규칙!"]
+    D --&gt;|"Lift ≤ 1"| G["❌ 우연이거나\n음의 연관"]</div>
+<hr />
+<h3 id="_4">📐 손으로 풀어보는 연습<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>아래 5건의 거래 데이터로 직접 계산해봅시다.</p>
+<ul>
+<li>거래 1: 빵, 우유, 쿠키</li>
+<li>거래 2: 빵, 우유</li>
+<li>거래 3: 빵, 쿠키</li>
+<li>거래 4: 우유, 쿠키</li>
+<li>거래 5: 빵, 우유, 쿠키</li>
+</ul>
+<p><strong>문제:</strong> {빵} → {우유} 규칙의 지지도, 신뢰도, 향상도를 구하세요.</p>
+<blockquote>
+<p><strong>풀이:</strong>
+- 빵과 우유가 함께 등장: 거래 1, 2, 5 → 3건
+- <strong>지지도</strong> = 3/5 = <strong>0.6 (60%)</strong>
+- 빵이 등장하는 거래: 1, 2, 3, 5 → 4건 → Support(빵) = 4/5 = 0.8
+- <strong>신뢰도</strong> = 0.6 / 0.8 = <strong>0.75 (75%)</strong>
+- 우유가 등장하는 거래: 1, 2, 4, 5 → 4건 → Support(우유) = 4/5 = 0.8
+- <strong>향상도</strong> = 0.75 / 0.8 = <strong>0.9375</strong></p>
+<p>해석: 향상도가 1보다 작으므로, 빵과 우유의 연관은 우연 수준보다 약간 <strong>약합니다</strong>. 빵을 산다고 해서 우유를 특별히 더 사는 것은 아닙니다.</p>
+</blockquote>
+<hr />
+<h2 id="python">🔨 따라하기: Python으로 연관 규칙 추출하기<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
+<p>이제 직접 코드로 연관 규칙을 찾아봅시다! Google Colab에서 바로 실행할 수 있습니다.</p>
+<h3 id="step-1">Step 1: 라이브러리 설치 및 임포트<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h3>
+<p><code>mlxtend</code>는 연관 분석에 특화된 Python 라이브러리입니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># mlxtend 설치 (Colab에서는 이 줄 실행 필요)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">mlxtend</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mlxtend.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TransactionEncoder</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mlxtend.frequent_patterns</span><span class="w"> </span><span class="kn">import</span> <span class="n">apriori</span><span class="p">,</span> <span class="n">association_rules</span>
+</span></code></pre></div>
+<blockquote>
+<p><strong>📌 알아보기:</strong> <code>mlxtend</code>는 "machine learning extensions"의 줄임말입니다. 연관 분석 외에도 다양한 머신러닝 유틸리티를 제공합니다. 여기서는 <strong>Apriori 알고리즘</strong>이라는 연관 규칙 탐색 알고리즘을 사용합니다.</p>
+</blockquote>
+<hr />
+<h3 id="step-2">Step 2: 편의점 거래 데이터 만들기<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h3>
+<p>실제 편의점에서 일어날 법한 거래 데이터를 만들어봅시다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># 편의점 거래 데이터 (각 리스트가 하나의 거래)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">transactions</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">],</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="p">[</span><span class="s1">&#39;과자&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;초콜릿&#39;</span><span class="p">],</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">],</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="p">[</span><span class="s1">&#39;빵&#39;</span><span class="p">,</span> <span class="s1">&#39;우유&#39;</span><span class="p">],</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">],</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="p">[</span><span class="s1">&#39;빵&#39;</span><span class="p">,</span> <span class="s1">&#39;우유&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">],</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">],</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="p">[</span><span class="s1">&#39;과자&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">],</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">],</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="p">[</span><span class="s1">&#39;빵&#39;</span><span class="p">,</span> <span class="s1">&#39;우유&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">],</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">],</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="p">[</span><span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;초콜릿&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">],</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">],</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    <span class="p">[</span><span class="s1">&#39;빵&#39;</span><span class="p">,</span> <span class="s1">&#39;우유&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">],</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">],</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="p">]</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;총 거래 수: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">transactions</span><span class="p">)</span><span class="si">}</span><span class="s2">건&quot;</span><span class="p">)</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;첫 번째 거래: </span><span class="si">{</span><span class="n">transactions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>실행 결과:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>총 거래 수: 15건
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>첫 번째 거래: [&#39;라면&#39;, &#39;계란&#39;, &#39;음료&#39;]
+</span></code></pre></div></p>
+<hr />
+<h3 id="step-3">Step 3: 데이터를 분석 가능한 형태로 변환<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h3>
+<p><code>mlxtend</code>는 True/False로 이루어진 표 형태의 데이터를 입력으로 받습니다. <code>TransactionEncoder</code>가 이 변환을 자동으로 해줍니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># 거래 데이터를 True/False 형태로 변환</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">te</span> <span class="o">=</span> <span class="n">TransactionEncoder</span><span class="p">()</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">te_array</span> <span class="o">=</span> <span class="n">te</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">transactions</span><span class="p">)</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">transactions</span><span class="p">)</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># DataFrame으로 변환</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">te_array</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">te</span><span class="o">.</span><span class="n">columns_</span><span class="p">)</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="c1"># 처음 5건 확인</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== 변환된 데이터 (처음 5건) ===&quot;</span><span class="p">)</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="c1"># 각 상품별 등장 횟수 확인</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== 상품별 등장 횟수 ===&quot;</span><span class="p">)</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</span></code></pre></div>
+<p>실행 결과:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>=== 변환된 데이터 (처음 5건) ===
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>      계란     과자      라면      빵     우유     음료    초콜릿
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>0   True  False   True  False  False   True  False
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>1  False   True  False  False  False   True   True
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>2   True   True   True  False  False  False  False
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>3  False  False  False   True   True  False  False
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>4   True   True   True  False  False   True  False
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>=== 상품별 등장 횟수 ===
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>계란     10
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>라면      9
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>음료      9
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>과자      8
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>빵       4
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>우유      4
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>초콜릿     2
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>dtype: int64
 </span></code></pre></div></p>
 <blockquote>
-<p><strong>해석 💬</strong>
-- <strong>기울기 6.35</strong>: 공부 시간이 <strong>1시간 늘면</strong> 점수가 약 <strong>6.35점 상승</strong>
-- <strong>절편 29.35</strong>: 공부를 <strong>0시간</strong> 했을 때 예상 점수는 약 <strong>29.35점</strong>
-- 수식: <strong>점수 = 6.35 × 공부시간 + 29.35</strong></p>
+<p><strong>💡 이해 포인트:</strong> 각 행이 하나의 거래, 각 열이 하나의 상품입니다. True는 "이 거래에서 이 상품을 구매했다"는 뜻입니다. 이 형태를 <strong>원-핫 인코딩(One-Hot Encoding)</strong> 이라고 부릅니다.</p>
 </blockquote>
 <hr />
-<h3 id="step-4">Step 4: 예측해보기<a class="headerlink" href="#step-4" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># 공부 시간 3시간, 7시간, 12시간일 때 점수 예측</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">new_hours</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">12</span><span class="p">]])</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">new_hours</span><span class="p">)</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">for</span> <span class="n">hour</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">new_hours</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">predictions</span><span class="p">):</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;공부 </span><span class="si">{</span><span class="n">hour</span><span class="si">}</span><span class="s2">시간 → 예상 점수: </span><span class="si">{</span><span class="n">score</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">점&quot;</span><span class="p">)</span>
+<h3 id="step-4-apriori">Step 4: 빈번 항목집합 찾기 (Apriori 알고리즘)<a class="headerlink" href="#step-4-apriori" title="Permanent link">&para;</a></h3>
+<p>모든 상품 조합을 다 계산하면 너무 오래 걸립니다. <strong>Apriori 알고리즘</strong>은 "지지도가 낮은 조합은 일찍 버리자"는 전략으로 효율적으로 빈번 항목집합을 찾습니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># 최소 지지도 0.2(20%) 이상인 항목집합 찾기</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">frequent_itemsets</span> <span class="o">=</span> <span class="n">apriori</span><span class="p">(</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="n">df</span><span class="p">,</span> 
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="n">min_support</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>      <span class="c1"># 최소 지지도: 전체 15건 중 3건(20%) 이상</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="n">use_colnames</span><span class="o">=</span><span class="kc">True</span>      <span class="c1"># 상품명 표시</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">)</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="c1"># 항목 수 기준으로 정렬</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="n">frequent_itemsets</span><span class="p">[</span><span class="s1">&#39;길이&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">frequent_itemsets</span><span class="p">[</span><span class="s1">&#39;itemsets&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="n">result</span> <span class="o">=</span> <span class="n">frequent_itemsets</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;길이&#39;</span><span class="p">,</span> <span class="s1">&#39;support&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== 빈번 항목집합 (지지도 20% 이상) ===&quot;</span><span class="p">)</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
 </span></code></pre></div>
-<p><strong>출력 예시:</strong>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>공부 3시간 → 예상 점수: 48.4점
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>공부 7시간 → 예상 점수: 73.8점
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>공부 12시간 → 예상 점수: 105.5점
+<p>실행 결과:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>=== 빈번 항목집합 (지지도 20% 이상) ===
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>   support       itemsets  길이
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>  0.666667          (계란)    1
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>  0.600000          (라면)    1
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>  0.600000          (음료)    1
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>  0.533333          (과자)    1
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>  0.266667           (빵)    1
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>  0.266667          (우유)    1
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>  0.533333      (계란, 라면)    2
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>  0.400000      (계란, 과자)    2
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>  0.400000      (계란, 음료)    2
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>  0.400000      (과자, 음료)    2
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>  0.400000      (라면, 음료)    2
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>  0.333333      (라면, 과자)    2
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>  0.200000       (빵, 우유)    2
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>  0.200000       (계란, 빵)    2
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>  0.266667  (계란, 라면, 과자)    3
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>  0.266667  (계란, 라면, 음료)    3
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>  0.266667  (계란, 과자, 음료)    3
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>  0.200000  (라면, 과자, 음료)    3
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>  ...
 </span></code></pre></div></p>
 <blockquote>
-<p><strong>생각해보기 🤔</strong>
-12시간 공부하면 105.5점? 100점 만점인데 말이 안 되죠! 이것이 선형 회귀의 한계입니다. 학습 데이터 범위(1~10시간)를 벗어나면 예측이 비현실적일 수 있습니다. 이를 <strong>외삽(extrapolation)의 위험</strong>이라고 합니다.</p>
+<p><strong>📌 알아보기:</strong> <code>min_support=0.2</code>는 "전체 거래의 20% 이상에서 등장하는 조합만 보겠다"는 의미입니다. 이 값을 낮추면 더 많은 조합이 나오고, 높이면 정말 자주 나타나는 조합만 남습니다.</p>
 </blockquote>
 <hr />
-<h3 id="step-5">Step 5: 회귀선 시각화<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># 산점도</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;royalblue&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Actual Data&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># 회귀선</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">X_line</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="n">y_line</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_line</span><span class="p">)</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_line</span><span class="p">,</span> <span class="n">y_line</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tomato&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>         <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;y = </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">x + </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
-</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Study Hours&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Exam Score&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Simple Linear Regression&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<h3 id="step-5">Step 5: 연관 규칙 생성 및 해석<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h3>
+<p>빈번 항목집합에서 연관 규칙을 만들고, 세 가지 지표를 확인합니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># 연관 규칙 생성 (최소 신뢰도 60% 이상)</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">rules</span> <span class="o">=</span> <span class="n">association_rules</span><span class="p">(</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="n">frequent_itemsets</span><span class="p">,</span> 
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;confidence&quot;</span><span class="p">,</span>   <span class="c1"># 기준 지표</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    <span class="n">min_threshold</span><span class="o">=</span><span class="mf">0.6</span>      <span class="c1"># 최소 신뢰도 60%</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="p">)</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="c1"># 주요 열만 선택하고 향상도 기준으로 정렬</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="n">rules_display</span> <span class="o">=</span> <span class="n">rules</span><span class="p">[[</span><span class="s1">&#39;antecedents&#39;</span><span class="p">,</span> <span class="s1">&#39;consequents&#39;</span><span class="p">,</span> <span class="s1">&#39;support&#39;</span><span class="p">,</span> <span class="s1">&#39;confidence&#39;</span><span class="p">,</span> <span class="s1">&#39;lift&#39;</span><span class="p">]]</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="n">rules_sorted</span> <span class="o">=</span> <span class="n">rules_display</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;lift&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== 연관 규칙 (신뢰도 60% 이상, 향상도 순) ===&quot;</span><span class="p">)</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rules_sorted</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    <span class="n">ant</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;antecedents&#39;</span><span class="p">]))</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>    <span class="n">con</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;consequents&#39;</span><span class="p">]))</span>
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">ant</span><span class="si">}</span><span class="s2"> → </span><span class="si">{</span><span class="n">con</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    지지도: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;support&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1%</span><span class="si">}</span><span class="s2">, &quot;</span>
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>          <span class="sa">f</span><span class="s2">&quot;신뢰도: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;confidence&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1%</span><span class="si">}</span><span class="s2">, &quot;</span>
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>          <span class="sa">f</span><span class="s2">&quot;향상도: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;lift&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-13-20"><a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>    <span class="nb">print</span><span class="p">()</span>
 </span></code></pre></div>
-<p>빨간 직선이 데이터 점들 사이를 <strong>가장 잘 관통</strong>하는 것을 확인할 수 있습니다. 이 직선이 최소제곱법으로 찾은 <strong>최적의 회귀선</strong>입니다!</p>
+<p>실행 결과 (예시):
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>=== 연관 규칙 (신뢰도 60% 이상, 향상도 순) ===
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  라면 → 계란
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    지지도: 53.3%, 신뢰도: 88.9%, 향상도: 1.33
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>  과자 → 계란
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    지지도: 40.0%, 신뢰도: 75.0%, 향상도: 1.13
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>  계란, 과자 → 라면
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>    지지도: 26.7%, 신뢰도: 66.7%, 향상도: 1.11
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>  라면 → 음료
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>    지지도: 40.0%, 신뢰도: 66.7%, 향상도: 1.11
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>  ...
+</span></code></pre></div></p>
+<p><strong>해석해봅시다!</strong> 🔍</p>
+<p>가장 눈에 띄는 규칙은 <strong>{라면} → {계란}</strong> 입니다.</p>
+<ul>
+<li><strong>지지도 53.3%</strong>: 전체 거래의 절반 이상에서 라면과 계란이 함께 등장</li>
+<li><strong>신뢰도 88.9%</strong>: 라면을 산 사람의 약 89%가 계란도 함께 구매</li>
+<li><strong>향상도 1.33</strong>: 우연보다 1.33배 높은 연관 → <strong>의미 있는 패턴!</strong></li>
+</ul>
+<blockquote>
+<p><strong>🏪 비즈니스 인사이트:</strong> 편의점 점주라면 이 결과를 보고 "라면 진열대 바로 옆에 계란을 배치하자!", "라면+계란 묶음 할인을 기획하자!"와 같은 의사결정을 내릴 수 있습니다.</p>
+</blockquote>
 <hr />
-<h3 id="step-6">Step 6: 잔차 시각화 — 예측이 얼마나 정확한지 확인<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;royalblue&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tomato&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># 잔차를 수직선으로 표시</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="k">for</span> <span class="n">xi</span><span class="p">,</span> <span class="n">yi</span><span class="p">,</span> <span class="n">yp</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">xi</span><span class="p">,</span> <span class="n">xi</span><span class="p">],</span> <span class="p">[</span><span class="n">yi</span><span class="p">,</span> <span class="n">yp</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Study Hours&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Exam Score&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Residuals (gray dashed lines)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
-</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;잔차 제곱 합(RSS): </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<h3 id="step-6">Step 6: 결과 시각화<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h3>
+<p>규칙들을 시각적으로 비교해봅시다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="c1"># 한글 폰트 설정 (Colab용)</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;NanumGothic&#39;</span><span class="p">)</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.unicode_minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="c1"># 폰트 설치 (Colab에서 한글이 안 보일 경우)</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="err">!</span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="o">-</span><span class="n">qq</span> <span class="n">install</span> <span class="n">fonts</span><span class="o">-</span><span class="n">nanum</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.font_manager</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">fm</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="n">fe</span> <span class="o">=</span> <span class="n">fm</span><span class="o">.</span><span class="n">FontEntry</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="s1">&#39;/usr/share/fonts/truetype/nanum/NanumGothic.ttf&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;NanumGothic&#39;</span><span class="p">)</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="n">fm</span><span class="o">.</span><span class="n">fontManager</span><span class="o">.</span><span class="n">ttflist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fe</span><span class="p">)</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;NanumGothic&#39;</span><span class="p">)</span>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="c1"># 산점도: 신뢰도 vs 향상도 (원 크기 = 지지도)</span>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="n">scatter</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>    <span class="n">rules</span><span class="p">[</span><span class="s1">&#39;confidence&#39;</span><span class="p">],</span> 
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>    <span class="n">rules</span><span class="p">[</span><span class="s1">&#39;lift&#39;</span><span class="p">],</span>
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>    <span class="n">s</span><span class="o">=</span><span class="n">rules</span><span class="p">[</span><span class="s1">&#39;support&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">500</span><span class="p">,</span>  <span class="c1"># 지지도에 비례한 원 크기</span>
+</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
+</span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>    <span class="n">c</span><span class="o">=</span><span class="n">rules</span><span class="p">[</span><span class="s1">&#39;lift&#39;</span><span class="p">],</span>
+</span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;RdYlGn&#39;</span><span class="p">,</span>
+</span><span id="__span-15-24"><a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>    <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span>
+</span><span id="__span-15-25"><a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a><span class="p">)</span>
+</span><span id="__span-15-26"><a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>
+</span><span id="__span-15-27"><a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a><span class="c1"># 기준선 표시</span>
+</span><span id="__span-15-28"><a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a><span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Lift = 1 (우연 수준)&#39;</span><span class="p">)</span>
+</span><span id="__span-15-29"><a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a>
+</span><span id="__span-15-30"><a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a><span class="c1"># 주요 규칙에 라벨 추가</span>
+</span><span id="__span-15-31"><a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rules_sorted</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+</span><span id="__span-15-32"><a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a>    <span class="n">ant</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;antecedents&#39;</span><span class="p">]))</span>
+</span><span id="__span-15-33"><a id="__codelineno-15-33" name="__codelineno-15-33" href="#__codelineno-15-33"></a>    <span class="n">con</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;consequents&#39;</span><span class="p">]))</span>
+</span><span id="__span-15-34"><a id="__codelineno-15-34" name="__codelineno-15-34" href="#__codelineno-15-34"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">ant</span><span class="si">}</span><span class="s1">→</span><span class="si">{</span><span class="n">con</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> 
+</span><span id="__span-15-35"><a id="__codelineno-15-35" name="__codelineno-15-35" href="#__codelineno-15-35"></a>                <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;confidence&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;lift&#39;</span><span class="p">]),</span>
+</span><span id="__span-15-36"><a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a>                <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+</span><span id="__span-15-37"><a id="__codelineno-15-37" name="__codelineno-15-37" href="#__codelineno-15-37"></a>
+</span><span id="__span-15-38"><a id="__codelineno-15-38" name="__codelineno-15-38" href="#__codelineno-15-38"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;신뢰도 (Confidence)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+</span><span id="__span-15-39"><a id="__codelineno-15-39" name="__codelineno-15-39" href="#__codelineno-15-39"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;향상도 (Lift)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+</span><span id="__span-15-40"><a id="__codelineno-15-40" name="__codelineno-15-40" href="#__codelineno-15-40"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;연관 규칙: 신뢰도 vs 향상도</span><span class="se">\n</span><span class="s1">(원 크기 = 지지도)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+</span><span id="__span-15-41"><a id="__codelineno-15-41" name="__codelineno-15-41" href="#__codelineno-15-41"></a><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</span><span id="__span-15-42"><a id="__codelineno-15-42" name="__codelineno-15-42" href="#__codelineno-15-42"></a>
+</span><span id="__span-15-43"><a id="__codelineno-15-43" name="__codelineno-15-43" href="#__codelineno-15-43"></a><span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;향상도&#39;</span><span class="p">)</span>
+</span><span id="__span-15-44"><a id="__codelineno-15-44" name="__codelineno-15-44" href="#__codelineno-15-44"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-15-45"><a id="__codelineno-15-45" name="__codelineno-15-45" href="#__codelineno-15-45"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></code></pre></div>
-<p>회색 점선이 <strong>잔차</strong>입니다. 최소제곱법은 이 점선들의 길이 제곱 합을 <strong>최소화</strong>하는 직선을 찾은 것입니다.</p>
+<blockquote>
+<p><strong>📌 차트 읽는 법:</strong>
+- <strong>오른쪽 위</strong>: 신뢰도도 높고 향상도도 높은 <strong>가장 좋은 규칙</strong>
+- <strong>빨간 점선(Lift=1) 위</strong>: 우연보다 강한 <strong>의미 있는</strong> 규칙
+- <strong>원이 클수록</strong>: 지지도가 높아 <strong>자주 등장하는</strong> 규칙</p>
+</blockquote>
 <hr />
 <h2 id="_5">📝 전체 코드<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># =============================================</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># Chapter 12: 단순 선형 회귀 — 전체 코드</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># =============================================</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1"># 1. 데이터 준비</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">35</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">68</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">92</span><span class="p">])</span>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="c1"># 2. 산점도 확인</span>
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;royalblue&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Study Hours&#39;</span><span class="p">)</span>
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Exam Score&#39;</span><span class="p">)</span>
-</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Study Hours vs Exam Score&#39;</span><span class="p">)</span>
-</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
-</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="c1"># 3. 모델 학습</span>
-</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
-</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;기울기: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, 절편: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>
-</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="c1"># 4. 예측</span>
-</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="n">new_hours</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">12</span><span class="p">]])</span>
-</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">new_hours</span><span class="p">)</span>
-</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="k">for</span> <span class="n">h</span><span class="p">,</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">new_hours</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">predictions</span><span class="p">):</span>
-</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;공부 </span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s2">시간 → 예상 점수: </span><span class="si">{</span><span class="n">s</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">점&quot;</span><span class="p">)</span>
-</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>
-</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="c1"># 5. 회귀선 시각화</span>
-</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;royalblue&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="n">X_line</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_line</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_line</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tomato&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>         <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;y = </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">x + </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</span><span id="__span-8-38"><a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Study Hours&#39;</span><span class="p">)</span>
-</span><span id="__span-8-39"><a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Exam Score&#39;</span><span class="p">)</span>
-</span><span id="__span-8-40"><a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Simple Linear Regression&#39;</span><span class="p">)</span>
-</span><span id="__span-8-41"><a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-</span><span id="__span-8-42"><a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-</span><span id="__span-8-43"><a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span><span id="__span-8-44"><a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a>
-</span><span id="__span-8-45"><a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a><span class="c1"># 6. 잔차 확인</span>
-</span><span id="__span-8-46"><a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a><span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-</span><span id="__span-8-47"><a id="__codelineno-8-47" name="__codelineno-8-47" href="#__codelineno-8-47"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;잔차 제곱 합(RSS): </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">y_pred</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<p>아래 코드를 Google Colab에 복사하여 한 번에 실행할 수 있습니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># ============================================</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="c1"># 연관 분석 전체 코드</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="c1"># ============================================</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="c1"># 1. 라이브러리 설치 및 임포트</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">mlxtend</span> <span class="o">-</span><span class="n">q</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mlxtend.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TransactionEncoder</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mlxtend.frequent_patterns</span><span class="w"> </span><span class="kn">import</span> <span class="n">apriori</span><span class="p">,</span> <span class="n">association_rules</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="c1"># Colab 한글 폰트 설정</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="err">!</span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="o">-</span><span class="n">qq</span> <span class="n">install</span> <span class="n">fonts</span><span class="o">-</span><span class="n">nanum</span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.font_manager</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">fm</span>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="n">fe</span> <span class="o">=</span> <span class="n">fm</span><span class="o">.</span><span class="n">FontEntry</span><span class="p">(</span>
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>    <span class="n">fname</span><span class="o">=</span><span class="s1">&#39;/usr/share/fonts/truetype/nanum/NanumGothic.ttf&#39;</span><span class="p">,</span> 
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;NanumGothic&#39;</span>
+</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="p">)</span>
+</span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="n">fm</span><span class="o">.</span><span class="n">fontManager</span><span class="o">.</span><span class="n">ttflist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fe</span><span class="p">)</span>
+</span><span id="__span-16-21"><a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;NanumGothic&#39;</span><span class="p">)</span>
+</span><span id="__span-16-22"><a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.unicode_minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+</span><span id="__span-16-23"><a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a>
+</span><span id="__span-16-24"><a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a><span class="c1"># 2. 편의점 거래 데이터</span>
+</span><span id="__span-16-25"><a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a><span class="n">transactions</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-16-26"><a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">],</span>
+</span><span id="__span-16-27"><a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a>    <span class="p">[</span><span class="s1">&#39;과자&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;초콜릿&#39;</span><span class="p">],</span>
+</span><span id="__span-16-28"><a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">],</span>
+</span><span id="__span-16-29"><a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a>    <span class="p">[</span><span class="s1">&#39;빵&#39;</span><span class="p">,</span> <span class="s1">&#39;우유&#39;</span><span class="p">],</span>
+</span><span id="__span-16-30"><a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">],</span>
+</span><span id="__span-16-31"><a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a>    <span class="p">[</span><span class="s1">&#39;빵&#39;</span><span class="p">,</span> <span class="s1">&#39;우유&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">],</span>
+</span><span id="__span-16-32"><a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">],</span>
+</span><span id="__span-16-33"><a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a>    <span class="p">[</span><span class="s1">&#39;과자&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">],</span>
+</span><span id="__span-16-34"><a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">],</span>
+</span><span id="__span-16-35"><a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a>    <span class="p">[</span><span class="s1">&#39;빵&#39;</span><span class="p">,</span> <span class="s1">&#39;우유&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">],</span>
+</span><span id="__span-16-36"><a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">],</span>
+</span><span id="__span-16-37"><a id="__codelineno-16-37" name="__codelineno-16-37" href="#__codelineno-16-37"></a>    <span class="p">[</span><span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;초콜릿&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">],</span>
+</span><span id="__span-16-38"><a id="__codelineno-16-38" name="__codelineno-16-38" href="#__codelineno-16-38"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">],</span>
+</span><span id="__span-16-39"><a id="__codelineno-16-39" name="__codelineno-16-39" href="#__codelineno-16-39"></a>    <span class="p">[</span><span class="s1">&#39;빵&#39;</span><span class="p">,</span> <span class="s1">&#39;우유&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">],</span>
+</span><span id="__span-16-40"><a id="__codelineno-16-40" name="__codelineno-16-40" href="#__codelineno-16-40"></a>    <span class="p">[</span><span class="s1">&#39;라면&#39;</span><span class="p">,</span> <span class="s1">&#39;계란&#39;</span><span class="p">,</span> <span class="s1">&#39;음료&#39;</span><span class="p">,</span> <span class="s1">&#39;과자&#39;</span><span class="p">],</span>
+</span><span id="__span-16-41"><a id="__codelineno-16-41" name="__codelineno-16-41" href="#__codelineno-16-41"></a><span class="p">]</span>
+</span><span id="__span-16-42"><a id="__codelineno-16-42" name="__codelineno-16-42" href="#__codelineno-16-42"></a>
+</span><span id="__span-16-43"><a id="__codelineno-16-43" name="__codelineno-16-43" href="#__codelineno-16-43"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;총 거래 수: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">transactions</span><span class="p">)</span><span class="si">}</span><span class="s2">건</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-16-44"><a id="__codelineno-16-44" name="__codelineno-16-44" href="#__codelineno-16-44"></a>
+</span><span id="__span-16-45"><a id="__codelineno-16-45" name="__codelineno-16-45" href="#__codelineno-16-45"></a><span class="c1"># 3. 데이터 변환</span>
+</span><span id="__span-16-46"><a id="__codelineno-16-46" name="__codelineno-16-46" href="#__codelineno-16-46"></a><span class="n">te</span> <span class="o">=</span> <span class="n">TransactionEncoder</span><span class="p">()</span>
+</span><span id="__span-16-47"><a id="__codelineno-16-47" name="__codelineno-16-47" href="#__codelineno-16-47"></a><span class="n">te_array</span> <span class="o">=</span> <span class="n">te</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">transactions</span><span class="p">)</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">transactions</span><span class="p">)</span>
+</span><span id="__span-16-48"><a id="__codelineno-16-48" name="__codelineno-16-48" href="#__codelineno-16-48"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">te_array</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">te</span><span class="o">.</span><span class="n">columns_</span><span class="p">)</span>
+</span><span id="__span-16-49"><a id="__codelineno-16-49" name="__codelineno-16-49" href="#__codelineno-16-49"></a>
+</span><span id="__span-16-50"><a id="__codelineno-16-50" name="__codelineno-16-50" href="#__codelineno-16-50"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== 상품별 등장 횟수 ===&quot;</span><span class="p">)</span>
+</span><span id="__span-16-51"><a id="__codelineno-16-51" name="__codelineno-16-51" href="#__codelineno-16-51"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</span><span id="__span-16-52"><a id="__codelineno-16-52" name="__codelineno-16-52" href="#__codelineno-16-52"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-16-53"><a id="__codelineno-16-53" name="__codelineno-16-53" href="#__codelineno-16-53"></a>
+</span><span id="__span-16-54"><a id="__codelineno-16-54" name="__codelineno-16-54" href="#__codelineno-16-54"></a><span class="c1"># 4. 빈번 항목집합 찾기</span>
+</span><span id="__span-16-55"><a id="__codelineno-16-55" name="__codelineno-16-55" href="#__codelineno-16-55"></a><span class="n">frequent_itemsets</span> <span class="o">=</span> <span class="n">apriori</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">min_support</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">use_colnames</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-16-56"><a id="__codelineno-16-56" name="__codelineno-16-56" href="#__codelineno-16-56"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;발견된 빈번 항목집합 수: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">frequent_itemsets</span><span class="p">)</span><span class="si">}</span><span class="s2">개</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-16-57"><a id="__codelineno-16-57" name="__codelineno-16-57" href="#__codelineno-16-57"></a>
+</span><span id="__span-16-58"><a id="__codelineno-16-58" name="__codelineno-16-58" href="#__codelineno-16-58"></a><span class="c1"># 5. 연관 규칙 생성</span>
+</span><span id="__span-16-59"><a id="__codelineno-16-59" name="__codelineno-16-59" href="#__codelineno-16-59"></a><span class="n">rules</span> <span class="o">=</span> <span class="n">association_rules</span><span class="p">(</span>
+</span><span id="__span-16-60"><a id="__codelineno-16-60" name="__codelineno-16-60" href="#__codelineno-16-60"></a>    <span class="n">frequent_itemsets</span><span class="p">,</span> 
+</span><span id="__span-16-61"><a id="__codelineno-16-61" name="__codelineno-16-61" href="#__codelineno-16-61"></a>    <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;confidence&quot;</span><span class="p">,</span> 
+</span><span id="__span-16-62"><a id="__codelineno-16-62" name="__codelineno-16-62" href="#__codelineno-16-62"></a>    <span class="n">min_threshold</span><span class="o">=</span><span class="mf">0.6</span>
+</span><span id="__span-16-63"><a id="__codelineno-16-63" name="__codelineno-16-63" href="#__codelineno-16-63"></a><span class="p">)</span>
+</span><span id="__span-16-64"><a id="__codelineno-16-64" name="__codelineno-16-64" href="#__codelineno-16-64"></a>
+</span><span id="__span-16-65"><a id="__codelineno-16-65" name="__codelineno-16-65" href="#__codelineno-16-65"></a><span class="c1"># 6. 결과 출력</span>
+</span><span id="__span-16-66"><a id="__codelineno-16-66" name="__codelineno-16-66" href="#__codelineno-16-66"></a><span class="n">rules_sorted</span> <span class="o">=</span> <span class="n">rules</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;lift&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-16-67"><a id="__codelineno-16-67" name="__codelineno-16-67" href="#__codelineno-16-67"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== 연관 규칙 TOP 10 (향상도 순) ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-16-68"><a id="__codelineno-16-68" name="__codelineno-16-68" href="#__codelineno-16-68"></a><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rules_sorted</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+</span><span id="__span-16-69"><a id="__codelineno-16-69" name="__codelineno-16-69" href="#__codelineno-16-69"></a>    <span class="n">ant</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;antecedents&#39;</span><span class="p">]))</span>
+</span><span id="__span-16-70"><a id="__codelineno-16-70" name="__codelineno-16-70" href="#__codelineno-16-70"></a>    <span class="n">con</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;consequents&#39;</span><span class="p">]))</span>
+</span><span id="__span-16-71"><a id="__codelineno-16-71" name="__codelineno-16-71" href="#__codelineno-16-71"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">ant</span><span class="si">}</span><span class="s2"> → </span><span class="si">{</span><span class="n">con</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-16-72"><a id="__codelineno-16-72" name="__codelineno-16-72" href="#__codelineno-16-72"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    지지도: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;support&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1%</span><span class="si">}</span><span class="s2">, &quot;</span>
+</span><span id="__span-16-73"><a id="__codelineno-16-73" name="__codelineno-16-73" href="#__codelineno-16-73"></a>          <span class="sa">f</span><span class="s2">&quot;신뢰도: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;confidence&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.1%</span><span class="si">}</span><span class="s2">, &quot;</span>
+</span><span id="__span-16-74"><a id="__codelineno-16-74" name="__codelineno-16-74" href="#__codelineno-16-74"></a>          <span class="sa">f</span><span class="s2">&quot;향상도: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;lift&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-16-75"><a id="__codelineno-16-75" name="__codelineno-16-75" href="#__codelineno-16-75"></a>    <span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-16-76"><a id="__codelineno-16-76" name="__codelineno-16-76" href="#__codelineno-16-76"></a>
+</span><span id="__span-16-77"><a id="__codelineno-16-77" name="__codelineno-16-77" href="#__codelineno-16-77"></a><span class="c1"># 7. 시각화</span>
+</span><span id="__span-16-78"><a id="__codelineno-16-78" name="__codelineno-16-78" href="#__codelineno-16-78"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</span><span id="__span-16-79"><a id="__codelineno-16-79" name="__codelineno-16-79" href="#__codelineno-16-79"></a><span class="n">scatter</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+</span><span id="__span-16-80"><a id="__codelineno-16-80" name="__codelineno-16-80" href="#__codelineno-16-80"></a>    <span class="n">rules</span><span class="p">[</span><span class="s1">&#39;confidence&#39;</span><span class="p">],</span> <span class="n">rules</span><span class="p">[</span><span class="s1">&#39;lift&#39;</span><span class="p">],</span>
+</span><span id="__span-16-81"><a id="__codelineno-16-81" name="__codelineno-16-81" href="#__codelineno-16-81"></a>    <span class="n">s</span><span class="o">=</span><span class="n">rules</span><span class="p">[</span><span class="s1">&#39;support&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">500</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
+</span><span id="__span-16-82"><a id="__codelineno-16-82" name="__codelineno-16-82" href="#__codelineno-16-82"></a>    <span class="n">c</span><span class="o">=</span><span class="n">rules</span><span class="p">[</span><span class="s1">&#39;lift&#39;</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;RdYlGn&#39;</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span>
+</span><span id="__span-16-83"><a id="__codelineno-16-83" name="__codelineno-16-83" href="#__codelineno-16-83"></a><span class="p">)</span>
+</span><span id="__span-16-84"><a id="__codelineno-16-84" name="__codelineno-16-84" href="#__codelineno-16-84"></a><span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Lift = 1&#39;</span><span class="p">)</span>
+</span><span id="__span-16-85"><a id="__codelineno-16-85" name="__codelineno-16-85" href="#__codelineno-16-85"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;신뢰도 (Confidence)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+</span><span id="__span-16-86"><a id="__codelineno-16-86" name="__codelineno-16-86" href="#__codelineno-16-86"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;향상도 (Lift)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+</span><span id="__span-16-87"><a id="__codelineno-16-87" name="__codelineno-16-87" href="#__codelineno-16-87"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;연관 규칙: 신뢰도 vs 향상도 (원 크기 = 지지도)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+</span><span id="__span-16-88"><a id="__codelineno-16-88" name="__codelineno-16-88" href="#__codelineno-16-88"></a><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</span><span id="__span-16-89"><a id="__codelineno-16-89" name="__codelineno-16-89" href="#__codelineno-16-89"></a><span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">scatter</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;향상도&#39;</span><span class="p">)</span>
+</span><span id="__span-16-90"><a id="__codelineno-16-90" name="__codelineno-16-90" href="#__codelineno-16-90"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-16-91"><a id="__codelineno-16-91" name="__codelineno-16-91" href="#__codelineno-16-91"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-16-92"><a id="__codelineno-16-92" name="__codelineno-16-92" href="#__codelineno-16-92"></a>
+</span><span id="__span-16-93"><a id="__codelineno-16-93" name="__codelineno-16-93" href="#__codelineno-16-93"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ 분석 완료!&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <hr />
 <h2 id="_6">⚠️ 자주 하는 실수<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p><strong>실수 1: X를 1차원 배열로 넣기</strong> 🚫</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># ❌ 이러면 에러!</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>  <span class="c1"># ValueError 발생!</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># ✅ 반드시 2차원으로!</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</span></code></pre></div>
-<p>scikit-learn은 X가 <strong>(샘플 수, 특성 수)</strong> 형태의 2차원 배열이어야 합니다. <code>.reshape(-1, 1)</code>을 잊지 마세요!</p>
-<hr />
-<p><strong>실수 2: fit 하기 전에 predict 호출</strong> 🚫</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># ❌ 학습 안 하고 예측하면 에러!</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">5</span><span class="p">]])</span>  <span class="c1"># NotFittedError!</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="c1"># ✅ 반드시 fit 먼저!</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">5</span><span class="p">]])</span>
-</span></code></pre></div>
-<p>모델은 <strong>학습(fit) → 예측(predict)</strong> 순서를 반드시 지켜야 합니다.</p>
-<hr />
-<p><strong>실수 3: 기울기의 의미를 반대로 해석</strong> 🚫</p>
+<h3 id="1_1">실수 1: 연관을 인과관계로 해석 🚫<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p>❌ "기울기가 6.35이니까, 점수가 6.35점 오르면 공부 시간이 1시간 늘어난다"</p>
+<p><strong>틀린 해석:</strong> "라면을 사면 계란을 사게 된다" (인과관계)
+<strong>올바른 해석:</strong> "라면과 계란이 함께 구매되는 경향이 있다" (동시 발생 패턴)</p>
 </blockquote>
-<p>기울기는 <strong>X → Y 방향</strong>입니다.</p>
-<blockquote>
-<p>✅ "공부 시간(X)이 1시간 늘면, 점수(Y)가 약 6.35점 오른다"</p>
-</blockquote>
-<hr />
-<p><strong>실수 4: 학습 데이터 범위 밖을 무작정 예측</strong> 🚫</p>
-<p>앞서 본 것처럼 12시간에 105.5점이 나오는 것은 비현실적입니다. 선형 회귀는 <strong>데이터 범위 안에서 가장 신뢰할 수 있는</strong> 모델입니다.</p>
+<p>연관 규칙은 <strong>상관관계(correlation)</strong> 를 보여줄 뿐, 원인과 결과를 알려주지 않습니다. "아이스크림 매출과 익사 사고가 동시에 높아진다"고 해서 아이스크림이 익사를 유발하는 것이 아닌 것처럼요 (둘 다 여름에 높아지는 것).</p>
+<h3 id="2">실수 2: 지지도만 보고 판단하기 🚫<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>지지도가 높다고 반드시 좋은 규칙은 아닙니다. 예를 들어, 편의점에서 거의 모든 사람이 비닐봉투를 구매한다면 {아무 상품} → {비닐봉투}의 지지도는 매우 높지만, 이건 의미 없는 규칙입니다. <strong>반드시 향상도(Lift)가 1보다 큰지 확인하세요.</strong></p>
+<h3 id="3-min_support">실수 3: min_support를 너무 낮게 설정하기 🚫<a class="headerlink" href="#3-min_support" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># ❌ 이렇게 하면 너무 많은 규칙이 나옴</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">frequent_itemsets</span> <span class="o">=</span> <span class="n">apriori</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">min_support</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>  <span class="c1"># 1%</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="c1"># ✅ 적절한 수준에서 시작하고 점차 조정</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="n">frequent_itemsets</span> <span class="o">=</span> <span class="n">apriori</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">min_support</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>   <span class="c1"># 10%</span>
+</span></code></pre></div>
+<p>최소 지지도를 너무 낮게 잡으면 수천~수만 개의 규칙이 쏟아져 나와 해석이 불가능합니다. <strong>데이터 크기에 따라 5%~20% 사이에서 시작</strong>하는 것을 추천합니다.</p>
+<h3 id="4">실수 4: 신뢰도의 방향을 무시하기 🚫<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># {A} → {B} 의 신뢰도 ≠ {B} → {A} 의 신뢰도!</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="c1"># &quot;라면을 사면 계란도 산다&quot;와 &quot;계란을 사면 라면도 산다&quot;는 다른 규칙</span>
+</span></code></pre></div>
+<p>비즈니스 맥락에 맞는 방향의 규칙을 선택해야 합니다. "라면 구매자에게 계란을 추천"하려면 {라면} → {계란}의 신뢰도를 봐야 합니다.</p>
 <hr />
 <h2 id="_7">✅ 스스로 점검하기<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<p><strong>기본 문제 📋</strong></p>
-<p><strong>Q1.</strong> 단순 선형 회귀의 수식 <code>Y = wX + b</code>에서 w와 b의 이름과 의미를 각각 적어보세요.</p>
-<details>
-<summary>정답 보기</summary>
-
-- **w**: 기울기(weight/coefficient). X가 1 증가할 때 Y의 변화량
-- **b**: 절편(bias/intercept). X가 0일 때 Y의 예측 값
-
-</details>
-
-<hr />
-<p><strong>Q2.</strong> 최소제곱법은 무엇을 최소화하는 방법인가요?</p>
-<details>
-<summary>정답 보기</summary>
-
-각 데이터 점에서 회귀선까지의 **잔차(실제 값 - 예측 값)의 제곱 합**을 최소화하는 방법입니다.
-
-</details>
-
-<hr />
-<p><strong>Q3.</strong> 어떤 회귀 모델의 결과가 <code>coef_ = 12.5</code>, <code>intercept_ = 3.0</code>입니다. X가 기온(°C)이고 Y가 아이스크림 판매량(개)일 때, 기온이 25°C면 예상 판매량은?</p>
-<details>
-<summary>정답 보기</summary>
-
-`Y = 12.5 × 25 + 3.0 = 315.5개`
-
-기온 1도 오르면 아이스크림이 약 12.5개 더 팔린다는 의미입니다.
-
-</details>
-
-<hr />
-<p><strong>응용 문제 🧩</strong></p>
-<p><strong>Q4.</strong> 아래 코드의 빈칸을 채워 모델을 완성하세요.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">90</span><span class="p">])</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="n">model</span> <span class="o">=</span> <span class="n">____________</span><span class="p">()</span>     <span class="c1"># (1) 모델 생성</span>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="n">model</span><span class="o">.</span><span class="n">_______</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>        <span class="c1"># (2) 학습</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="n">result</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">_______</span><span class="p">([[</span><span class="mi">7</span><span class="p">]])</span>  <span class="c1"># (3) 예측</span>
-</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</span></code></pre></div>
-<details>
-<summary>정답 보기</summary>
-
-<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>   <span class="c1"># (1)</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>              <span class="c1"># (2)</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">result</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">7</span><span class="p">]])</span>  <span class="c1"># (3)</span>
-</span></code></pre></div>
-
-</details>
-
-<hr />
-<h2 id="_8">🚀 더 해보기<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<h3 id="_9">도전 과제: 야구 타자 데이터로 회귀 분석 ⚾<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>안타 수(X)로 타율(Y)을 예측하는 모델을 만들어보세요!</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.linear_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="c1"># 가상의 야구 타자 데이터 (안타 수, 타율)</span>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="n">hits</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">80</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">145</span><span class="p">,</span> <span class="mi">155</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">195</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="n">batting_avg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.220</span><span class="p">,</span> <span class="mf">0.245</span><span class="p">,</span> <span class="mf">0.260</span><span class="p">,</span> <span class="mf">0.275</span><span class="p">,</span> <span class="mf">0.290</span><span class="p">,</span> <span class="mf">0.300</span><span class="p">,</span> <span class="mf">0.310</span><span class="p">,</span> <span class="mf">0.325</span><span class="p">,</span> <span class="mf">0.340</span><span class="p">,</span> <span class="mf">0.355</span><span class="p">])</span>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>
-</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="c1"># TODO: 아래를 직접 완성해보세요!</span>
-</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="c1"># 1. LinearRegression 모델 생성 및 학습</span>
-</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="c1"># 2. 기울기와 절편 출력</span>
-</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="c1"># 3. 안타 150개인 선수의 예상 타율 예측</span>
-</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="c1"># 4. 산점도 + 회귀선 시각화</span>
-</span></code></pre></div>
-<details>
-<summary>힌트 💡</summary>
-
-Step 3~5의 코드를 그대로 참고하되, 변수 이름만 바꾸면 됩니다. `model.fit(hits, batting_avg)` 이렇게 시작하세요!
-
-</details>
-
-<details>
-<summary>전체 풀이 보기</summary>
-
-<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">hits</span><span class="p">,</span> <span class="n">batting_avg</span><span class="p">)</span>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;기울기: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;절편: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;안타 150개 → 예상 타율: </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">150</span><span class="p">]])[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">hits</span><span class="p">,</span> <span class="n">batting_avg</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="n">X_line</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_line</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_line</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tomato&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Hits&#39;</span><span class="p">)</span>
-</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Batting Average&#39;</span><span class="p">)</span>
-</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Hits vs Batting Average&#39;</span><span class="p">)</span>
-</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></code></pre></div>
-
-</details>
-
-<hr />
-<blockquote>
-<p><strong>정리하기 📌</strong></p>
-<p><strong>이 장의 핵심을 3줄로 요약합니다!</strong></p>
+<h3 id="_8">기본 문제<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p><strong>문제 1.</strong> 아래 데이터에서 {콜라} → {팝콘}의 지지도, 신뢰도, 향상도를 구하세요.</p>
 <ul>
-<li><strong>단순 선형 회귀</strong>는 입력(X) 하나로 연속적인 출력(Y)을 예측하는 <code>Y = wX + b</code> 모델이다</li>
-<li><strong>최소제곱법</strong>은 잔차 제곱 합을 최소화하여 최적의 기울기(w)와 절편(b)을 찾는다</li>
-<li>scikit-learn의 <strong><code>LinearRegression</code></strong>으로 <code>.fit()</code> → <code>.predict()</code> 두 단계로 간편하게 구현할 수 있다</li>
+<li>거래 1: 콜라, 팝콘</li>
+<li>거래 2: 콜라, 사탕</li>
+<li>거래 3: 팝콘, 사탕</li>
+<li>거래 4: 콜라, 팝콘, 사탕</li>
+<li>거래 5: 콜라, 팝콘</li>
 </ul>
+<blockquote>
+<p><strong>정답:</strong>
+- 콜라 ∩ 팝콘: 1, 4, 5번 → 3건 → <strong>지지도 = 3/5 = 0.6</strong>
+- 콜라: 1, 2, 4, 5번 → 4건 → Support(콜라) = 4/5 = 0.8
+- <strong>신뢰도 = 0.6 / 0.8 = 0.75 (75%)</strong>
+- 팝콘: 1, 3, 4, 5번 → 4건 → Support(팝콘) = 4/5 = 0.8
+- <strong>향상도 = 0.75 / 0.8 = 0.9375</strong>
+- 해석: 향상도 &lt; 1이므로, 의미 있는 양의 연관은 아닙니다.</p>
+</blockquote>
+<p><strong>문제 2.</strong> 다음 중 올바른 설명을 모두 고르세요.</p>
+<ul>
+<li>(가) 향상도가 2라면 우연보다 2배 강한 연관이다 ✅</li>
+<li>(나) 신뢰도가 높으면 반드시 좋은 규칙이다 ❌ (지지도나 향상도도 봐야 함)</li>
+<li>(다) 연관 규칙은 인과관계를 의미한다 ❌ (동시 발생 패턴일 뿐)</li>
+<li>(라) 지지도는 방향성이 없다 (A→B와 B→A가 같다) ✅</li>
+</ul>
+<h3 id="_9">응용 문제<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p><strong>문제 3.</strong> 어떤 온라인 쇼핑몰에서 다음 연관 규칙을 발견했습니다.</p>
+<ul>
+<li>규칙 A: {노트북} → {마우스}, 지지도 5%, 신뢰도 70%, 향상도 3.5</li>
+<li>규칙 B: {키보드} → {마우스}, 지지도 15%, 신뢰도 60%, 향상도 1.2</li>
+</ul>
+<p>마케팅 팀에 추천 규칙을 하나만 골라야 한다면 어떤 것을 고르겠습니까? 이유를 설명하세요.</p>
+<blockquote>
+<p><strong>예시 답안:</strong> 목적에 따라 다릅니다.
+- <strong>정밀한 추천(전환율)</strong> 이 목표라면 → <strong>규칙 A</strong>. 향상도가 3.5로 매우 높아, 노트북 구매자에게 마우스를 추천하면 효과적일 확률이 높습니다.
+- <strong>대량 마케팅(커버리지)</strong> 이 목표라면 → <strong>규칙 B</strong>. 지지도가 15%로 더 높아, 더 많은 고객에게 적용할 수 있습니다.
+- 일반적으로는 향상도가 월등히 높은 <strong>규칙 A</strong>를 추천합니다.</p>
+</blockquote>
+<h3 id="_10">심화 문제<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p><strong>문제 4.</strong> <code>min_support=0.3</code>, <code>min_confidence=0.7</code>로 설정했을 때, 왜 일부 "진짜 의미 있는" 규칙을 놓칠 수 있는지 설명하세요.</p>
+<blockquote>
+<p><strong>예시 답안:</strong> 특정 니치(niche) 상품 조합은 지지도가 낮을 수 있습니다. 예를 들어, "프로틴 바 → 아몬드 우유"는 전체 거래에서 드물게 등장하지만(지지도 5%), 프로틴 바를 사는 사람 중 90%가 아몬드 우유도 사고(신뢰도 90%), 향상도가 5.0일 수 있습니다. min_support=0.3으로 설정하면 이 규칙은 지지도 기준에서 걸러져 발견되지 않습니다. 따라서 <strong>높은 지지도 기준은 희귀하지만 강력한 규칙을 놓칠 위험</strong>이 있습니다.</p>
 </blockquote>
 <hr />
-<h2 id="_10">🔗 다음 장으로<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<p>이번 장에서는 입력 변수가 <strong>1개</strong>인 단순 선형 회귀를 배웠습니다. 하지만 현실의 예측 문제는 보통 입력이 여러 개입니다. 예를 들어 집값은 면적뿐 아니라 <strong>방 수, 층수, 역까지 거리</strong> 등 여러 요인에 영향을 받죠.</p>
+<h2 id="_11">🚀 더 해보기: 넷플릭스 시청 이력 추천 규칙<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>넷플릭스 스타일의 가상 시청 데이터에서 "이 영화를 본 사람이 다음에 볼 영화"를 추천하는 규칙을 만들어봅시다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># 가상 넷플릭스 시청 이력 데이터</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">viewing_history</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    <span class="p">[</span><span class="s1">&#39;기생충&#39;</span><span class="p">,</span> <span class="s1">&#39;올드보이&#39;</span><span class="p">,</span> <span class="s1">&#39;부산행&#39;</span><span class="p">],</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    <span class="p">[</span><span class="s1">&#39;어벤져스&#39;</span><span class="p">,</span> <span class="s1">&#39;아이언맨&#39;</span><span class="p">,</span> <span class="s1">&#39;스파이더맨&#39;</span><span class="p">],</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>    <span class="p">[</span><span class="s1">&#39;기생충&#39;</span><span class="p">,</span> <span class="s1">&#39;부산행&#39;</span><span class="p">,</span> <span class="s1">&#39;반도&#39;</span><span class="p">],</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    <span class="p">[</span><span class="s1">&#39;어벤져스&#39;</span><span class="p">,</span> <span class="s1">&#39;스파이더맨&#39;</span><span class="p">,</span> <span class="s1">&#39;닥터스트레인지&#39;</span><span class="p">],</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>    <span class="p">[</span><span class="s1">&#39;기생충&#39;</span><span class="p">,</span> <span class="s1">&#39;올드보이&#39;</span><span class="p">],</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>    <span class="p">[</span><span class="s1">&#39;어벤져스&#39;</span><span class="p">,</span> <span class="s1">&#39;아이언맨&#39;</span><span class="p">,</span> <span class="s1">&#39;스파이더맨&#39;</span><span class="p">,</span> <span class="s1">&#39;닥터스트레인지&#39;</span><span class="p">],</span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>    <span class="p">[</span><span class="s1">&#39;기생충&#39;</span><span class="p">,</span> <span class="s1">&#39;부산행&#39;</span><span class="p">,</span> <span class="s1">&#39;올드보이&#39;</span><span class="p">,</span> <span class="s1">&#39;반도&#39;</span><span class="p">],</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>    <span class="p">[</span><span class="s1">&#39;아이언맨&#39;</span><span class="p">,</span> <span class="s1">&#39;스파이더맨&#39;</span><span class="p">],</span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>    <span class="p">[</span><span class="s1">&#39;기생충&#39;</span><span class="p">,</span> <span class="s1">&#39;올드보이&#39;</span><span class="p">,</span> <span class="s1">&#39;부산행&#39;</span><span class="p">],</span>
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>    <span class="p">[</span><span class="s1">&#39;어벤져스&#39;</span><span class="p">,</span> <span class="s1">&#39;아이언맨&#39;</span><span class="p">,</span> <span class="s1">&#39;닥터스트레인지&#39;</span><span class="p">],</span>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>    <span class="p">[</span><span class="s1">&#39;부산행&#39;</span><span class="p">,</span> <span class="s1">&#39;반도&#39;</span><span class="p">,</span> <span class="s1">&#39;기생충&#39;</span><span class="p">],</span>
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>    <span class="p">[</span><span class="s1">&#39;스파이더맨&#39;</span><span class="p">,</span> <span class="s1">&#39;어벤져스&#39;</span><span class="p">,</span> <span class="s1">&#39;아이언맨&#39;</span><span class="p">],</span>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>    <span class="p">[</span><span class="s1">&#39;기생충&#39;</span><span class="p">,</span> <span class="s1">&#39;올드보이&#39;</span><span class="p">,</span> <span class="s1">&#39;반도&#39;</span><span class="p">],</span>
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>    <span class="p">[</span><span class="s1">&#39;어벤져스&#39;</span><span class="p">,</span> <span class="s1">&#39;스파이더맨&#39;</span><span class="p">,</span> <span class="s1">&#39;아이언맨&#39;</span><span class="p">,</span> <span class="s1">&#39;닥터스트레인지&#39;</span><span class="p">],</span>
+</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>    <span class="p">[</span><span class="s1">&#39;기생충&#39;</span><span class="p">,</span> <span class="s1">&#39;부산행&#39;</span><span class="p">],</span>
+</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a>    <span class="p">[</span><span class="s1">&#39;아이언맨&#39;</span><span class="p">,</span> <span class="s1">&#39;어벤져스&#39;</span><span class="p">],</span>
+</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a>    <span class="p">[</span><span class="s1">&#39;올드보이&#39;</span><span class="p">,</span> <span class="s1">&#39;기생충&#39;</span><span class="p">,</span> <span class="s1">&#39;부산행&#39;</span><span class="p">],</span>
+</span><span id="__span-19-20"><a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>    <span class="p">[</span><span class="s1">&#39;스파이더맨&#39;</span><span class="p">,</span> <span class="s1">&#39;닥터스트레인지&#39;</span><span class="p">,</span> <span class="s1">&#39;어벤져스&#39;</span><span class="p">],</span>
+</span><span id="__span-19-21"><a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a>    <span class="p">[</span><span class="s1">&#39;기생충&#39;</span><span class="p">,</span> <span class="s1">&#39;반도&#39;</span><span class="p">],</span>
+</span><span id="__span-19-22"><a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a>    <span class="p">[</span><span class="s1">&#39;아이언맨&#39;</span><span class="p">,</span> <span class="s1">&#39;스파이더맨&#39;</span><span class="p">,</span> <span class="s1">&#39;어벤져스&#39;</span><span class="p">],</span>
+</span><span id="__span-19-23"><a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a><span class="p">]</span>
+</span><span id="__span-19-24"><a id="__codelineno-19-24" name="__codelineno-19-24" href="#__codelineno-19-24"></a>
+</span><span id="__span-19-25"><a id="__codelineno-19-25" name="__codelineno-19-25" href="#__codelineno-19-25"></a><span class="c1"># 분석 실행</span>
+</span><span id="__span-19-26"><a id="__codelineno-19-26" name="__codelineno-19-26" href="#__codelineno-19-26"></a><span class="n">te2</span> <span class="o">=</span> <span class="n">TransactionEncoder</span><span class="p">()</span>
+</span><span id="__span-19-27"><a id="__codelineno-19-27" name="__codelineno-19-27" href="#__codelineno-19-27"></a><span class="n">te2_array</span> <span class="o">=</span> <span class="n">te2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">viewing_history</span><span class="p">)</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">viewing_history</span><span class="p">)</span>
+</span><span id="__span-19-28"><a id="__codelineno-19-28" name="__codelineno-19-28" href="#__codelineno-19-28"></a><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">te2_array</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">te2</span><span class="o">.</span><span class="n">columns_</span><span class="p">)</span>
+</span><span id="__span-19-29"><a id="__codelineno-19-29" name="__codelineno-19-29" href="#__codelineno-19-29"></a>
+</span><span id="__span-19-30"><a id="__codelineno-19-30" name="__codelineno-19-30" href="#__codelineno-19-30"></a><span class="n">frequent2</span> <span class="o">=</span> <span class="n">apriori</span><span class="p">(</span><span class="n">df2</span><span class="p">,</span> <span class="n">min_support</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">use_colnames</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-19-31"><a id="__codelineno-19-31" name="__codelineno-19-31" href="#__codelineno-19-31"></a><span class="n">rules2</span> <span class="o">=</span> <span class="n">association_rules</span><span class="p">(</span><span class="n">frequent2</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;confidence&quot;</span><span class="p">,</span> <span class="n">min_threshold</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</span><span id="__span-19-32"><a id="__codelineno-19-32" name="__codelineno-19-32" href="#__codelineno-19-32"></a>
+</span><span id="__span-19-33"><a id="__codelineno-19-33" name="__codelineno-19-33" href="#__codelineno-19-33"></a><span class="c1"># 향상도 1 이상, 신뢰도 높은 순으로 출력</span>
+</span><span id="__span-19-34"><a id="__codelineno-19-34" name="__codelineno-19-34" href="#__codelineno-19-34"></a><span class="n">good_rules</span> <span class="o">=</span> <span class="n">rules2</span><span class="p">[</span><span class="n">rules2</span><span class="p">[</span><span class="s1">&#39;lift&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;confidence&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-19-35"><a id="__codelineno-19-35" name="__codelineno-19-35" href="#__codelineno-19-35"></a>
+</span><span id="__span-19-36"><a id="__codelineno-19-36" name="__codelineno-19-36" href="#__codelineno-19-36"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🎬 영화 추천 규칙 (향상도 &gt; 1, 신뢰도 순)</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-19-37"><a id="__codelineno-19-37" name="__codelineno-19-37" href="#__codelineno-19-37"></a><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">good_rules</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+</span><span id="__span-19-38"><a id="__codelineno-19-38" name="__codelineno-19-38" href="#__codelineno-19-38"></a>    <span class="n">ant</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;antecedents&#39;</span><span class="p">]))</span>
+</span><span id="__span-19-39"><a id="__codelineno-19-39" name="__codelineno-19-39" href="#__codelineno-19-39"></a>    <span class="n">con</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;consequents&#39;</span><span class="p">]))</span>
+</span><span id="__span-19-40"><a id="__codelineno-19-40" name="__codelineno-19-40" href="#__codelineno-19-40"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  &#39;</span><span class="si">{</span><span class="n">ant</span><span class="si">}</span><span class="s2">&#39; 본 사람 → &#39;</span><span class="si">{</span><span class="n">con</span><span class="si">}</span><span class="s2">&#39; 추천!&quot;</span><span class="p">)</span>
+</span><span id="__span-19-41"><a id="__codelineno-19-41" name="__codelineno-19-41" href="#__codelineno-19-41"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;    신뢰도: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;confidence&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.0%</span><span class="si">}</span><span class="s2">, 향상도: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;lift&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-19-42"><a id="__codelineno-19-42" name="__codelineno-19-42" href="#__codelineno-19-42"></a>    <span class="nb">print</span><span class="p">()</span>
+</span></code></pre></div>
 <blockquote>
-<p><strong>다음 장 예고</strong>: <em>회귀 분석 (2) — 다중 선형 회귀와 모델 평가</em>에서는 입력 변수를 <strong>여러 개</strong>로 확장하고, 모델이 얼마나 잘 예측하는지 평가하는 <strong>R² 점수, MSE</strong> 등의 지표를 배웁니다. 🎯</p>
+<p><strong>🎯 도전 과제:</strong> 위 코드를 실행한 후, 다음 질문에 답해보세요.
+1. 가장 신뢰도가 높은 추천 규칙은 무엇인가요?
+2. 한국 영화끼리, 마블 영화끼리 묶이는 패턴이 보이나요?
+3. <code>min_support</code>를 0.1로 낮추면 새로운 규칙이 얼마나 더 발견되나요?</p>
 </blockquote>
+<hr />
+<h2 id="_12">🔗 다음 장으로<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>이번 장에서는 <strong>"함께 등장하는 패턴"</strong> 을 찾는 연관 분석을 배웠습니다.</p>
+<div class="mermaid">flowchart LR
+    A["📊 12장\n연관 분석\n함께 등장하는 패턴"] --&gt; B["📊 13장\n군집 분석\n비슷한 것끼리 묶기"]
+
+    style A fill:#4CAF50,stroke:#333,color:#fff
+    style B fill:#2196F3,stroke:#333,color:#fff</div>
+<p><strong>핵심 요약:</strong></p>
+<ul>
+<li><strong>지지도</strong>: 전체 중 함께 등장하는 비율 → "얼마나 자주?"</li>
+<li><strong>신뢰도</strong>: A가 있을 때 B도 있을 확률 → "얼마나 확실히?"</li>
+<li><strong>향상도</strong>: 우연 대비 강도 → "진짜 연관인가?"</li>
+<li><strong>Apriori 알고리즘</strong>: 효율적으로 빈번 항목집합을 찾는 방법</li>
+<li><strong>실전 활용</strong>: 상품 추천, 진열 배치, 마케팅 전략</li>
+</ul>
+<p>다음 장에서는 <strong>군집 분석(Clustering)</strong> 을 배웁니다. 연관 분석이 "함께 등장하는 아이템"을 찾았다면, 군집 분석은 "비슷한 고객/데이터를 그룹으로 묶는" 방법입니다. K-Means 알고리즘으로 데이터를 자동으로 그룹핑하는 방법을 실습합니다! 🚀</p>
 
 
 

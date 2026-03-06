@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-05-1" class="md-skip">
+        <a href="#chapter-5" class="md-skip">
           콘텐츠로 이동
         </a>
       
@@ -756,7 +756,7 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 1: 데이터 수집 경로 🗂️
+        개념 1: 데이터 수집 — 재료 장보기 🛒
       
     </span>
   </a>
@@ -767,7 +767,7 @@
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 2: 데이터 불러오기와 기본 확인 📥
+        개념 2: 데이터 구조 파악 — 첫인상 확인하기 👀
       
     </span>
   </a>
@@ -778,7 +778,7 @@
   <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 3: 요약 통계량 📊
+        개념 3: 자료형 구분 — 숫자와 카테고리 🏷️
       
     </span>
   </a>
@@ -789,7 +789,7 @@
   <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 4: 분포 시각화 — 히스토그램과 막대그래프 📈
+        개념 4: 특성 분석 — 데이터의 성격 읽기 📊
       
     </span>
   </a>
@@ -814,10 +814,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
+  <a href="#step-1-csv" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: 데이터 준비하기
+        Step 1: 데이터 수집 (CSV 불러오기)
       
     </span>
   </a>
@@ -828,7 +828,7 @@
   <a href="#step-2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: 데이터 첫인상 확인하기
+        Step 2: 데이터 구조 파악
       
     </span>
   </a>
@@ -836,10 +836,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-describe" class="md-nav__link">
+  <a href="#step-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: 요약 통계량 확인하기 — describe()
+        Step 3: 자료형 확인 및 기초 통계량
       
     </span>
   </a>
@@ -847,10 +847,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-value_counts" class="md-nav__link">
+  <a href="#step-4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: 범주형 데이터 탐색하기 — value_counts()
+        Step 4: 시각화로 분포 확인
       
     </span>
   </a>
@@ -861,7 +861,7 @@
   <a href="#step-5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: 히스토그램으로 분포 살펴보기
+        Step 5: 박스플롯으로 이상치 탐색
       
     </span>
   </a>
@@ -872,7 +872,7 @@
   <a href="#step-6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: 막대그래프로 범주별 비교하기
+        Step 6: 상관관계 분석
       
     </span>
   </a>
@@ -903,6 +903,56 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 자주 하는 실수">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 1: 파일 경로 오류로 데이터를 못 불러옴
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 2: 숫자처럼 보이지만 문자열인 데이터
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-describe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 3: describe()만 보고 범주형 변수를 놓침
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 4: 상관계수를 인과관계로 오해
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -953,6 +1003,28 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 더 해보기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 다음 장으로
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1779,7 +1851,7 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 1: 데이터 수집 경로 🗂️
+        개념 1: 데이터 수집 — 재료 장보기 🛒
       
     </span>
   </a>
@@ -1790,7 +1862,7 @@
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 2: 데이터 불러오기와 기본 확인 📥
+        개념 2: 데이터 구조 파악 — 첫인상 확인하기 👀
       
     </span>
   </a>
@@ -1801,7 +1873,7 @@
   <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 3: 요약 통계량 📊
+        개념 3: 자료형 구분 — 숫자와 카테고리 🏷️
       
     </span>
   </a>
@@ -1812,7 +1884,7 @@
   <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 4: 분포 시각화 — 히스토그램과 막대그래프 📈
+        개념 4: 특성 분석 — 데이터의 성격 읽기 📊
       
     </span>
   </a>
@@ -1837,10 +1909,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1" class="md-nav__link">
+  <a href="#step-1-csv" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: 데이터 준비하기
+        Step 1: 데이터 수집 (CSV 불러오기)
       
     </span>
   </a>
@@ -1851,7 +1923,7 @@
   <a href="#step-2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: 데이터 첫인상 확인하기
+        Step 2: 데이터 구조 파악
       
     </span>
   </a>
@@ -1859,10 +1931,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-describe" class="md-nav__link">
+  <a href="#step-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: 요약 통계량 확인하기 — describe()
+        Step 3: 자료형 확인 및 기초 통계량
       
     </span>
   </a>
@@ -1870,10 +1942,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-value_counts" class="md-nav__link">
+  <a href="#step-4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: 범주형 데이터 탐색하기 — value_counts()
+        Step 4: 시각화로 분포 확인
       
     </span>
   </a>
@@ -1884,7 +1956,7 @@
   <a href="#step-5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: 히스토그램으로 분포 살펴보기
+        Step 5: 박스플롯으로 이상치 탐색
       
     </span>
   </a>
@@ -1895,7 +1967,7 @@
   <a href="#step-6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: 막대그래프로 범주별 비교하기
+        Step 6: 상관관계 분석
       
     </span>
   </a>
@@ -1926,6 +1998,56 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 자주 하는 실수">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 1: 파일 경로 오류로 데이터를 못 불러옴
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 2: 숫자처럼 보이지만 문자열인 데이터
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-describe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 3: describe()만 보고 범주형 변수를 놓침
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        실수 4: 상관계수를 인과관계로 오해
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1979,6 +2101,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 더 해보기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 다음 장으로
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1996,374 +2140,402 @@
 
 
 
-<h1 id="chapter-05-1">Chapter 05. 데이터 수집 및 특성 분석 (1) — 데이터 수집과 탐색<a class="headerlink" href="#chapter-05-1" title="Permanent link">&para;</a></h1>
+<h1 id="chapter-5">Chapter 5: 데이터 수집 및 특성 분석<a class="headerlink" href="#chapter-5" title="Permanent link">&para;</a></h1>
 <p><strong>Part 2 | [1권] 데이터 준비와 분석</strong></p>
 <hr />
 <h2 id="_1">🎯 이 장에서 배우는 것<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>이 장을 마치면 다음을 할 수 있습니다.</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터 수집이 왜 필요한지 설명하고, 다양한 수집 경로를 구분할 수 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 공공데이터 포털이나 CSV 파일에서 데이터를 불러올 수 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>describe()</code>, <code>value_counts()</code>, <code>info()</code>로 데이터 특성을 요약할 수 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 히스토그램과 막대그래프로 데이터 분포를 시각적으로 탐색할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 다양한 형식(CSV, 웹, API)의 데이터를 <strong>Python으로 수집</strong>할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 수집한 데이터의 <strong>기본 구조와 통계량</strong>을 파악할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터의 <strong>자료형(수치형, 범주형)</strong>을 구분하고 적절히 처리할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>시각화를 활용</strong>하여 데이터의 분포와 특성을 분석할 수 있다</li>
 </ul>
 <hr />
 <h2 id="_2">💡 왜 이걸 배우나요?<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p><strong>생각해보기 🤔</strong>: "우리 반 학생들의 하루 스크린 타임은 어떻게 분포할까?"</p>
-</blockquote>
-<p>이 질문에 답하려면 어떻게 해야 할까요? "대충 3시간 정도 아닐까?"라고 <strong>감으로 추측</strong>할 수도 있지만, 실제로 데이터를 모아보면 예상과 전혀 다른 결과가 나올 수 있습니다.</p>
-<p>데이터 분석의 첫 단계는 <strong>좋은 데이터를 수집하는 것</strong>입니다. 아무리 뛰어난 분석 기술이 있어도, 데이터가 없으면 아무것도 할 수 없습니다. 그리고 데이터를 모았다면, 바로 분석에 뛰어들기 전에 <strong>"이 데이터는 어떤 모습인가?"</strong>를 먼저 살펴봐야 합니다.</p>
-<p>이번 장에서는 <strong>데이터를 어디서 구하고, 어떻게 첫인상을 파악하는지</strong> 배웁니다. 마치 새로운 도시에 도착했을 때 지도를 펼쳐보는 것처럼, 데이터의 전체적인 윤곽을 그려보는 과정입니다.</p>
+<p>요리를 시작하기 전에 재료를 확인하는 것처럼, 데이터 분석도 <strong>"내가 가진 데이터가 어떤 녀석인지"</strong> 파악하는 것에서 시작합니다.</p>
+<p>아무리 뛰어난 머신러닝 모델도, 데이터를 제대로 이해하지 못한 채 투입하면 엉뚱한 결과를 냅니다. 실제 데이터 과학자들은 전체 프로젝트 시간의 <strong>60~80%를 데이터 수집과 이해</strong>에 사용합니다.</p>
+<p>이 장에서는 데이터를 모으고, 처음 만난 데이터에게 "너 누구야?"라고 물어보는 방법을 배웁니다.</p>
 <hr />
 <h2 id="_3">📚 핵심 개념<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="1">개념 1: 데이터 수집 경로 🗂️<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p><strong>비유로 시작하기</strong></p>
-<p>요리를 하려면 재료가 필요합니다. 재료는 마트에서 살 수도 있고, 텃밭에서 직접 기를 수도 있고, 이웃에게 나눠 받을 수도 있죠. 데이터도 마찬가지입니다. <strong>목적에 맞는 데이터를 다양한 곳에서 구할 수 있습니다.</strong></p>
-<p><strong>주요 데이터 수집 경로</strong></p>
+<h3 id="1">개념 1: 데이터 수집 — 재료 장보기 🛒<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p><strong>비유</strong>: 요리사가 시장에서 재료를 사 오듯, 데이터 분석가는 여러 곳에서 데이터를 수집합니다. 시장마다 파는 물건이 다르듯, 데이터 출처마다 형식도 다릅니다.</p>
+<p><strong>정의</strong>: 데이터 수집(Data Collection)이란 분석 목적에 맞는 데이터를 <strong>다양한 출처에서 가져와 하나의 구조화된 형태로 정리</strong>하는 과정입니다.</p>
+<p><strong>주요 데이터 출처와 형식</strong></p>
 <ul>
-<li><strong>직접 수집</strong>: 설문조사, 실험, 관찰 등으로 내가 직접 만드는 데이터 (예: 급식 만족도 설문)</li>
-<li><strong>공공데이터 포털</strong> (data.go.kr): 정부·공공기관이 무료로 제공하는 데이터 (예: 인구통계, 교통사고, 날씨)</li>
-<li><strong>캐글</strong> (kaggle.com): 전 세계 데이터 과학자들이 공유하는 데이터셋 모음</li>
-<li><strong>웹 크롤링</strong>: 웹사이트에서 자동으로 정보를 추출하는 방법 (고급 과정에서 다룸)</li>
+<li><strong>CSV 파일</strong>: 쉼표로 구분된 텍스트 파일. 가장 보편적인 데이터 교환 형식</li>
+<li><strong>엑셀 파일(.xlsx)</strong>: 스프레드시트 형태. 기업 현장에서 많이 사용</li>
+<li><strong>웹 데이터</strong>: 웹사이트에서 직접 가져오는 데이터 (웹 스크래핑)</li>
+<li><strong>API</strong>: 서비스가 제공하는 공식 데이터 통로 (예: 공공데이터포털, 날씨 API)</li>
 </ul>
 <div class="mermaid">flowchart LR
-    A["🎯 분석 목적"] --&gt; B{"데이터가\n있는가?"}
-    B --&gt;|"직접 만들기"| C["📋 설문조사\n실험·관찰"]
-    B --&gt;|"가져오기"| D["🏛️ 공공데이터\n포털"]
-    B --&gt;|"가져오기"| E["📊 캐글\nKaggle"]
-    B --&gt;|"가져오기"| F["🌐 웹\n크롤링"]</div>
+    A["📁 CSV/Excel\n파일"] --&gt; D["🐼 pandas\nDataFrame"]
+    B["🌐 웹사이트\n스크래핑"] --&gt; D
+    C["🔌 API\n공공데이터"] --&gt; D
+    D --&gt; E["📊 분석 시작!"]</div>
 <blockquote>
-<p><strong>알아보기 📌</strong>: 가장 흔한 데이터 형식은 <strong>CSV(Comma-Separated Values)</strong> 파일입니다. 이름 그대로 값들이 쉼표(,)로 구분된 텍스트 파일이며, 엑셀로도 열 수 있고 pandas로 바로 읽을 수 있습니다.</p>
+<p><strong>알아보기</strong>: pandas의 <code>read_csv()</code>, <code>read_excel()</code>, <code>read_html()</code> 함수는 각각 다른 형식의 데이터를 <strong>동일한 DataFrame 구조</strong>로 변환해줍니다. 입구는 달라도 도착지는 같은 셈이죠!</p>
 </blockquote>
 <hr />
-<h3 id="2">개념 2: 데이터 불러오기와 기본 확인 📥<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<p><strong>비유로 시작하기</strong></p>
-<p>택배 상자를 받았을 때, 바로 사용하지 않고 먼저 <strong>뚜껑을 열어 내용물을 확인</strong>하죠? 데이터도 마찬가지입니다. 불러온 직후 "몇 줄짜리인지", "어떤 항목이 있는지", "빠진 값은 없는지"를 체크합니다.</p>
-<p><strong>핵심 함수 3가지</strong></p>
+<h3 id="2">개념 2: 데이터 구조 파악 — 첫인상 확인하기 👀<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p><strong>비유</strong>: 새 학기에 반 친구들을 처음 만나면, 먼저 "몇 명이지?", "이름이 뭐지?"를 확인하죠. 데이터도 마찬가지입니다. 처음 만나면 <strong>크기, 구성, 형태</strong>부터 확인합니다.</p>
+<p><strong>정의</strong>: 데이터 구조 파악이란 데이터의 <strong>행(관측값) 수, 열(변수) 수, 각 열의 자료형, 결측값 유무</strong> 등 기본적인 뼈대를 확인하는 과정입니다.</p>
+<p><strong>핵심 확인 항목</strong></p>
 <ul>
-<li><strong><code>df.head()</code></strong>: 데이터의 처음 5줄을 보여줍니다 → "첫인상 확인"</li>
-<li><strong><code>df.info()</code></strong>: 각 열의 이름, 데이터 타입, 비어있지 않은 값의 개수를 보여줍니다 → "건강검진표"</li>
-<li><strong><code>df.shape</code></strong>: (행 수, 열 수)를 알려줍니다 → "데이터의 크기"</li>
+<li><strong>shape</strong>: 행 × 열 크기 (예: 150행 × 4열)</li>
+<li><strong>dtypes</strong>: 각 열의 자료형 (숫자인지, 문자인지)</li>
+<li><strong>info()</strong>: 전체 구조 요약 (결측값 포함)</li>
+<li><strong>head()</strong>: 처음 5행 미리보기</li>
+<li><strong>describe()</strong>: 수치형 데이터의 기본 통계량</li>
 </ul>
 <blockquote>
-<p><strong>정리하기 📋</strong>: <code>head()</code>로 모양을 보고, <code>info()</code>로 건강 상태를 점검하고, <code>shape</code>로 크기를 파악하는 것이 데이터를 처음 만났을 때의 <strong>3단계 인사</strong>입니다.</p>
+<p><strong>생각해보기</strong>: <code>describe()</code>가 보여주는 mean(평균), std(표준편차), min, max 값만으로도 데이터에 이상한 점이 있는지 감을 잡을 수 있습니다. 예를 들어 "나이" 열의 max가 999라면? 🤔</p>
 </blockquote>
 <hr />
-<h3 id="3">개념 3: 요약 통계량 📊<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
-<p><strong>비유로 시작하기</strong></p>
-<p>시험을 보고 나면 선생님이 "평균 72점, 최고 98점, 최저 35점"이라고 알려주시죠? 이것만으로도 "아, 이번 시험은 대체로 이 정도 수준이었구나"라고 파악할 수 있습니다. 이렇게 <strong>데이터 전체를 몇 개의 숫자로 요약한 것</strong>이 요약 통계량입니다.</p>
-<p><strong>정확한 정의</strong></p>
-<ul>
-<li><strong><code>df.describe()</code></strong>: 숫자형 열에 대해 개수(count), 평균(mean), 표준편차(std), 최솟값(min), 사분위수(25%·50%·75%), 최댓값(max)을 한 번에 보여주는 함수</li>
-<li><strong><code>df['열이름'].value_counts()</code></strong>: 범주형(카테고리) 데이터에서 각 값이 몇 번 등장하는지 세어주는 함수</li>
-</ul>
+<h3 id="3">개념 3: 자료형 구분 — 숫자와 카테고리 🏷️<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<p><strong>비유</strong>: 학교에서 학생 정보를 정리한다고 생각해보세요. <strong>키(168.5cm)</strong> 는 숫자로 계산할 수 있지만, <strong>혈액형(A, B, O, AB)</strong> 은 숫자가 아닌 카테고리입니다. 이 둘을 같은 방식으로 다루면 안 됩니다.</p>
+<p><strong>정의</strong>: 자료형(Data Type)은 데이터가 가진 <strong>값의 성질</strong>에 따른 분류입니다.</p>
 <div class="mermaid">flowchart TD
-    A["데이터 요약"] --&gt; B{"데이터 유형?"}
-    B --&gt;|"숫자형\n(키, 점수, 타율)"| C["describe()\n평균·최대·최소 등"]
-    B --&gt;|"범주형\n(포지션, 팀, 성별)"| D["value_counts()\n각 항목별 개수"]</div>
+    A["데이터 자료형"] --&gt; B["수치형\nNumerical"]
+    A --&gt; C["범주형\nCategorical"]
+    B --&gt; B1["연속형\n키, 몸무게, 온도"]
+    B --&gt; B2["이산형\n학생 수, 횟수"]
+    C --&gt; C1["명목형\n혈액형, 성별"]
+    C --&gt; C2["순서형\n학점(A&gt;B&gt;C), 만족도"]</div>
+<p><strong>왜 구분이 중요한가요?</strong></p>
+<ul>
+<li><strong>수치형</strong> → 평균, 표준편차 계산 가능 → 히스토그램으로 시각화</li>
+<li><strong>범주형</strong> → 빈도(개수) 계산 → 막대그래프로 시각화</li>
+<li>자료형을 잘못 인식하면 분석 결과 자체가 틀어집니다!</li>
+</ul>
 <blockquote>
-<p><strong>알아보기 📌</strong>: <strong>표준편차(std)</strong>는 "데이터가 평균에서 얼마나 퍼져 있는가"를 나타냅니다. 값이 크면 데이터가 넓게 흩어져 있고, 작으면 평균 근처에 모여 있다는 뜻입니다.</p>
+<p><strong>알아보기</strong>: pandas에서 숫자처럼 보이는 "1, 2, 3"이 사실은 문자(object)로 저장되어 있는 경우가 많습니다. <code>dtypes</code>로 반드시 확인하세요!</p>
 </blockquote>
 <hr />
-<h3 id="4">개념 4: 분포 시각화 — 히스토그램과 막대그래프 📈<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
-<p><strong>비유로 시작하기</strong></p>
-<p>숫자 나열만으로는 전체 그림이 잘 안 그려집니다. 마치 지도 없이 길을 찾는 것과 같죠. <strong>그래프는 데이터의 지도</strong>입니다. 한눈에 "어디에 많이 모여 있는지", "특이한 값은 없는지" 파악할 수 있습니다.</p>
-<p><strong>두 가지 그래프의 차이</strong></p>
+<h3 id="4">개념 4: 특성 분석 — 데이터의 성격 읽기 📊<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p><strong>비유</strong>: 사람의 성격을 파악하려면 대화도 하고 행동도 관찰하듯, 데이터의 성격을 파악하려면 <strong>통계량도 보고 그래프도 그려봐야</strong> 합니다.</p>
+<p><strong>정의</strong>: 특성 분석(Feature Analysis)이란 각 변수의 <strong>분포, 중심 경향, 퍼짐 정도, 변수 간 관계</strong>를 통계와 시각화로 파악하는 과정입니다.</p>
+<p><strong>핵심 분석 도구</strong></p>
 <ul>
-<li><strong>히스토그램(Histogram)</strong>: <strong>숫자형</strong> 데이터의 분포를 보여줍니다. 값의 범위를 구간(bin)으로 나누고, 각 구간에 속하는 데이터 개수를 막대 높이로 표현합니다. (예: 타율 분포)</li>
-<li><strong>막대그래프(Bar Chart)</strong>: <strong>범주형</strong> 데이터의 빈도를 보여줍니다. 각 카테고리별 개수를 막대로 표현합니다. (예: 포지션별 선수 수)</li>
+<li><strong>히스토그램(histogram)</strong>: 수치형 데이터가 어떻게 퍼져 있는지 확인</li>
+<li><strong>박스플롯(boxplot)</strong>: 이상치(outlier, 극단적으로 튀는 값)를 한눈에 포착</li>
+<li><strong>상관계수(correlation)</strong>: 두 수치형 변수가 얼마나 함께 움직이는지 (-1 ~ +1)</li>
+<li><strong>값 빈도(value_counts)</strong>: 범주형 데이터에서 각 카테고리의 개수</li>
 </ul>
 <div class="mermaid">flowchart LR
-    A["📊 분포 시각화"] --&gt; B["숫자형 데이터"]
-    A --&gt; C["범주형 데이터"]
-    B --&gt; D["히스토그램\n구간별 빈도"]
-    C --&gt; E["막대그래프\n항목별 개수"]</div>
-<blockquote>
-<p><strong>생각해보기 🤔</strong>: 히스토그램에서 막대들이 서로 붙어 있는 이유는 뭘까요? 숫자형 데이터는 값이 <strong>연속적</strong>으로 이어지기 때문입니다. 반면 막대그래프는 카테고리가 서로 독립적이라 막대 사이에 간격이 있습니다.</p>
-</blockquote>
+    A["특성 분석"] --&gt; B["단변량 분석\n변수 하나씩"]
+    A --&gt; C["이변량 분석\n변수 둘 사이 관계"]
+    B --&gt; B1["히스토그램\n박스플롯\n빈도표"]
+    C --&gt; C1["산점도\n상관계수\n그룹별 비교"]</div>
 <hr />
 <h2 id="_4">🔨 따라하기<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>이번 실습에서는 <strong>프로야구 타자 성적 데이터</strong>를 사용합니다. Google Colab에서 바로 실행할 수 있도록 샘플 데이터를 코드 안에서 직접 생성합니다.</p>
-<h3 id="step-1">Step 1: 데이터 준비하기<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h3>
-<p>먼저 실습에 사용할 라이브러리를 불러오고, 프로야구 타자 성적 샘플 데이터를 만듭니다.</p>
+<blockquote>
+<p>유명한 <strong>붓꽃(Iris) 데이터셋</strong>을 활용하여, 데이터 수집부터 특성 분석까지 전체 흐름을 체험합니다.</p>
+</blockquote>
+<h3 id="step-1-csv">Step 1: 데이터 수집 (CSV 불러오기)<a class="headerlink" href="#step-1-csv" title="Permanent link">&para;</a></h3>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># 한글 폰트 설정 (Colab 환경)</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NanumGothic&#39;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.unicode_minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># 프로야구 타자 성적 샘플 데이터 생성</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="s1">&#39;선수명&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;김민수&#39;</span><span class="p">,</span> <span class="s1">&#39;이정훈&#39;</span><span class="p">,</span> <span class="s1">&#39;박성진&#39;</span><span class="p">,</span> <span class="s1">&#39;최동원&#39;</span><span class="p">,</span> <span class="s1">&#39;정우성&#39;</span><span class="p">,</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>             <span class="s1">&#39;한승엽&#39;</span><span class="p">,</span> <span class="s1">&#39;오재일&#39;</span><span class="p">,</span> <span class="s1">&#39;강민호&#39;</span><span class="p">,</span> <span class="s1">&#39;서건창&#39;</span><span class="p">,</span> <span class="s1">&#39;나성범&#39;</span><span class="p">,</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>             <span class="s1">&#39;양의지&#39;</span><span class="p">,</span> <span class="s1">&#39;김하성&#39;</span><span class="p">,</span> <span class="s1">&#39;이대호&#39;</span><span class="p">,</span> <span class="s1">&#39;손아섭&#39;</span><span class="p">,</span> <span class="s1">&#39;박병호&#39;</span><span class="p">,</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>             <span class="s1">&#39;김재환&#39;</span><span class="p">,</span> <span class="s1">&#39;로하스&#39;</span><span class="p">,</span> <span class="s1">&#39;테임즈&#39;</span><span class="p">,</span> <span class="s1">&#39;에르난데스&#39;</span><span class="p">,</span> <span class="s1">&#39;브리검&#39;</span><span class="p">],</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="s1">&#39;팀&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;LG&#39;</span><span class="p">,</span> <span class="s1">&#39;LG&#39;</span><span class="p">,</span> <span class="s1">&#39;삼성&#39;</span><span class="p">,</span> <span class="s1">&#39;삼성&#39;</span><span class="p">,</span> <span class="s1">&#39;KIA&#39;</span><span class="p">,</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>          <span class="s1">&#39;KIA&#39;</span><span class="p">,</span> <span class="s1">&#39;두산&#39;</span><span class="p">,</span> <span class="s1">&#39;두산&#39;</span><span class="p">,</span> <span class="s1">&#39;키움&#39;</span><span class="p">,</span> <span class="s1">&#39;키움&#39;</span><span class="p">,</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>          <span class="s1">&#39;NC&#39;</span><span class="p">,</span> <span class="s1">&#39;NC&#39;</span><span class="p">,</span> <span class="s1">&#39;롯데&#39;</span><span class="p">,</span> <span class="s1">&#39;롯데&#39;</span><span class="p">,</span> <span class="s1">&#39;KT&#39;</span><span class="p">,</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>          <span class="s1">&#39;두산&#39;</span><span class="p">,</span> <span class="s1">&#39;KT&#39;</span><span class="p">,</span> <span class="s1">&#39;NC&#39;</span><span class="p">,</span> <span class="s1">&#39;키움&#39;</span><span class="p">,</span> <span class="s1">&#39;LG&#39;</span><span class="p">],</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="s1">&#39;포지션&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;외야수&#39;</span><span class="p">,</span> <span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;투수&#39;</span><span class="p">,</span> <span class="s1">&#39;외야수&#39;</span><span class="p">,</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>             <span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;포수&#39;</span><span class="p">,</span> <span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;외야수&#39;</span><span class="p">,</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>             <span class="s1">&#39;포수&#39;</span><span class="p">,</span> <span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;외야수&#39;</span><span class="p">,</span> <span class="s1">&#39;내야수&#39;</span><span class="p">,</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>             <span class="s1">&#39;외야수&#39;</span><span class="p">,</span> <span class="s1">&#39;외야수&#39;</span><span class="p">,</span> <span class="s1">&#39;외야수&#39;</span><span class="p">,</span> <span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;투수&#39;</span><span class="p">],</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="s1">&#39;경기수&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">144</span><span class="p">,</span> <span class="mi">138</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>            <span class="mi">139</span><span class="p">,</span> <span class="mi">141</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">136</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mi">143</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">132</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="s1">&#39;타율&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.312</span><span class="p">,</span> <span class="mf">0.298</span><span class="p">,</span> <span class="mf">0.275</span><span class="p">,</span> <span class="mf">0.000</span><span class="p">,</span> <span class="mf">0.305</span><span class="p">,</span> <span class="mf">0.258</span><span class="p">,</span> <span class="mf">0.289</span><span class="p">,</span> <span class="mf">0.271</span><span class="p">,</span>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>           <span class="mf">0.321</span><span class="p">,</span> <span class="mf">0.303</span><span class="p">,</span> <span class="mf">0.295</span><span class="p">,</span> <span class="mf">0.318</span><span class="p">,</span> <span class="mf">0.263</span><span class="p">,</span> <span class="mf">0.287</span><span class="p">,</span> <span class="mf">0.292</span><span class="p">,</span> <span class="mf">0.310</span><span class="p">,</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>           <span class="mf">0.330</span><span class="p">,</span> <span class="mf">0.343</span><span class="p">,</span> <span class="mf">0.285</span><span class="p">,</span> <span class="mf">0.000</span><span class="p">],</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    <span class="s1">&#39;홈런&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>           <span class="mi">16</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    <span class="s1">&#39;안타&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">168</span><span class="p">,</span> <span class="mi">155</span><span class="p">,</span> <span class="mi">132</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">172</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">148</span><span class="p">,</span> <span class="mi">118</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>           <span class="mi">142</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">138</span><span class="p">,</span> <span class="mi">152</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="p">}</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ 데이터가 준비되었습니다!&quot;</span><span class="p">)</span>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;데이터 크기: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">명의 선수, </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">개의 항목&quot;</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Iris 데이터셋 불러오기 (인터넷에서 직접 CSV 다운로드)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv&quot;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ 데이터 수집 완료!&quot;</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;데이터 크기: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">행, </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">열&quot;</span><span class="p">)</span>
 </span></code></pre></div>
+<p><strong>실행 결과 예시</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>✅ 데이터 수집 완료!
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>데이터 크기: 150행, 5열
+</span></code></pre></div></p>
 <blockquote>
-<p><strong>알아보기 📌</strong>: 실제 프로젝트에서는 <code>pd.read_csv('파일경로.csv')</code>로 CSV 파일을 불러옵니다. 공공데이터 포털에서 다운받은 파일도 같은 방법으로 읽을 수 있습니다.</p>
+<p><strong>알아보기</strong>: <code>pd.read_csv()</code>는 URL을 직접 넣어도 됩니다. 로컬 파일이라면 <code>pd.read_csv("data/iris.csv")</code>처럼 경로를 지정하면 됩니다.</p>
 </blockquote>
 <hr />
-<h3 id="step-2">Step 2: 데이터 첫인상 확인하기<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 처음 5줄 확인</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📋 데이터 미리보기 (처음 5줄)&quot;</span><span class="p">)</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<h3 id="step-2">Step 2: 데이터 구조 파악<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 처음 5행 확인</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📋 처음 5행:&quot;</span><span class="p">)</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># 전체 구조 요약</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📊 데이터 정보:&quot;</span><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
 </span></code></pre></div>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 데이터 구조 확인</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🔍 데이터 구조 (info)&quot;</span><span class="p">)</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</span></code></pre></div>
-<p>실행하면 각 열의 이름, 데이터 타입(<code>object</code>는 문자열, <code>int64</code>는 정수, <code>float64</code>는 소수), 비어있지 않은 값의 개수를 확인할 수 있습니다. <strong>Non-Null Count가 전체 행 수와 같으면 결측값(빈 값)이 없다</strong>는 뜻입니다.</p>
+<p><strong>실행 결과 예시</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>📋 처음 5행:
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>   sepal_length  sepal_width  petal_length  petal_width species
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>0           5.1          3.5           1.4          0.2  setosa
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>1           4.9          3.0           1.4          0.2  setosa
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>2           4.7          3.2           1.3          0.2  setosa
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>3           4.6          3.1           1.5          0.2  setosa
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>4           5.0          3.6           1.4          0.2  setosa
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>📊 데이터 정보:
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>RangeIndex: 150 entries, 0 to 149
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>Data columns (total 5 columns):
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a> #   Column        Non-Null Count  Dtype  
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a> 0   sepal_length  150 non-null    float64
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a> 1   sepal_width   150 non-null    float64
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a> 2   petal_length  150 non-null    float64
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a> 3   petal_width   150 non-null    float64
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a> 4   species       150 non-null    object 
+</span></code></pre></div></p>
+<p>여기서 알 수 있는 것:
+- <strong>150개 데이터</strong>, 결측값(빈 값) <strong>없음</strong> (모두 150 non-null)
+- <strong>4개 수치형 열</strong> (float64) + <strong>1개 범주형 열</strong> (object)</p>
 <hr />
-<h3 id="step-3-describe">Step 3: 요약 통계량 확인하기 — <code>describe()</code><a class="headerlink" href="#step-3-describe" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># 숫자형 열의 요약 통계</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📊 요약 통계량&quot;</span><span class="p">)</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<h3 id="step-3">Step 3: 자료형 확인 및 기초 통계량<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># 수치형 데이터의 기본 통계량</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📈 기초 통계량:&quot;</span><span class="p">)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1"># 범주형 데이터의 빈도 확인</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🏷️ 품종(species)별 개수:&quot;</span><span class="p">)</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
 </span></code></pre></div>
-<p>결과를 살펴봅시다.</p>
-<ul>
-<li><strong>count</strong>: 데이터 개수 (20명)</li>
-<li><strong>mean</strong>: 평균값 (타율 평균이 약 0.253 — 투수 포함이라 낮게 나옵니다)</li>
-<li><strong>std</strong>: 표준편차 (값이 평균에서 얼마나 퍼져 있는지)</li>
-<li><strong>min / max</strong>: 최솟값 / 최댓값</li>
-<li><strong>25%, 50%, 75%</strong>: 사분위수 (데이터를 크기순으로 나열했을 때 25%, 50%, 75% 지점의 값)</li>
-</ul>
+<p><strong>실행 결과 예시</strong>:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>📈 기초 통계량:
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>       sepal_length  sepal_width  petal_length  petal_width
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>count    150.000000   150.000000    150.000000   150.000000
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>mean       5.843333     3.057333      3.758000     1.199333
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>std        0.828066     0.435866      1.765298     0.762238
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>min        4.300000     2.000000      1.000000     0.100000
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>max        7.900000     4.400000      6.900000     2.500000
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>🏷️ 품종(species)별 개수:
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>setosa        50
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>versicolor    50
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>virginica     50
+</span></code></pre></div></p>
 <blockquote>
-<p><strong>생각해보기 🤔</strong>: 타율의 min이 0.000인 데이터가 보입니다. 이건 타율이 정말 0인 걸까요? 데이터를 다시 보면 <strong>투수</strong>들의 타율입니다. 분석 목적에 따라 투수를 제외해야 할 수도 있습니다. 이렇게 요약 통계를 보면서 "이상한 점"을 발견하는 것이 탐색의 핵심입니다!</p>
+<p><strong>생각해보기</strong>: petal_length(꽃잎 길이)의 표준편차(std)가 1.77로, sepal_width(꽃받침 너비)의 0.44보다 훨씬 큽니다. 이는 꽃잎 길이가 <strong>품종마다 크게 다르다</strong>는 힌트입니다!</p>
 </blockquote>
 <hr />
-<h3 id="step-4-value_counts">Step 4: 범주형 데이터 탐색하기 — <code>value_counts()</code><a class="headerlink" href="#step-4-value_counts" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># 팀별 선수 수</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;⚾ 팀별 선수 수&quot;</span><span class="p">)</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">30</span><span class="p">)</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;팀&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+<h3 id="step-4">Step 4: 시각화로 분포 확인<a class="headerlink" href="#step-4" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1"># 한글 깨짐 방지 (환경에 따라 조정)</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1"># 히스토그램: 수치형 4개 변수의 분포</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">]</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">columns</span><span class="p">):</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;steelblue&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Value&#39;</span><span class="p">)</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;iris_histograms.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ 히스토그램 저장 완료!&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># 포지션별 선수 수</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🧢 포지션별 선수 수&quot;</span><span class="p">)</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="mi">30</span><span class="p">)</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;포지션&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
-</span></code></pre></div>
-<p><code>value_counts()</code>는 해당 열에서 각 값이 <strong>몇 번 등장하는지</strong> 내림차순으로 보여줍니다. 이 데이터에서는 내야수가 가장 많고, 투수는 2명뿐이라는 것을 알 수 있습니다.</p>
+<p><strong>이 그래프에서 읽어야 할 것</strong>:
+- <code>petal_length</code>, <code>petal_width</code>는 <strong>두 개의 봉우리</strong>가 보임 → 품종에 따라 값이 확연히 다름
+- <code>sepal_width</code>는 <strong>종 모양</strong>에 가까움 → 정규분포에 가까운 형태</p>
 <hr />
-<h3 id="step-5">Step 5: 히스토그램으로 분포 살펴보기<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h3>
-<p>타자들의 <strong>타율 분포</strong>를 히스토그램으로 그려봅시다.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># 투수를 제외한 타자 데이터만 추출</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">batters</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;포지션&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;투수&#39;</span><span class="p">]</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># 타율 히스토그램</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">batters</span><span class="p">[</span><span class="s1">&#39;타율&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;steelblue&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;프로야구 타자 타율 분포&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;타율&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;선수 수&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></code></pre></div>
-<blockquote>
-<p><strong>알아보기 📌</strong>: <code>bins=8</code>은 타율 범위를 8개 구간으로 나눈다는 뜻입니다. bins 값을 바꾸면 그래프 모양이 달라집니다. 너무 적으면 뭉뚱그려지고, 너무 많으면 쪼개져서 패턴이 안 보입니다. 보통 <strong>데이터 수의 제곱근</strong> 정도가 적당합니다.</p>
-</blockquote>
-<hr />
-<h3 id="step-6">Step 6: 막대그래프로 범주별 비교하기<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h3>
-<p>포지션별 <strong>평균 홈런 수</strong>를 막대그래프로 비교해봅시다.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># 포지션별 평균 홈런 (투수 제외)</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">hr_by_pos</span> <span class="o">=</span> <span class="n">batters</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;포지션&#39;</span><span class="p">)[</span><span class="s1">&#39;홈런&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<h3 id="step-5">Step 5: 박스플롯으로 이상치 탐색<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># 품종별 꽃잎 길이 박스플롯</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># 막대그래프</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">hr_by_pos</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;coral&#39;</span><span class="p">,</span> <span class="s1">&#39;mediumseagreen&#39;</span><span class="p">,</span> <span class="s1">&#39;gold&#39;</span><span class="p">])</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;포지션별 평균 홈런 수&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;포지션&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;평균 홈런&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">species_list</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">data_by_species</span> <span class="o">=</span> <span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">][</span><span class="s1">&#39;petal_length&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">species_list</span><span class="p">]</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="n">ax</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data_by_species</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">species_list</span><span class="p">)</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Petal Length by Species&#39;</span><span class="p">)</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Petal Length (cm)&#39;</span><span class="p">)</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;iris_boxplot.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ 박스플롯 저장 완료!&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<p>그래프를 보면 어떤 포지션이 홈런을 많이 치는지 한눈에 비교할 수 있습니다. 숫자만 나열했을 때보다 훨씬 직관적이죠?</p>
+<p><strong>박스플롯 읽는 법</strong>:
+- <strong>상자</strong>: 데이터의 중간 50%가 모여 있는 범위 (Q1~Q3)
+- <strong>가운데 선</strong>: 중앙값(median)
+- <strong>수염(whisker)</strong>: 정상 범위
+- <strong>점(●)</strong>: 수염 바깥의 값 = <strong>이상치(outlier)</strong> 후보</p>
+<hr />
+<h3 id="step-6">Step 6: 상관관계 분석<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># 상관계수 계산</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">corr</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;number&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🔗 상관계수 행렬:&quot;</span><span class="p">)</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">corr</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1"># 히트맵 시각화</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="c1"># 축 라벨 설정</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">corr</span><span class="o">.</span><span class="n">columns</span><span class="p">)))</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">corr</span><span class="o">.</span><span class="n">columns</span><span class="p">)))</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">corr</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">corr</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="c1"># 수치 표시</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">corr</span><span class="p">)):</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">corr</span><span class="p">)):</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">corr</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Correlation Heatmap&#39;</span><span class="p">)</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;iris_correlation.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<p><strong>결과 해석</strong>:
+- <code>petal_length</code>와 <code>petal_width</code>의 상관계수 ≈ <strong>0.96</strong> → 매우 강한 양의 상관관계 (꽃잎이 길면 넓기도 하다)
+- <code>sepal_width</code>와 다른 변수들은 상관관계가 약함</p>
+<blockquote>
+<p><strong>정리하기</strong>: 상관계수는 <strong>-1 ~ +1</strong> 사이의 값입니다. +1에 가까우면 "같이 증가", -1에 가까우면 "하나가 증가하면 다른 하나는 감소", 0에 가까우면 "별 관련 없음"을 의미합니다.</p>
+</blockquote>
 <hr />
 <h2 id="_5">📝 전체 코드<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>아래 코드를 Google Colab에 복사해서 한 번에 실행할 수 있습니다.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># ========================================</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># Chapter 05: 데이터 수집과 탐색 - 전체 코드</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># ========================================</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1"># 한글 폰트 설정 (Colab)</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NanumGothic&#39;</span>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.unicode_minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="c1"># 1. 데이터 생성</span>
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    <span class="s1">&#39;선수명&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;김민수&#39;</span><span class="p">,</span> <span class="s1">&#39;이정훈&#39;</span><span class="p">,</span> <span class="s1">&#39;박성진&#39;</span><span class="p">,</span> <span class="s1">&#39;최동원&#39;</span><span class="p">,</span> <span class="s1">&#39;정우성&#39;</span><span class="p">,</span>
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>             <span class="s1">&#39;한승엽&#39;</span><span class="p">,</span> <span class="s1">&#39;오재일&#39;</span><span class="p">,</span> <span class="s1">&#39;강민호&#39;</span><span class="p">,</span> <span class="s1">&#39;서건창&#39;</span><span class="p">,</span> <span class="s1">&#39;나성범&#39;</span><span class="p">,</span>
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>             <span class="s1">&#39;양의지&#39;</span><span class="p">,</span> <span class="s1">&#39;김하성&#39;</span><span class="p">,</span> <span class="s1">&#39;이대호&#39;</span><span class="p">,</span> <span class="s1">&#39;손아섭&#39;</span><span class="p">,</span> <span class="s1">&#39;박병호&#39;</span><span class="p">,</span>
-</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>             <span class="s1">&#39;김재환&#39;</span><span class="p">,</span> <span class="s1">&#39;로하스&#39;</span><span class="p">,</span> <span class="s1">&#39;테임즈&#39;</span><span class="p">,</span> <span class="s1">&#39;에르난데스&#39;</span><span class="p">,</span> <span class="s1">&#39;브리검&#39;</span><span class="p">],</span>
-</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>    <span class="s1">&#39;팀&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;LG&#39;</span><span class="p">,</span> <span class="s1">&#39;LG&#39;</span><span class="p">,</span> <span class="s1">&#39;삼성&#39;</span><span class="p">,</span> <span class="s1">&#39;삼성&#39;</span><span class="p">,</span> <span class="s1">&#39;KIA&#39;</span><span class="p">,</span>
-</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>          <span class="s1">&#39;KIA&#39;</span><span class="p">,</span> <span class="s1">&#39;두산&#39;</span><span class="p">,</span> <span class="s1">&#39;두산&#39;</span><span class="p">,</span> <span class="s1">&#39;키움&#39;</span><span class="p">,</span> <span class="s1">&#39;키움&#39;</span><span class="p">,</span>
-</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>          <span class="s1">&#39;NC&#39;</span><span class="p">,</span> <span class="s1">&#39;NC&#39;</span><span class="p">,</span> <span class="s1">&#39;롯데&#39;</span><span class="p">,</span> <span class="s1">&#39;롯데&#39;</span><span class="p">,</span> <span class="s1">&#39;KT&#39;</span><span class="p">,</span>
-</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>          <span class="s1">&#39;두산&#39;</span><span class="p">,</span> <span class="s1">&#39;KT&#39;</span><span class="p">,</span> <span class="s1">&#39;NC&#39;</span><span class="p">,</span> <span class="s1">&#39;키움&#39;</span><span class="p">,</span> <span class="s1">&#39;LG&#39;</span><span class="p">],</span>
-</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>    <span class="s1">&#39;포지션&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;외야수&#39;</span><span class="p">,</span> <span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;투수&#39;</span><span class="p">,</span> <span class="s1">&#39;외야수&#39;</span><span class="p">,</span>
-</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>             <span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;포수&#39;</span><span class="p">,</span> <span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;외야수&#39;</span><span class="p">,</span>
-</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>             <span class="s1">&#39;포수&#39;</span><span class="p">,</span> <span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;외야수&#39;</span><span class="p">,</span> <span class="s1">&#39;내야수&#39;</span><span class="p">,</span>
-</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>             <span class="s1">&#39;외야수&#39;</span><span class="p">,</span> <span class="s1">&#39;외야수&#39;</span><span class="p">,</span> <span class="s1">&#39;외야수&#39;</span><span class="p">,</span> <span class="s1">&#39;내야수&#39;</span><span class="p">,</span> <span class="s1">&#39;투수&#39;</span><span class="p">],</span>
-</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>    <span class="s1">&#39;경기수&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">144</span><span class="p">,</span> <span class="mi">138</span><span class="p">,</span> <span class="mi">130</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">142</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">133</span><span class="p">,</span>
-</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>            <span class="mi">139</span><span class="p">,</span> <span class="mi">141</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">136</span><span class="p">,</span> <span class="mi">137</span><span class="p">,</span> <span class="mi">143</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">132</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
-</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>    <span class="s1">&#39;타율&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.312</span><span class="p">,</span> <span class="mf">0.298</span><span class="p">,</span> <span class="mf">0.275</span><span class="p">,</span> <span class="mf">0.000</span><span class="p">,</span> <span class="mf">0.305</span><span class="p">,</span> <span class="mf">0.258</span><span class="p">,</span> <span class="mf">0.289</span><span class="p">,</span> <span class="mf">0.271</span><span class="p">,</span>
-</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>           <span class="mf">0.321</span><span class="p">,</span> <span class="mf">0.303</span><span class="p">,</span> <span class="mf">0.295</span><span class="p">,</span> <span class="mf">0.318</span><span class="p">,</span> <span class="mf">0.263</span><span class="p">,</span> <span class="mf">0.287</span><span class="p">,</span> <span class="mf">0.292</span><span class="p">,</span> <span class="mf">0.310</span><span class="p">,</span>
-</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>           <span class="mf">0.330</span><span class="p">,</span> <span class="mf">0.343</span><span class="p">,</span> <span class="mf">0.285</span><span class="p">,</span> <span class="mf">0.000</span><span class="p">],</span>
-</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>    <span class="s1">&#39;홈런&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span>
-</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>           <span class="mi">16</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>    <span class="s1">&#39;안타&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">168</span><span class="p">,</span> <span class="mi">155</span><span class="p">,</span> <span class="mi">132</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">172</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">148</span><span class="p">,</span> <span class="mi">118</span><span class="p">,</span> <span class="mi">185</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span>
-</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>           <span class="mi">142</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">138</span><span class="p">,</span> <span class="mi">152</span><span class="p">,</span> <span class="mi">170</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
-</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="p">}</span>
-</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>
-</span><span id="__span-8-38"><a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a><span class="c1"># 2. 기본 확인</span>
-</span><span id="__span-8-39"><a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📋 데이터 미리보기&quot;</span><span class="p">)</span>
-</span><span id="__span-8-40"><a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-</span><span id="__span-8-41"><a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📐 데이터 크기: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</span><span id="__span-8-42"><a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🔍 데이터 구조&quot;</span><span class="p">)</span>
-</span><span id="__span-8-43"><a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</span><span id="__span-8-44"><a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a>
-</span><span id="__span-8-45"><a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a><span class="c1"># 3. 요약 통계</span>
-</span><span id="__span-8-46"><a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📊 요약 통계량&quot;</span><span class="p">)</span>
-</span><span id="__span-8-47"><a id="__codelineno-8-47" name="__codelineno-8-47" href="#__codelineno-8-47"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
-</span><span id="__span-8-48"><a id="__codelineno-8-48" name="__codelineno-8-48" href="#__codelineno-8-48"></a>
-</span><span id="__span-8-49"><a id="__codelineno-8-49" name="__codelineno-8-49" href="#__codelineno-8-49"></a><span class="c1"># 4. 범주형 탐색</span>
-</span><span id="__span-8-50"><a id="__codelineno-8-50" name="__codelineno-8-50" href="#__codelineno-8-50"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">⚾ 팀별 선수 수&quot;</span><span class="p">)</span>
-</span><span id="__span-8-51"><a id="__codelineno-8-51" name="__codelineno-8-51" href="#__codelineno-8-51"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;팀&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
-</span><span id="__span-8-52"><a id="__codelineno-8-52" name="__codelineno-8-52" href="#__codelineno-8-52"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🧢 포지션별 선수 수&quot;</span><span class="p">)</span>
-</span><span id="__span-8-53"><a id="__codelineno-8-53" name="__codelineno-8-53" href="#__codelineno-8-53"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;포지션&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
-</span><span id="__span-8-54"><a id="__codelineno-8-54" name="__codelineno-8-54" href="#__codelineno-8-54"></a>
-</span><span id="__span-8-55"><a id="__codelineno-8-55" name="__codelineno-8-55" href="#__codelineno-8-55"></a><span class="c1"># 5. 히스토그램</span>
-</span><span id="__span-8-56"><a id="__codelineno-8-56" name="__codelineno-8-56" href="#__codelineno-8-56"></a><span class="n">batters</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;포지션&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;투수&#39;</span><span class="p">]</span>
-</span><span id="__span-8-57"><a id="__codelineno-8-57" name="__codelineno-8-57" href="#__codelineno-8-57"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-</span><span id="__span-8-58"><a id="__codelineno-8-58" name="__codelineno-8-58" href="#__codelineno-8-58"></a><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">batters</span><span class="p">[</span><span class="s1">&#39;타율&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;steelblue&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
-</span><span id="__span-8-59"><a id="__codelineno-8-59" name="__codelineno-8-59" href="#__codelineno-8-59"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;프로야구 타자 타율 분포&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-</span><span id="__span-8-60"><a id="__codelineno-8-60" name="__codelineno-8-60" href="#__codelineno-8-60"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;타율&#39;</span><span class="p">)</span>
-</span><span id="__span-8-61"><a id="__codelineno-8-61" name="__codelineno-8-61" href="#__codelineno-8-61"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;선수 수&#39;</span><span class="p">)</span>
-</span><span id="__span-8-62"><a id="__codelineno-8-62" name="__codelineno-8-62" href="#__codelineno-8-62"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-</span><span id="__span-8-63"><a id="__codelineno-8-63" name="__codelineno-8-63" href="#__codelineno-8-63"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span><span id="__span-8-64"><a id="__codelineno-8-64" name="__codelineno-8-64" href="#__codelineno-8-64"></a>
-</span><span id="__span-8-65"><a id="__codelineno-8-65" name="__codelineno-8-65" href="#__codelineno-8-65"></a><span class="c1"># 6. 막대그래프</span>
-</span><span id="__span-8-66"><a id="__codelineno-8-66" name="__codelineno-8-66" href="#__codelineno-8-66"></a><span class="n">hr_by_pos</span> <span class="o">=</span> <span class="n">batters</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;포지션&#39;</span><span class="p">)[</span><span class="s1">&#39;홈런&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</span><span id="__span-8-67"><a id="__codelineno-8-67" name="__codelineno-8-67" href="#__codelineno-8-67"></a><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-</span><span id="__span-8-68"><a id="__codelineno-8-68" name="__codelineno-8-68" href="#__codelineno-8-68"></a><span class="n">hr_by_pos</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;coral&#39;</span><span class="p">,</span> <span class="s1">&#39;mediumseagreen&#39;</span><span class="p">,</span> <span class="s1">&#39;gold&#39;</span><span class="p">])</span>
-</span><span id="__span-8-69"><a id="__codelineno-8-69" name="__codelineno-8-69" href="#__codelineno-8-69"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;포지션별 평균 홈런 수&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-</span><span id="__span-8-70"><a id="__codelineno-8-70" name="__codelineno-8-70" href="#__codelineno-8-70"></a><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;포지션&#39;</span><span class="p">)</span>
-</span><span id="__span-8-71"><a id="__codelineno-8-71" name="__codelineno-8-71" href="#__codelineno-8-71"></a><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;평균 홈런&#39;</span><span class="p">)</span>
-</span><span id="__span-8-72"><a id="__codelineno-8-72" name="__codelineno-8-72" href="#__codelineno-8-72"></a><span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</span><span id="__span-8-73"><a id="__codelineno-8-73" name="__codelineno-8-73" href="#__codelineno-8-73"></a><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-</span><span id="__span-8-74"><a id="__codelineno-8-74" name="__codelineno-8-74" href="#__codelineno-8-74"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<p>아래 코드를 복사하여 한 번에 실행할 수 있습니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># ===== Step 1: 데이터 수집 =====</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv&quot;</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✅ 데이터 수집 완료! (</span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">행, </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">열)</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="c1"># ===== Step 2: 구조 파악 =====</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📋 처음 5행:&quot;</span><span class="p">)</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="nb">print</span><span class="p">()</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="c1"># ===== Step 3: 기초 통계량 =====</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📈 기초 통계량:&quot;</span><span class="p">)</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🏷️ 품종별 개수:&quot;</span><span class="p">)</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="c1"># ===== Step 4: 히스토그램 =====</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">]</span>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">columns</span><span class="p">):</span>
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;steelblue&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">col</span><span class="p">)</span>
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>
+</span><span id="__span-9-30"><a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a><span class="c1"># ===== Step 5: 박스플롯 =====</span>
+</span><span id="__span-9-31"><a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</span><span id="__span-9-32"><a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="n">species_list</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</span><span id="__span-9-33"><a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a><span class="n">data_by_species</span> <span class="o">=</span> <span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">s</span><span class="p">][</span><span class="s1">&#39;petal_length&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">species_list</span><span class="p">]</span>
+</span><span id="__span-9-34"><a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a><span class="n">ax</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data_by_species</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">species_list</span><span class="p">)</span>
+</span><span id="__span-9-35"><a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Petal Length by Species&#39;</span><span class="p">)</span>
+</span><span id="__span-9-36"><a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-9-37"><a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-9-38"><a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a>
+</span><span id="__span-9-39"><a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a><span class="c1"># ===== Step 6: 상관관계 =====</span>
+</span><span id="__span-9-40"><a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a><span class="n">corr</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;number&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</span><span id="__span-9-41"><a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🔗 상관계수:&quot;</span><span class="p">)</span>
+</span><span id="__span-9-42"><a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a><span class="nb">print</span><span class="p">(</span><span class="n">corr</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</span><span id="__span-9-43"><a id="__codelineno-9-43" name="__codelineno-9-43" href="#__codelineno-9-43"></a>
+</span><span id="__span-9-44"><a id="__codelineno-9-44" name="__codelineno-9-44" href="#__codelineno-9-44"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</span><span id="__span-9-45"><a id="__codelineno-9-45" name="__codelineno-9-45" href="#__codelineno-9-45"></a><span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-9-46"><a id="__codelineno-9-46" name="__codelineno-9-46" href="#__codelineno-9-46"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">corr</span><span class="o">.</span><span class="n">columns</span><span class="p">)))</span>
+</span><span id="__span-9-47"><a id="__codelineno-9-47" name="__codelineno-9-47" href="#__codelineno-9-47"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">corr</span><span class="o">.</span><span class="n">columns</span><span class="p">)))</span>
+</span><span id="__span-9-48"><a id="__codelineno-9-48" name="__codelineno-9-48" href="#__codelineno-9-48"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">corr</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+</span><span id="__span-9-49"><a id="__codelineno-9-49" name="__codelineno-9-49" href="#__codelineno-9-49"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">corr</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</span><span id="__span-9-50"><a id="__codelineno-9-50" name="__codelineno-9-50" href="#__codelineno-9-50"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">corr</span><span class="p">)):</span>
+</span><span id="__span-9-51"><a id="__codelineno-9-51" name="__codelineno-9-51" href="#__codelineno-9-51"></a>    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">corr</span><span class="p">)):</span>
+</span><span id="__span-9-52"><a id="__codelineno-9-52" name="__codelineno-9-52" href="#__codelineno-9-52"></a>        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">corr</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+</span><span id="__span-9-53"><a id="__codelineno-9-53" name="__codelineno-9-53" href="#__codelineno-9-53"></a><span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+</span><span id="__span-9-54"><a id="__codelineno-9-54" name="__codelineno-9-54" href="#__codelineno-9-54"></a><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Correlation Heatmap&#39;</span><span class="p">)</span>
+</span><span id="__span-9-55"><a id="__codelineno-9-55" name="__codelineno-9-55" href="#__codelineno-9-55"></a><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span><span id="__span-9-56"><a id="__codelineno-9-56" name="__codelineno-9-56" href="#__codelineno-9-56"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></code></pre></div>
 <hr />
 <h2 id="_6">⚠️ 자주 하는 실수<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<p><strong>1. CSV 파일 경로 오류</strong> 🚫</p>
-<p><code>pd.read_csv('data.csv')</code>에서 파일 이름이나 경로를 잘못 적으면 <code>FileNotFoundError</code>가 발생합니다. Colab에서는 파일을 먼저 업로드하거나, 정확한 URL을 사용해야 합니다.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># ❌ 파일이 없는데 읽으려고 하면</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;없는파일.csv&#39;</span><span class="p">)</span>  <span class="c1"># FileNotFoundError!</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># ✅ Colab에서 파일 업로드 후 읽기</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">uploaded</span> <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">upload</span><span class="p">()</span>  <span class="c1"># 파일 선택 창이 열림</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;업로드한파일명.csv&#39;</span><span class="p">)</span>
-</span></code></pre></div>
-<p><strong>2. <code>describe()</code>에 문자열 열이 안 나와요!</strong> 🤔</p>
-<p><code>describe()</code>는 기본적으로 <strong>숫자형 열만</strong> 요약합니다. 문자열 열도 보고 싶다면 <code>include='all'</code>을 추가하세요.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># ❌ 팀, 포지션 같은 문자열 열이 안 보임</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<h3 id="1_1">실수 1: 파일 경로 오류로 데이터를 못 불러옴<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># ❌ 잘못된 예: 파일이 다른 폴더에 있는데 이름만 씀</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;iris.csv&quot;</span><span class="p">)</span>  <span class="c1"># FileNotFoundError!</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># ✅ 모든 열 포함</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
-</span></code></pre></div>
-<p><strong>3. 한글이 깨져서 그래프에 □□□로 나와요!</strong> 😱</p>
-<p>matplotlib은 기본적으로 한글 폰트를 지원하지 않습니다. <strong>반드시 한글 폰트를 설정</strong>해야 합니다.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># ✅ Colab에서 한글 폰트 설정 (코드 맨 위에 넣기)</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;NanumGothic&#39;</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.unicode_minus&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># ✅ 올바른 예: 정확한 경로 지정</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data/iris.csv&quot;</span><span class="p">)</span>  <span class="c1"># 상대 경로</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>                 <span class="c1"># URL 직접 사용</span>
 </span></code></pre></div>
 <blockquote>
-<p>만약 <code>NanumGothic</code>이 안 되면, Colab에서 <code>!apt-get install -y fonts-nanum</code> 실행 후 <strong>런타임을 재시작</strong>하세요.</p>
+<p><strong>팁</strong>: 파일 위치를 모르겠다면, 먼저 <code>import os; print(os.getcwd())</code>로 현재 작업 디렉토리를 확인하세요.</p>
 </blockquote>
+<h3 id="2_1">실수 2: 숫자처럼 보이지만 문자열인 데이터<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># ❌ &quot;123&quot;은 문자열이라 계산이 안 됨</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="c1"># df[&#39;price&#39;] 열이 object 타입이면 평균 계산 불가!</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># ✅ 자료형 변환 후 사용</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="c1"># errors=&#39;coerce&#39;: 변환 불가능한 값은 NaN(빈 값)으로 처리</span>
+</span></code></pre></div>
+<h3 id="3-describe">실수 3: describe()만 보고 범주형 변수를 놓침<a class="headerlink" href="#3-describe" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># ❌ describe()는 기본적으로 수치형만 보여줌</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>  <span class="c1"># species 열이 안 보임!</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># ✅ 범주형까지 보려면 include 파라미터 사용</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>  <span class="c1"># 모든 자료형 요약</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1"># 또는 범주형은 따로 확인</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="n">df</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;object&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</span></code></pre></div>
+<h3 id="4_1">실수 4: 상관계수를 인과관계로 오해<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h3>
+<p>상관계수가 높다고 해서 <strong>"A가 B를 일으킨다"</strong>는 아닙니다! 아이스크림 판매량과 익사 사고 건수는 상관관계가 높지만, 아이스크림이 익사를 일으키는 것은 아닙니다 (둘 다 여름에 증가할 뿐).</p>
 <hr />
 <h2 id="_7">✅ 스스로 점검하기<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <h3 id="_8">기본 문제<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p><strong>문제 1.</strong> 다음 중 <code>describe()</code> 함수의 결과에 포함되지 <strong>않는</strong> 것은?</p>
-<ul>
-<li>① 평균(mean)</li>
-<li>② 최빈값(mode)</li>
-<li>③ 표준편차(std)</li>
-<li>④ 중앙값(50%)</li>
-</ul>
-<details>
-<summary>정답 확인</summary>
-
-**② 최빈값(mode)**
-
-`describe()`는 count, mean, std, min, 25%, 50%(중앙값), 75%, max를 보여줍니다. 최빈값은 포함되지 않으며, 따로 `df['열이름'].mode()`로 구할 수 있습니다.
-
-</details>
-
-<hr />
-<p><strong>문제 2.</strong> "팀별 선수 수"처럼 범주형 데이터의 빈도를 확인할 때 사용하는 함수는?</p>
-<details>
-<summary>정답 확인</summary>
-
-**`value_counts()`**
-
-사용법: `df['팀'].value_counts()`
-
-</details>
-
-<hr />
+<p><strong>1.</strong> 다음 코드의 출력 결과로 알 수 있는 정보 3가지를 적으세요.
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</span></code></pre></div></p>
+<p><strong>정답</strong>: 행(데이터) 수, 각 열의 이름과 자료형, 각 열의 결측값(Non-Null Count) 수</p>
+<p><strong>2.</strong> <code>sepal_width</code>는 어떤 자료형인가요?
+- (a) 명목형 범주 (b) 순서형 범주 (c) 연속형 수치 (d) 이산형 수치</p>
+<p><strong>정답</strong>: (c) 연속형 수치 — 소수점이 있는 측정값이므로</p>
 <h3 id="_9">응용 문제<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p><strong>문제 3.</strong> 아래 코드의 실행 결과로 가장 적절한 그래프 유형은 무엇일까요?</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">batters</span><span class="p">[</span><span class="s1">&#39;홈런&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
-</span></code></pre></div>
-<ul>
-<li>① 원그래프</li>
-<li>② 히스토그램</li>
-<li>③ 막대그래프</li>
-<li>④ 꺾은선그래프</li>
-</ul>
-<details>
-<summary>정답 확인</summary>
-
-**② 히스토그램**
-
-`plt.hist()`는 히스토그램을 그리는 함수입니다. 홈런 수(숫자형 데이터)의 분포를 6개 구간으로 나누어 보여줍니다.
-
-</details>
-
-<hr />
+<p><strong>3.</strong> 아래 통계량에서 이상한 점을 찾으세요.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>열 이름: age (나이)
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>mean: 32.5
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>min: -5
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>max: 200
+</span></code></pre></div></p>
+<p><strong>정답</strong>: min이 -5 (나이는 음수 불가), max가 200 (비현실적). 이상치 또는 입력 오류가 있을 가능성이 높습니다.</p>
 <h3 id="_10">심화 문제<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<p><strong>문제 4.</strong> <code>describe()</code>의 결과에서 타율의 <strong>mean이 0.253</strong>이고 <strong>50%(중앙값)이 0.291</strong>이라면, 이 데이터의 분포에 대해 어떤 추론을 할 수 </p>
+<p><strong>4.</strong> 새로운 데이터셋(tips 데이터)을 직접 불러와서 구조를 파악해보세요.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">tips_url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/mwaskom/seaborn-data/master/tips.csv&quot;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">tips</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">tips_url</span><span class="p">)</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="c1"># 여기서부터 직접 작성해보세요:</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="c1"># 1) shape 확인</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="c1"># 2) 수치형/범주형 열 구분</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="c1"># 3) describe()로 통계량 확인</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="c1"># 4) 범주형 열 하나의 value_counts() 확인</span>
+</span></code></pre></div>
+<hr />
+<h2 id="_11">🚀 더 해보기<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p><strong>도전 과제</strong>: 공공데이터포털(data.go.kr)에서 관심 있는 CSV 데이터를 하나 다운로드하여 이 장에서 배운 6단계를 적용해보세요.</p>
+<ul>
+<li>데이터 불러오기 → 구조 파악 → 자료형 확인 → 통계량 → 히스토그램 → 상관관계</li>
+</ul>
+<p><strong>추가 탐구</strong>: seaborn 라이브러리의 <code>pairplot()</code>을 사용하면 모든 변수 쌍의 산점도를 한 번에 그릴 수 있습니다.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;species&#39;</span><span class="p">)</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<hr />
+<h2 id="_12">🔗 다음 장으로<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>이번 장에서는 데이터를 <strong>수집하고 있는 그대로의 모습을 파악</strong>하는 방법을 배웠습니다.</p>
+<p>하지만 현실의 데이터는 빈 값도 있고, 이상한 값도 섞여 있고, 형식이 제각각입니다. 🧹</p>
+<p><strong>다음 장 (Chapter 6: 데이터 전처리)</strong>에서는 이렇게 지저분한 데이터를 <strong>분석 가능한 깨끗한 상태로 정리</strong>하는 방법을 배웁니다.</p>
+<blockquote>
+<p><strong>정리하기</strong> 📌
+- 데이터 수집은 CSV, 웹, API 등 다양한 경로로 가능하며, pandas가 통일된 구조(DataFrame)로 변환해줍니다
+- 새 데이터를 만나면 <strong>shape → head → info → describe</strong> 순서로 파악합니다
+- 자료형(수치형 vs 범주형)에 따라 분석 방법과 시각화 방법이 달라집니다
+- 히스토그램, 박스플롯, 상관계수를 통해 데이터의 분포와 관계를 읽어냅니다</p>
+</blockquote>
 
 
 
