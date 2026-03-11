@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-3" class="md-skip">
+        <a href="#chapter-03" class="md-skip">
           콘텐츠로 이동
         </a>
       
@@ -604,17 +604,6 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💡 왜 이걸 배우나요?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         📚 핵심 개념
       
     </span>
@@ -624,10 +613,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-dataset" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 1: 데이터셋 (Dataset)
+        개념 1: 데이터셋 — 한 장의 스프레드시트
       
     </span>
   </a>
@@ -635,10 +624,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-database" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 2: 데이터베이스 (Database)
+        개념 2: 데이터베이스 — 도서관 서가 시스템
       
     </span>
   </a>
@@ -656,39 +645,28 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#4-sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        개념 4: SQL 기초
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#csv" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔨 따라하기: 데이터셋 만들고 데이터베이스에 저장하기
+        🔨 따라하기: CSV 파일 불러와 구조 살펴보기
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔨 따라하기: 데이터셋 만들고 데이터베이스에 저장하기">
+    <nav class="md-nav" aria-label="🔨 따라하기: CSV 파일 불러와 구조 살펴보기">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-csv" class="md-nav__link">
+  <a href="#step-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: CSV 데이터셋 만들기
+        Step 1: 라이브러리 불러오기
       
     </span>
   </a>
@@ -699,7 +677,7 @@
   <a href="#step-2-csv" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: CSV 파일로 저장하고 불러오기
+        Step 2: CSV 파일 불러오기
       
     </span>
   </a>
@@ -707,10 +685,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-sqlite" class="md-nav__link">
+  <a href="#step-2-b" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: SQLite 데이터베이스 생성하기
+        Step 2-B: 직접 샘플 데이터 만들기 (대체용)
       
     </span>
   </a>
@@ -718,10 +696,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4" class="md-nav__link">
+  <a href="#step-3-5-head" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: 데이터베이스에 데이터 넣기
+        Step 3: 처음 5줄 확인하기 — head()
       
     </span>
   </a>
@@ -729,10 +707,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-sql" class="md-nav__link">
+  <a href="#step-4-shape" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: SQL로 데이터 조회하기
+        Step 4: 데이터셋의 크기 확인 — shape
       
     </span>
   </a>
@@ -740,10 +718,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-6" class="md-nav__link">
+  <a href="#step-5-columns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: 연결 종료
+        Step 5: 열 이름 확인 — columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: 기본 정보 한눈에 보기 — info()
       
     </span>
   </a>
@@ -756,7 +745,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         📝 전체 코드
@@ -767,132 +756,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 주의할 점
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 점검하기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚠️ 자주 하는 실수
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚠️ 자주 하는 실수">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-csv" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        실수 1: CSV 파일 한글 깨짐
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        실수 2: 데이터베이스 연결을 닫지 않음
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        실수 3: SQL에서 문자열 비교 시 따옴표 누락
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-if_exists" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        실수 4: if_exists 옵션을 모르고 데이터 덮어쓰기
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ 스스로 점검하기
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="✅ 스스로 점검하기">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        기본 문제
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        응용 문제
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        심화 문제
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 더 해보기
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔗 다음 장으로
+        🔗 다음 장 미리보기
       
     </span>
   </a>
@@ -1828,17 +1717,6 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💡 왜 이걸 배우나요?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         📚 핵심 개념
       
     </span>
@@ -1848,10 +1726,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-dataset" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 1: 데이터셋 (Dataset)
+        개념 1: 데이터셋 — 한 장의 스프레드시트
       
     </span>
   </a>
@@ -1859,10 +1737,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-database" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        개념 2: 데이터베이스 (Database)
+        개념 2: 데이터베이스 — 도서관 서가 시스템
       
     </span>
   </a>
@@ -1880,39 +1758,28 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#4-sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        개념 4: SQL 기초
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#csv" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔨 따라하기: 데이터셋 만들고 데이터베이스에 저장하기
+        🔨 따라하기: CSV 파일 불러와 구조 살펴보기
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔨 따라하기: 데이터셋 만들고 데이터베이스에 저장하기">
+    <nav class="md-nav" aria-label="🔨 따라하기: CSV 파일 불러와 구조 살펴보기">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-csv" class="md-nav__link">
+  <a href="#step-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: CSV 데이터셋 만들기
+        Step 1: 라이브러리 불러오기
       
     </span>
   </a>
@@ -1923,7 +1790,7 @@
   <a href="#step-2-csv" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: CSV 파일로 저장하고 불러오기
+        Step 2: CSV 파일 불러오기
       
     </span>
   </a>
@@ -1931,10 +1798,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-sqlite" class="md-nav__link">
+  <a href="#step-2-b" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: SQLite 데이터베이스 생성하기
+        Step 2-B: 직접 샘플 데이터 만들기 (대체용)
       
     </span>
   </a>
@@ -1942,10 +1809,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4" class="md-nav__link">
+  <a href="#step-3-5-head" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: 데이터베이스에 데이터 넣기
+        Step 3: 처음 5줄 확인하기 — head()
       
     </span>
   </a>
@@ -1953,10 +1820,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-sql" class="md-nav__link">
+  <a href="#step-4-shape" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: SQL로 데이터 조회하기
+        Step 4: 데이터셋의 크기 확인 — shape
       
     </span>
   </a>
@@ -1964,10 +1831,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-6" class="md-nav__link">
+  <a href="#step-5-columns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: 연결 종료
+        Step 5: 열 이름 확인 — columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: 기본 정보 한눈에 보기 — info()
       
     </span>
   </a>
@@ -1980,7 +1858,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         📝 전체 코드
@@ -1991,132 +1869,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ 주의할 점
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ 점검하기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚠️ 자주 하는 실수
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚠️ 자주 하는 실수">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-csv" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        실수 1: CSV 파일 한글 깨짐
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        실수 2: 데이터베이스 연결을 닫지 않음
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        실수 3: SQL에서 문자열 비교 시 따옴표 누락
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-if_exists" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        실수 4: if_exists 옵션을 모르고 데이터 덮어쓰기
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ 스스로 점검하기
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="✅ 스스로 점검하기">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        기본 문제
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        응용 문제
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        심화 문제
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🚀 더 해보기
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔗 다음 장으로
+        🔗 다음 장 미리보기
       
     </span>
   </a>
@@ -2140,484 +1918,224 @@
 
 
 
-<h1 id="chapter-3">📘 Chapter 3: 데이터셋과 데이터베이스<a class="headerlink" href="#chapter-3" title="Permanent link">&para;</a></h1>
+<h1 id="chapter-03">📖 Chapter 03. 데이터셋과 데이터베이스<a class="headerlink" href="#chapter-03" title="Permanent link">&para;</a></h1>
 <hr />
 <h2 id="_1">🎯 이 장에서 배우는 것<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>이 장을 마치면 다음을 할 수 있습니다:</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터셋의 구조(행과 열)를 설명하고, 직접 데이터셋을 만들 수 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터베이스가 무엇인지 이해하고, 데이터셋과의 차이를 구분할 수 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> SQL의 기본 명령어로 데이터베이스에서 원하는 데이터를 조회할 수 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Python으로 CSV 파일과 SQLite 데이터베이스를 다루는 기초 코드를 작성할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터셋의 구조(행·열·레코드·필드)를 정확히 설명할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터셋과 데이터베이스의 차이점과 관계를 비교할 수 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CSV 파일을 코랩에서 불러와 기본 구조를 확인할 수 있다</li>
 </ul>
 <hr />
-<h2 id="_2">💡 왜 이걸 배우나요?<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>여러분이 스마트폰으로 음악 앱을 열면, 수천만 곡 중에서 내가 좋아할 만한 노래를 추천해줍니다. 온라인 쇼핑몰은 수백만 개 상품 중에서 내 취향에 맞는 것을 골라 보여줍니다.</p>
-<p>이 모든 것의 출발점은 <strong>"데이터를 어떻게 정리하고 저장하느냐"</strong>입니다.</p>
-<p>아무리 뛰어난 인공지능 모델이라도, 데이터가 엉망으로 저장되어 있으면 아무것도 할 수 없습니다. 데이터를 깔끔하게 정리한 것이 <strong>데이터셋</strong>이고, 이를 효율적으로 저장하고 꺼내 쓰는 시스템이 <strong>데이터베이스</strong>입니다.</p>
-<p>이번 장에서는 데이터 과학의 <strong>원재료 창고</strong>를 직접 만들고 다루는 법을 배웁니다.</p>
-<hr />
-<h2 id="_3">📚 핵심 개념<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h3 id="1-dataset">개념 1: 데이터셋 (Dataset)<a class="headerlink" href="#1-dataset" title="Permanent link">&para;</a></h3>
-<p><strong>🎒 비유로 시작하기</strong></p>
-<p>학교 반의 <strong>출석부</strong>를 떠올려보세요. 출석부에는 세로로 학생 이름이 쭉 나열되고, 가로로 출석번호, 이름, 전화번호 같은 정보가 적혀 있습니다. 데이터셋은 바로 이 출석부와 같은 구조입니다.</p>
-<p><strong>📖 정확한 정의</strong></p>
 <blockquote>
-<p><strong>데이터셋(Dataset)</strong>: 분석이나 처리를 위해 체계적으로 정리된 데이터의 모음. 보통 <strong>행(row)</strong>과 <strong>열(column)</strong>로 이루어진 표 형태를 가집니다.</p>
+<p>💬 <strong>생각해보기:</strong> 학교 성적표는 데이터셋일까, 데이터베이스일까? 잠시 생각해보고, 이 장을 다 읽은 뒤 다시 답해봅시다.</p>
 </blockquote>
-<p>핵심 용어를 정리해봅시다:</p>
+<hr />
+<h2 id="_2">📚 핵심 개념<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="1">개념 1: 데이터셋 — 한 장의 스프레드시트<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p><strong>비유로 시작</strong> 🧩</p>
+<p>"데이터셋은 마치 <strong>엑셀 시트 한 장</strong>과 같아요."</p>
+<p>시험이 끝나면 선생님이 성적표를 보여주시죠? 세로 방향으로 학생 이름이 쭉 나열되고, 가로 방향으로 국어·영어·수학 점수가 적혀 있습니다. 이 성적표 전체가 바로 <strong>데이터셋(Dataset)</strong> 입니다.</p>
+<p><strong>정확한 정의</strong></p>
+<p>데이터셋이란 <strong>하나의 주제에 대해 일정한 형식으로 정리된 데이터 모음</strong>입니다. 네 가지 핵심 용어를 기억하세요.</p>
 <ul>
-<li><strong>행(Row)</strong>: 하나의 관측값 또는 레코드. 출석부에서 "한 명의 학생 정보" 한 줄에 해당</li>
-<li><strong>열(Column)</strong>: 하나의 속성 또는 변수. "이름", "나이" 같은 정보의 종류</li>
-<li><strong>값(Value)</strong>: 특정 행과 열이 만나는 지점의 실제 데이터</li>
+<li><strong>행(Row) = 레코드(Record)</strong>: 한 건의 데이터. 예) 학생 한 명의 전체 정보</li>
+<li><strong>열(Column) = 필드(Field)</strong>: 데이터의 속성 항목. 예) "수학 점수"라는 항목</li>
+<li><strong>값(Value)</strong>: 행과 열이 만나는 곳의 실제 데이터. 예) 95점</li>
+<li><strong>헤더(Header)</strong>: 각 열의 이름이 적힌 맨 윗줄</li>
 </ul>
-<p><strong>✏️ 예시로 확인</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>학생 성적 데이터셋:
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>─────────────────────────────
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>행1: 김하늘 | 17세 | 수학 92점
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>행2: 이바다 | 18세 | 수학 85점
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>행3: 박숲길 | 17세 | 수학 78점
-</span></code></pre></div>
-<p>여기서 "이름", "나이", "수학점수"가 <strong>열(Column)</strong>이고, 김하늘의 정보 전체가 하나의 <strong>행(Row)</strong>입니다.</p>
-<div class="mermaid">graph TB
-    subgraph 데이터셋의 구조
-        direction TB
-        A["열 Column = 속성"] --&gt; B["이름 열"]
-        A --&gt; C["나이 열"]
-        A --&gt; D["점수 열"]
-        E["행 Row = 관측값"] --&gt; F["김하늘, 17, 92"]
-        E --&gt; G["이바다, 18, 85"]
-        E --&gt; H["박숲길, 17, 78"]
-    end</div>
+<p><strong>예시로 확인</strong></p>
+<div class="mermaid">graph LR
+    A["📋 성적 데이터셋"] --- B["열(필드): 이름, 국어, 영어, 수학"]
+    A --- C["행(레코드): 학생 1명의 전체 성적"]
+    A --- D["값: 김민수의 수학 점수 = 95"]</div>
 <blockquote>
-<p>📌 <strong>알아보기</strong>: 데이터셋의 가장 대표적인 파일 형식은 <strong>CSV(Comma-Separated Values)</strong>입니다. 말 그대로 쉼표(,)로 값을 구분하는 텍스트 파일이에요. 메모장으로 열어도 내용을 확인할 수 있을 만큼 단순합니다.</p>
+<p>📌 <strong>알아보기:</strong> CSV는 <strong>Comma-Separated Values</strong>의 약자입니다. 말 그대로 값들을 쉼표(,)로 구분해 저장한 텍스트 파일이에요. 엑셀 없이도 어디서든 열 수 있어서 데이터 과학에서 가장 많이 쓰이는 파일 형식입니다.</p>
 </blockquote>
 <hr />
-<h3 id="2-database">개념 2: 데이터베이스 (Database)<a class="headerlink" href="#2-database" title="Permanent link">&para;</a></h3>
-<p><strong>🎒 비유로 시작하기</strong></p>
-<p>데이터셋이 <strong>종이 출석부 한 장</strong>이라면, 데이터베이스는 <strong>학교 행정실의 거대한 캐비닛 시스템</strong>입니다. 학생 정보, 성적, 출결, 동아리 활동 등 여러 종류의 서류가 각각의 서랍에 분류되어 있고, 필요한 서류를 빠르게 찾을 수 있는 <strong>색인(Index)</strong>까지 갖추고 있습니다. 그리고 여러 선생님이 <strong>동시에</strong> 서류를 열람하거나 수정할 수 있죠.</p>
-<p><strong>📖 정확한 정의</strong></p>
-<blockquote>
-<p><strong>데이터베이스(Database)</strong>: 여러 사용자가 공유하여 사용할 수 있도록 체계적으로 조직하고 관리하는 데이터의 집합. 보통 <strong>DBMS(Database Management System, 데이터베이스 관리 시스템)</strong>를 통해 운영됩니다.</p>
-</blockquote>
-<p>데이터베이스의 핵심 특징:</p>
+<h3 id="2">개념 2: 데이터베이스 — 도서관 서가 시스템<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p><strong>비유로 시작</strong> 📚</p>
+<p>"데이터베이스는 마치 <strong>도서관 전체 관리 시스템</strong>과 같아요."</p>
+<p>도서관에는 수만 권의 책이 있습니다. 이 책들을 분류번호로 정리하고, 검색 시스템으로 원하는 책을 찾고, 대출·반납을 관리하죠. <strong>데이터베이스(Database)</strong> 는 이처럼 여러 데이터셋을 <strong>저장하고, 검색하고, 관리하는 체계적인 시스템</strong>입니다.</p>
+<p><strong>정확한 정의</strong></p>
+<p>데이터베이스란 <strong>여러 데이터를 구조화하여 저장하고, 효율적으로 검색·수정·삭제할 수 있게 만든 시스템</strong>입니다.</p>
 <ul>
-<li><strong>체계적 저장</strong>: 여러 개의 테이블(표)이 서로 관계를 맺으며 저장됨</li>
-<li><strong>동시 접근</strong>: 여러 사용자가 동시에 데이터를 읽고 쓸 수 있음</li>
-<li><strong>데이터 무결성</strong>: 잘못된 데이터가 들어가지 않도록 규칙을 설정할 수 있음</li>
-<li><strong>빠른 검색</strong>: 수백만 건의 데이터에서도 원하는 정보를 빠르게 찾음</li>
+<li><strong>저장</strong>: 수천만 건의 데이터도 안전하게 보관</li>
+<li><strong>검색</strong>: 조건에 맞는 데이터를 빠르게 찾기 (예: "서울 카페만 보여줘")</li>
+<li><strong>관리</strong>: 여러 사람이 동시에 사용해도 데이터가 꼬이지 않게 제어</li>
 </ul>
-<p><strong>✏️ 예시로 확인</strong></p>
-<p>학교 데이터베이스에는 여러 테이블이 존재할 수 있습니다:</p>
-<div class="mermaid">erDiagram
-    STUDENT ||--o{ GRADE : "성적을 가짐"
-    STUDENT ||--o{ ATTENDANCE : "출결 기록을 가짐"
-    STUDENT {
-        int student_id
-        string name
-        int age
-        string class_name
-    }
-    GRADE {
-        int grade_id
-        int student_id
-        string subject
-        int score
-    }
-    ATTENDANCE {
-        int record_id
-        int student_id
-        string date
-        string status
-    }</div>
-<p>이처럼 <strong>학생 테이블</strong>, <strong>성적 테이블</strong>, <strong>출결 테이블</strong>이 <code>student_id</code>라는 공통 키로 연결되어 있습니다. 이런 구조를 <strong>관계형 데이터베이스(Relational Database)</strong>라고 합니다.</p>
-<blockquote>
-<p>📌 <strong>알아보기</strong>: 대표적인 관계형 데이터베이스에는 <strong>MySQL</strong>, <strong>PostgreSQL</strong>, <strong>SQLite</strong> 등이 있습니다. 이 중 SQLite는 설치 없이 파일 하나로 동작해서 학습용으로 가장 좋습니다.</p>
-</blockquote>
 <hr />
 <h3 id="3-vs">개념 3: 데이터셋 vs 데이터베이스<a class="headerlink" href="#3-vs" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>💭 <strong>생각해보기</strong>: "엑셀 파일에 데이터를 저장하면 되는데, 왜 데이터베이스를 따로 쓸까요?"</p>
-</blockquote>
-<p>둘의 차이를 명확히 이해해봅시다.</p>
-<div class="mermaid">graph LR
-    subgraph 데이터셋
-        A1["📄 하나의 파일"]
-        A2["단순한 표 구조"]
-        A3["소규모 데이터에 적합"]
-        A4["개인 작업에 적합"]
-    end
-    subgraph 데이터베이스
-        B1["🗄️ 관리 시스템"]
-        B2["여러 테이블이 연결"]
-        B3["대규모 데이터에 적합"]
-        B4["다수 사용자 동시 접근"]
-    end
-    A1 -.-&gt;|규모가 커지면| B1</div>
-<p>핵심 비교:</p>
+<div class="mermaid">flowchart TB
+    DB["🗄️ 데이터베이스&lt;br/&gt;도서관 전체 시스템"]
+    DS1["📋 데이터셋 1&lt;br/&gt;학생 정보"]
+    DS2["📋 데이터셋 2&lt;br/&gt;성적 정보"]
+    DS3["📋 데이터셋 3&lt;br/&gt;출석 정보"]
+
+    DB --&gt; DS1
+    DB --&gt; DS2
+    DB --&gt; DS3
+
+    style DB fill:#4A90D9,color:#fff,stroke:#2C5F8A
+    style DS1 fill:#F5A623,color:#fff,stroke:#C47D0E
+    style DS2 fill:#F5A623,color:#fff,stroke:#C47D0E
+    style DS3 fill:#F5A623,color:#fff,stroke:#C47D0E</div>
+<p>핵심 차이를 정리하면 이렇습니다.</p>
 <ul>
-<li><strong>데이터셋</strong>: 분석을 위해 준비된 <strong>"재료"</strong> → CSV, Excel 파일 한 장</li>
-<li><strong>데이터베이스</strong>: 데이터를 안전하게 보관하고 관리하는 <strong>"창고 시스템"</strong> → 여러 테이블 + 관리 기능</li>
+<li><strong>데이터셋</strong> → 데이터 그 자체 (엑셀 시트 한 장, CSV 파일 하나)</li>
+<li><strong>데이터베이스</strong> → 데이터셋들을 담고 관리하는 시스템 (도서관 전체)</li>
 </ul>
-<p>실무에서는 <strong>데이터베이스에서 필요한 데이터를 꺼내서 → 데이터셋으로 만들어 → 분석</strong>하는 흐름이 일반적입니다.</p>
-<div class="mermaid">flowchart LR
-    DB["🗄️ 데이터베이스"] --&gt;|SQL로 추출| DS["📄 데이터셋"]
-    DS --&gt;|Python으로 분석| RESULT["📊 분석 결과"]</div>
-<hr />
-<h3 id="4-sql">개념 4: SQL 기초<a class="headerlink" href="#4-sql" title="Permanent link">&para;</a></h3>
-<p><strong>🎒 비유로 시작하기</strong></p>
-<p>도서관에서 책을 찾을 때 사서에게 "2023년에 나온 소설 중에서 평점 4점 이상인 것 좀 찾아주세요"라고 말하죠? <strong>SQL(Structured Query Language, 구조화 질의 언어)</strong>은 데이터베이스에게 이런 요청을 하는 <strong>공식 언어</strong>입니다.</p>
-<p><strong>📖 정확한 정의</strong></p>
+<p>쉽게 말해, 데이터셋은 <strong>"내용물"</strong>, 데이터베이스는 <strong>"내용물 + 관리 체계"</strong> 입니다.</p>
 <blockquote>
-<p><strong>SQL</strong>: 관계형 데이터베이스에서 데이터를 조회, 삽입, 수정, 삭제하기 위한 표준 프로그래밍 언어</p>
-</blockquote>
-<p>가장 많이 쓰는 SQL 명령어 4가지:</p>
-<ul>
-<li><strong>SELECT</strong>: 데이터 조회 (가장 자주 사용!)</li>
-<li><strong>INSERT</strong>: 새 데이터 추가</li>
-<li><strong>UPDATE</strong>: 기존 데이터 수정</li>
-<li><strong>DELETE</strong>: 데이터 삭제</li>
-</ul>
-<p><strong>✏️ 예시로 확인</strong></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- 모든 학생 정보를 조회</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="p">;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">-- 나이가 17세인 학생의 이름만 조회</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">-- 수학 점수가 80점 이상인 학생을 점수 높은 순으로 조회</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">grades</span><span class="w"> </span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;수학&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">80</span><span class="w"> </span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
-</span></code></pre></div>
-<blockquote>
-<p>📌 <strong>알아보기</strong>: SQL은 <strong>대소문자를 구분하지 않습니다</strong>. <code>SELECT</code>와 <code>select</code>는 같습니다. 하지만 관례적으로 SQL 명령어는 대문자, 테이블/열 이름은 소문자로 씁니다.</p>
+<p>💡 <strong>정리하기:</strong> 성적표 한 장은 <strong>데이터셋</strong>이고, 학교 전체 학생의 성적·출결·인적사항을 통합 관리하는 학교 행정 시스템은 <strong>데이터베이스</strong>입니다. 처음 질문의 답이 보이시나요?</p>
 </blockquote>
 <hr />
-<h2 id="_4">🔨 따라하기: 데이터셋 만들고 데이터베이스에 저장하기<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>지금부터 Python으로 직접 데이터셋을 만들고, 데이터베이스에 저장한 뒤, SQL로 조회하는 전 과정을 실습합니다.</p>
-<h3 id="step-1-csv">Step 1: CSV 데이터셋 만들기<a class="headerlink" href="#step-1-csv" title="Permanent link">&para;</a></h3>
-<p>먼저 Python의 <code>pandas</code> 라이브러리로 데이터셋을 만들어봅시다.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># 학생 성적 데이터셋 만들기</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;김하늘&#39;</span><span class="p">,</span> <span class="s1">&#39;이바다&#39;</span><span class="p">,</span> <span class="s1">&#39;박숲길&#39;</span><span class="p">,</span> <span class="s1">&#39;최별빛&#39;</span><span class="p">,</span> <span class="s1">&#39;정새벽&#39;</span><span class="p">],</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">],</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="s1">&#39;subject&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;수학&#39;</span><span class="p">,</span> <span class="s1">&#39;수학&#39;</span><span class="p">,</span> <span class="s1">&#39;수학&#39;</span><span class="p">,</span> <span class="s1">&#39;수학&#39;</span><span class="p">,</span> <span class="s1">&#39;수학&#39;</span><span class="p">],</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">92</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">88</span><span class="p">]</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<h2 id="csv">🔨 따라하기: CSV 파일 불러와 구조 살펴보기<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h2>
+<p>공공데이터포털의 전국 카페 정보를 직접 불러와 봅시다. 코랩에서 아래 코드를 <strong>한 셀씩</strong> 실행하세요.</p>
+<h3 id="step-1">Step 1: 라이브러리 불러오기<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>  <span class="c1"># 데이터 분석 핵심 라이브러리</span>
 </span></code></pre></div>
-<p>실행 결과:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>  name  age subject  score
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>0  김하늘   17      수학     92
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>1  이바다   18      수학     85
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>2  박숲길   17      수학     78
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>3  최별빛   18      수학     95
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>4  정새벽   17      수학     88
+<h3 id="step-2-csv">Step 2: CSV 파일 불러오기<a class="headerlink" href="#step-2-csv" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 전국 카페 정보 샘플 데이터 (공공데이터 기반)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/bigdata-young/data_science_book/main/cafe_sample.csv&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;데이터 불러오기 완료!&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<h3 id="step-2-csv">Step 2: CSV 파일로 저장하고 불러오기<a class="headerlink" href="#step-2-csv" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># CSV 파일로 저장</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;students.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8-sig&#39;</span><span class="p">)</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ students.csv 파일이 저장되었습니다!&quot;</span><span class="p">)</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># 저장된 CSV 파일 다시 불러오기</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">df_loaded</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;students.csv&#39;</span><span class="p">)</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">df_loaded</span><span class="p">)</span>
-</span></code></pre></div>
+<p><strong>실행 결과:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>데이터 불러오기 완료!
+</span></code></pre></div></p>
 <blockquote>
-<p>💭 <strong>생각해보기</strong>: <code>index=False</code>를 쓰는 이유는 무엇일까요? 빼고 실행해보면, 0, 1, 2… 같은 불필요한 인덱스 번호가 파일에 함께 저장됩니다.</p>
+<p>⚠️ 위 URL이 접속되지 않을 경우, Step 2-B를 대신 사용하세요.</p>
 </blockquote>
-<h3 id="step-3-sqlite">Step 3: SQLite 데이터베이스 생성하기<a class="headerlink" href="#step-3-sqlite" title="Permanent link">&para;</a></h3>
-<p>이제 CSV의 데이터를 데이터베이스에 넣어봅시다. Python에는 <code>sqlite3</code>가 기본 내장되어 있어 설치가 필요 없습니다.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># 데이터베이스 연결 (파일이 없으면 자동 생성)</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;school.db&#39;</span><span class="p">)</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># 테이블 생성</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="s1">    CREATE TABLE IF NOT EXISTS students (</span>
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="s1">        id INTEGER PRIMARY KEY AUTOINCREMENT,</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="s1">        name TEXT NOT NULL,</span>
-</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="s1">        age INTEGER,</span>
-</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="s1">        subject TEXT,</span>
-</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="s1">        score INTEGER</span>
-</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="s1">    )</span>
-</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
-</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
-</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ students 테이블이 생성되었습니다!&quot;</span><span class="p">)</span>
-</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<h3 id="step-2-b">Step 2-B: 직접 샘플 데이터 만들기 (대체용)<a class="headerlink" href="#step-2-b" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="s2">&quot;상호명&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;스타벅스 강남점&quot;</span><span class="p">,</span> <span class="s2">&quot;이디야 홍대점&quot;</span><span class="p">,</span> <span class="s2">&quot;투썸 판교점&quot;</span><span class="p">,</span> <span class="s2">&quot;메가커피 수원점&quot;</span><span class="p">,</span> <span class="s2">&quot;빽다방 부산점&quot;</span><span class="p">],</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="s2">&quot;시도&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;서울&quot;</span><span class="p">,</span> <span class="s2">&quot;서울&quot;</span><span class="p">,</span> <span class="s2">&quot;경기&quot;</span><span class="p">,</span> <span class="s2">&quot;경기&quot;</span><span class="p">,</span> <span class="s2">&quot;부산&quot;</span><span class="p">],</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="s2">&quot;시군구&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;강남구&quot;</span><span class="p">,</span> <span class="s2">&quot;마포구&quot;</span><span class="p">,</span> <span class="s2">&quot;성남시&quot;</span><span class="p">,</span> <span class="s2">&quot;수원시&quot;</span><span class="p">,</span> <span class="s2">&quot;해운대구&quot;</span><span class="p">],</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="s2">&quot;업종&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;커피전문점&quot;</span><span class="p">,</span> <span class="s2">&quot;커피전문점&quot;</span><span class="p">,</span> <span class="s2">&quot;커피전문점&quot;</span><span class="p">,</span> <span class="s2">&quot;커피전문점&quot;</span><span class="p">,</span> <span class="s2">&quot;커피전문점&quot;</span><span class="p">],</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="s2">&quot;전화번호&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;02-1234-5678&quot;</span><span class="p">,</span> <span class="s2">&quot;02-2345-6789&quot;</span><span class="p">,</span> <span class="s2">&quot;031-345-6789&quot;</span><span class="p">,</span> <span class="s2">&quot;031-456-7890&quot;</span><span class="p">,</span> <span class="s2">&quot;051-567-8901&quot;</span><span class="p">]</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">}</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;샘플 데이터 생성 완료!&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<h3 id="step-4">Step 4: 데이터베이스에 데이터 넣기<a class="headerlink" href="#step-4" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># pandas DataFrame을 SQLite에 한 번에 저장</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;students&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ 데이터가 데이터베이스에 저장되었습니다!&quot;</span><span class="p">)</span>
+<h3 id="step-3-5-head">Step 3: 처음 5줄 확인하기 — head()<a class="headerlink" href="#step-3-5-head" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>  <span class="c1"># 상위 5개 행 미리보기</span>
 </span></code></pre></div>
-<h3 id="step-5-sql">Step 5: SQL로 데이터 조회하기<a class="headerlink" href="#step-5-sql" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># 전체 데이터 조회</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📋 전체 학생 목록:&quot;</span><span class="p">)</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM students&quot;</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># 조건 조회: 점수 85점 이상인 학생</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🏆 85점 이상 학생:&quot;</span><span class="p">)</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">result_high</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="s2">&quot;SELECT name, score FROM students WHERE score &gt;= 85 ORDER BY score DESC&quot;</span><span class="p">,</span> 
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="n">conn</span>
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="p">)</span>
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">result_high</span><span class="p">)</span>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
-</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="c1"># 통계: 평균 점수</span>
-</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📊 평균 점수:&quot;</span><span class="p">)</span>
-</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="n">result_avg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span>
-</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>    <span class="s2">&quot;SELECT AVG(score) as average_score FROM students&quot;</span><span class="p">,</span> 
-</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>    <span class="n">conn</span>
-</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="p">)</span>
-</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  수학 평균: </span><span class="si">{</span><span class="n">result_avg</span><span class="p">[</span><span class="s1">&#39;average_score&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">점&quot;</span><span class="p">)</span>
+<p><strong>실행 결과:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>           상호명  시도   시군구       업종        전화번호
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>0  스타벅스 강남점  서울   강남구  커피전문점  02-1234-5678
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>1  이디야 홍대점   서울   마포구  커피전문점  02-2345-6789
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>2  투썸 판교점    경기   성남시  커피전문점  031-345-6789
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>3  메가커피 수원점  경기   수원시  커피전문점  031-456-7890
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>4  빽다방 부산점   부산  해운대구  커피전문점  051-567-8901
+</span></code></pre></div></p>
+<h3 id="step-4-shape">Step 4: 데이터셋의 크기 확인 — shape<a class="headerlink" href="#step-4-shape" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># (행의 수, 열의 수)</span>
 </span></code></pre></div>
-<p>실행 결과:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>📋 전체 학생 목록:
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  name  age subject  score
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>0  김하늘   17      수학     92
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>1  이바다   18      수학     85
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>2  박숲길   17      수학     78
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>3  최별빛   18      수학     95
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>4  정새벽   17      수학     88
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>🏆 85점 이상 학생:
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>  name  score
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>0  최별빛     95
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>1  김하늘     92
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>2  정새벽     88
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>3  이바다     85
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>📊 평균 점수:
-</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>  수학 평균: 87.6점
+<p><strong>실행 결과:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>(5, 5)
+</span></code></pre></div></p>
+<p>👉 5개의 <strong>행(레코드)</strong> 과 5개의 <strong>열(필드)</strong> 로 이루어진 데이터셋입니다.</p>
+<h3 id="step-5-columns">Step 5: 열 이름 확인 — columns<a class="headerlink" href="#step-5-columns" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>  <span class="c1"># 모든 열(필드) 이름 목록</span>
 </span></code></pre></div>
-<h3 id="step-6">Step 6: 연결 종료<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># 데이터베이스 연결 닫기 (항상 마지막에!)</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ 데이터베이스 연결이 종료되었습니다.&quot;</span><span class="p">)</span>
+<p><strong>실행 결과:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>[&#39;상호명&#39;, &#39;시도&#39;, &#39;시군구&#39;, &#39;업종&#39;, &#39;전화번호&#39;]
+</span></code></pre></div></p>
+<h3 id="step-6-info">Step 6: 기본 정보 한눈에 보기 — info()<a class="headerlink" href="#step-6-info" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>  <span class="c1"># 데이터 타입, 결측값 등 요약 정보</span>
 </span></code></pre></div>
+<p><strong>실행 결과:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>RangeIndex: 5 entries, 0 to 4
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Data columns (total 5 columns):
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a> #   Column  Non-Null Count  Dtype
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>---  ------  --------------  -----
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a> 0   상호명     5 non-null      object
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a> 1   시도      5 non-null      object
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a> 2   시군구     5 non-null      object
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a> 3   업종      5 non-null      object
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a> 4   전화번호    5 non-null      object
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>dtypes: object(5)
+</span></code></pre></div></p>
 <blockquote>
-<p>📌 <strong>정리하기</strong>: 전체 흐름을 다시 한번 확인합시다.</p>
+<p>💡 <strong>알아보기:</strong> <code>info()</code>에서 <strong>Non-Null Count</strong>는 비어있지 않은 데이터의 개수입니다. 5 non-null이면 5개 모두 값이 있다는 뜻이에요.</p>
 </blockquote>
-<div class="mermaid">flowchart LR
-    A["1️⃣ DataFrame 생성"] --&gt; B["2️⃣ CSV 저장"]
-    A --&gt; C["3️⃣ DB 생성"]
-    C --&gt; D["4️⃣ 데이터 삽입"]
-    D --&gt; E["5️⃣ SQL 조회"]
-    E --&gt; F["6️⃣ 연결 종료"]</div>
 <hr />
-<h2 id="_5">📝 전체 코드<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>아래 코드를 복사해서 한 번에 실행할 수 있습니다.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># ── 1. 데이터셋 만들기 ──</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;김하늘&#39;</span><span class="p">,</span> <span class="s1">&#39;이바다&#39;</span><span class="p">,</span> <span class="s1">&#39;박숲길&#39;</span><span class="p">,</span> <span class="s1">&#39;최별빛&#39;</span><span class="p">,</span> <span class="s1">&#39;정새벽&#39;</span><span class="p">],</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">],</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    <span class="s1">&#39;subject&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;수학&#39;</span><span class="p">,</span> <span class="s1">&#39;수학&#39;</span><span class="p">,</span> <span class="s1">&#39;수학&#39;</span><span class="p">,</span> <span class="s1">&#39;수학&#39;</span><span class="p">,</span> <span class="s1">&#39;수학&#39;</span><span class="p">],</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>    <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">92</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">88</span><span class="p">]</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="p">}</span>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
-</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="c1"># ── 2. CSV 파일로 저장 ──</span>
-</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;students.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8-sig&#39;</span><span class="p">)</span>
-</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
-</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="c1"># ── 3. SQLite 데이터베이스에 저장 ──</span>
-</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;school.db&#39;</span><span class="p">)</span>
-</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;students&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>
-</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="c1"># ── 4. SQL로 조회 ──</span>
-</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="c1"># 전체 조회</span>
-</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📋 전체 학생:&quot;</span><span class="p">)</span>
-</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM students&quot;</span><span class="p">,</span> <span class="n">conn</span><span class="p">))</span>
-</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>
-</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="c1"># 조건 조회</span>
-</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🏆 85점 이상:&quot;</span><span class="p">)</span>
-</span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span>
-</span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>    <span class="s2">&quot;SELECT name, score FROM students WHERE score &gt;= 85 ORDER BY score DESC&quot;</span><span class="p">,</span>
-</span><span id="__span-10-30"><a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>    <span class="n">conn</span>
-</span><span id="__span-10-31"><a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="p">))</span>
-</span><span id="__span-10-32"><a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="nb">print</span><span class="p">()</span>
-</span><span id="__span-10-33"><a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>
-</span><span id="__span-10-34"><a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a><span class="c1"># 통계 조회</span>
-</span><span id="__span-10-35"><a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a><span class="n">avg</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;SELECT AVG(score) as avg_score FROM students&quot;</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
-</span><span id="__span-10-36"><a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📊 평균 점수: </span><span class="si">{</span><span class="n">avg</span><span class="p">[</span><span class="s1">&#39;avg_score&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">점&quot;</span><span class="p">)</span>
-</span><span id="__span-10-37"><a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a>
-</span><span id="__span-10-38"><a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a><span class="c1"># ── 5. 연결 종료 ──</span>
-</span><span id="__span-10-39"><a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<h2 id="_3">📝 전체 코드<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c1"># 1. 샘플 데이터 생성</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    <span class="s2">&quot;상호명&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;스타벅스 강남점&quot;</span><span class="p">,</span> <span class="s2">&quot;이디야 홍대점&quot;</span><span class="p">,</span> <span class="s2">&quot;투썸 판교점&quot;</span><span class="p">,</span> <span class="s2">&quot;메가커피 수원점&quot;</span><span class="p">,</span> <span class="s2">&quot;빽다방 부산점&quot;</span><span class="p">],</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="s2">&quot;시도&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;서울&quot;</span><span class="p">,</span> <span class="s2">&quot;서울&quot;</span><span class="p">,</span> <span class="s2">&quot;경기&quot;</span><span class="p">,</span> <span class="s2">&quot;경기&quot;</span><span class="p">,</span> <span class="s2">&quot;부산&quot;</span><span class="p">],</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    <span class="s2">&quot;시군구&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;강남구&quot;</span><span class="p">,</span> <span class="s2">&quot;마포구&quot;</span><span class="p">,</span> <span class="s2">&quot;성남시&quot;</span><span class="p">,</span> <span class="s2">&quot;수원시&quot;</span><span class="p">,</span> <span class="s2">&quot;해운대구&quot;</span><span class="p">],</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    <span class="s2">&quot;업종&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;커피전문점&quot;</span><span class="p">,</span> <span class="s2">&quot;커피전문점&quot;</span><span class="p">,</span> <span class="s2">&quot;커피전문점&quot;</span><span class="p">,</span> <span class="s2">&quot;커피전문점&quot;</span><span class="p">,</span> <span class="s2">&quot;커피전문점&quot;</span><span class="p">],</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="s2">&quot;전화번호&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;02-1234-5678&quot;</span><span class="p">,</span> <span class="s2">&quot;02-2345-6789&quot;</span><span class="p">,</span> <span class="s2">&quot;031-345-6789&quot;</span><span class="p">,</span> <span class="s2">&quot;031-456-7890&quot;</span><span class="p">,</span> <span class="s2">&quot;051-567-8901&quot;</span><span class="p">]</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="p">}</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="c1"># 2. 구조 탐색</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== 상위 5행 ===&quot;</span><span class="p">)</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== 크기 (행, 열) ===&quot;</span><span class="p">)</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== 열 이름 ===&quot;</span><span class="p">)</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== 기본 정보 ===&quot;</span><span class="p">)</span>
+</span><span id="__span-12-21"><a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </span></code></pre></div>
 <hr />
-<h2 id="_6">⚠️ 자주 하는 실수<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<h3 id="1-csv">실수 1: CSV 파일 한글 깨짐<a class="headerlink" href="#1-csv" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># ❌ 잘못된 방법 — Windows에서 엑셀로 열면 한글이 깨짐</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># ✅ 올바른 방법 — encoding=&#39;utf-8-sig&#39; 추가</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8-sig&#39;</span><span class="p">)</span>
-</span></code></pre></div>
-<p><code>utf-8-sig</code>는 파일 앞에 BOM(Byte Order Mark)이라는 표식을 붙여서, 엑셀이 "이 파일은 UTF-8이구나!"하고 제대로 인식하게 해줍니다.</p>
-<h3 id="2">실수 2: 데이터베이스 연결을 닫지 않음<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># ❌ 잘못된 방법 — conn.close()를 빼먹으면 파일이 잠길 수 있음</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;school.db&#39;</span><span class="p">)</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;students&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># ... 그냥 프로그램 종료</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="c1"># ✅ 올바른 방법 — 반드시 닫아주기</span>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;school.db&#39;</span><span class="p">)</span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="k">try</span><span class="p">:</span>
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;students&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="k">finally</span><span class="p">:</span>
-</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># 에러가 나도 반드시 실행됨</span>
-</span></code></pre></div>
-<h3 id="3-sql">실수 3: SQL에서 문자열 비교 시 따옴표 누락<a class="headerlink" href="#3-sql" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># ❌ 잘못된 SQL — 문자열에 따옴표가 없으면 에러 발생</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="s2">&quot;SELECT * FROM students WHERE subject = 수학&quot;</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># ✅ 올바른 SQL — 문자열은 반드시 작은따옴표로 감싸기</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="s2">&quot;SELECT * FROM students WHERE subject = &#39;수학&#39;&quot;</span>
-</span></code></pre></div>
-<h3 id="4-if_exists">실수 4: <code>if_exists</code> 옵션을 모르고 데이터 덮어쓰기<a class="headerlink" href="#4-if_exists" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># ⚠️ &#39;replace&#39;는 기존 테이블을 삭제하고 새로 만듦</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;students&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># 💡 기존 데이터에 추가하고 싶으면 &#39;append&#39; 사용</span>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;students&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;append&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span></code></pre></div>
-<hr />
-<h2 id="_7">✅ 스스로 점검하기<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<h3 id="_8">기본 문제<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p><strong>문제 1.</strong> 데이터셋에서 '행(Row)'과 '열(Column)'이 각각 무엇을 의미하는지 자신의 말로 설명해보세요.</p>
-<details>
-<summary>정답 확인</summary>
-
-**행(Row)**은 하나의 관측 대상에 대한 전체 정보입니다. 예를 들어, 한 학생의 이름, 나이, 점수 등 모든 정보를 담은 한 줄이 하나의 행입니다. **열(Column)**은 하나의 속성(특성)입니다. "이름"이라는 열에는 모든 학생의 이름이, "점수"라는 열에는 모든 학생의 점수가 들어있습니다.
-
-</details>
-
-<p><strong>문제 2.</strong> 다음 SQL 문이 하는 일을 설명하세요.</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
-</span></code></pre></div>
-<details>
-<summary>정답 확인</summary>
-
-students 테이블에서 **나이가 17세인** 학생들의 **이름과 점수**를 **점수가 높은 순서(내림차순)**로 조회합니다. `DESC`는 Descending(내림차순)의 약자입니다.
-
-</details>
-
-<h3 id="_9">응용 문제<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p><strong>문제 3.</strong> 다음 요구사항에 맞는 SQL을 직접 작성해보세요.
-- students 테이블에서
-- 점수가 90점 이상인 학생의
-- 이름만 조회</p>
-<details>
-<summary>정답 확인</summary>
-
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">90</span><span class="p">;</span>
-</span></code></pre></div>
-
-</details>
-
-<h3 id="_10">심화 문제<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<p><strong>문제 4.</strong> 아래 코드에서 새로운 과목 '영어' 데이터를 추가한 뒤, 과목별 평균 점수를 구하는 코드를 완성해보세요.</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="c1"># 기존 수학 데이터</span>
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="n">math_data</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;김하늘&#39;</span><span class="p">,</span> <span class="s1">&#39;이바다&#39;</span><span class="p">,</span> <span class="s1">&#39;박숲길&#39;</span><span class="p">],</span>
-</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>    <span class="s1">&#39;subject&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;수학&#39;</span><span class="p">,</span> <span class="s1">&#39;수학&#39;</span><span class="p">,</span> <span class="s1">&#39;수학&#39;</span><span class="p">],</span>
-</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>    <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">92</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">78</span><span class="p">]</span>
-</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="p">}</span>
-</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>
-</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="c1"># 영어 데이터 추가 (여기를 채우세요)</span>
-</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="n">eng_data</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;김하늘&#39;</span><span class="p">,</span> <span class="s1">&#39;이바다&#39;</span><span class="p">,</span> <span class="s1">&#39;박숲길&#39;</span><span class="p">],</span>
-</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>    <span class="s1">&#39;subject&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;영어&#39;</span><span class="p">,</span> <span class="s1">&#39;영어&#39;</span><span class="p">,</span> <span class="s1">&#39;영어&#39;</span><span class="p">],</span>
-</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>    <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">82</span><span class="p">]</span>
-</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="p">}</span>
-</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>
-</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a><span class="c1"># 두 데이터를 합치기 (여기를 채우세요)</span>
-</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="c1"># 힌트: pd.concat()을 사용합니다</span>
-</span><span id="__span-17-20"><a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>
-</span><span id="__span-17-21"><a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="c1"># DB에 저장하고 과목별 평균을 SQL로 구하세요</span>
-</span><span id="__span-17-22"><a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="c1"># 힌트: GROUP BY를 사용합니다</span>
-</span></code></pre></div>
-<details>
-<summary>정답 확인</summary>
-
-<div class="language-python highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="n">math_data</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;김하늘&#39;</span><span class="p">,</span> <span class="s1">&#39;이바다&#39;</span><span class="p">,</span> <span class="s1">&#39;박숲길&#39;</span><span class="p">],</span>
-</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>    <span class="s1">&#39;subject&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;수학&#39;</span><span class="p">,</span> <span class="s1">&#39;수학&#39;</span><span class="p">,</span> <span class="s1">&#39;수학&#39;</span><span class="p">],</span>
-</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>    <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">92</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">78</span><span class="p">]</span>
-</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="p">}</span>
-</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>
-</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="n">eng_data</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;김하늘&#39;</span><span class="p">,</span> <span class="s1">&#39;이바다&#39;</span><span class="p">,</span> <span class="s1">&#39;박숲길&#39;</span><span class="p">],</span>
-</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>    <span class="s1">&#39;subject&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;영어&#39;</span><span class="p">,</span> <span class="s1">&#39;영어&#39;</span><span class="p">,</span> <span class="s1">&#39;영어&#39;</span><span class="p">],</span>
-</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>    <span class="s1">&#39;score&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">82</span><span class="p">]</span>
-</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="p">}</span>
-</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>
-</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="n">df_math</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">math_data</span><span class="p">)</span>
-</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="n">df_eng</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">eng_data</span><span class="p">)</span>
-</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="n">df_all</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_math</span><span class="p">,</span> <span class="n">df_eng</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>
-</span><span id="__span-18-20"><a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;school2.db&#39;</span><span class="p">)</span>
-</span><span id="__span-18-21"><a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="n">df_all</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;scores&#39;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</span><span id="__span-18-22"><a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>
-</span><span id="__span-18-23"><a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span>
-</span><span id="__span-18-24"><a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a>    <span class="s2">&quot;SELECT subject, AVG(score) as avg_score FROM scores GROUP BY subject&quot;</span><span class="p">,</span>
-</span><span id="__span-18-25"><a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a>    <span class="n">conn</span>
-</span><span id="__span-18-26"><a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a><span class="p">)</span>
-</span><span id="__span-18-27"><a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</span><span id="__span-18-28"><a id="__codelineno-18-28" name="__codelineno-18-28" href="#__codelineno-18-28"></a><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</span></code></pre></div>
-
-</details>
-
-<hr />
-<h2 id="_11">🚀 더 해보기<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<h2 id="_4">⚠️ 주의할 점<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ol>
-<li>
-<p><strong>나만의 데이터셋 만들기</strong>: 관심 있는 주제(좋아하는 게임 캐릭터, 영화 평점, 운동 기록 등)로 5개 이상의 행과 3개 이상의 열을 가진 데이터셋을 직접 만들어 CSV로 저장해보세요.</p>
-</li>
-<li>
-<p><strong>SQL 연습 확장</strong>: 위 실습의 데이터베이스에 새로운 테이블(예: <code>clubs</code> 동아리 테이블)을 추가하고, 학생 이름으로 두 테이블을 연결하는 <code>JOIN</code> 쿼리를 검색해서 시도해보세요.</p>
-</li>
-<li>
-<p><strong>공개 데이터셋 탐험</strong>: <a href="https://www.kaggle.com/datasets">Kaggle</a>에서 흥미로운 CSV 데이터셋을 다운로드 받아 <code>pd.read_csv()</code>로 불러온 뒤, 행과 열의 개수를 <code>df.shape</code>로 확인해보세요.</p>
-</li>
+<li><strong>CSV 파일의 인코딩 문제</strong>: 한글이 포함된 CSV 파일을 불러올 때 글자가 깨지면 <code>encoding="cp949"</code> 또는 <code>encoding="euc-kr"</code>로 바꿔보세요.</li>
+<li><strong>데이터셋 ≠ 데이터베이스</strong>: 둘을 같은 의미로 쓰는 경우가 많지만, 엄밀히 다릅니다. 데이터셋은 "데이터 파일 하나", 데이터베이스는 "여러 데이터를 관리하는 시스템"으로 구분하세요.</li>
 </ol>
 <hr />
-<h2 id="_12">🔗 다음 장으로<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>📌 <strong>정리하기</strong>: 이번 장에서 우리는 데이터의 <strong>저장 형태</strong>를 배웠습니다.</p>
-</blockquote>
-<p>핵심을 다시 짚어봅시다:</p>
+<h2 id="_5">✅ 점검하기<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p><strong>1. (기본) 빈칸을 채우세요.</strong></p>
+<p>데이터셋에서 한 명의 학생 정보처럼 가로 한 줄을 <strong><em>_</em>_이라 하고, "수학 점수"처럼 세로 한 줄의 속성 항목을 </strong>____이라 한다.</p>
+<details><summary>정답 확인</summary>
+
+가로 한 줄 = **행(Row)** 또는 **레코드(Record)**
+
+세로 한 줄 = **열(Column)** 또는 **필드(Field)**
+
+</details>
+
+<hr />
+<p><strong>2. (응용) 다음 중 데이터베이스에 해당하는 것을 모두 고르세요.</strong></p>
 <ul>
-<li><strong>데이터셋</strong>은 행과 열로 이루어진 정리된 데이터 (CSV 파일)</li>
-<li><strong>데이터베이스</strong>는 여러 테이블을 체계적으로 관리하는 시스템 (SQLite)</li>
-<li><strong>SQL</strong>로 데이터베이스에서 원하는 데이터를 정확히 꺼낼 수 있음</li>
-<li><strong>pandas</strong>와 <strong>sqlite3</strong>로 Python에서 이 모든 것을 다룰 수 있음</li>
+<li>ⓐ 반 친구 연락처를 적은 엑셀 파일 한 장</li>
+<li>ⓑ 네이버 회원 정보를 저장·검색·관리하는 시스템</li>
+<li>ⓒ USB에 저장된 CSV 파일 하나</li>
+<li>ⓓ 학교 도서관의 도서 대출 관리 프로그램</li>
 </ul>
-<div class="mermaid">flowchart LR
-    CH2["📗 2장: 데이터의 유형과 구조"] --&gt; CH3["📘 3장: 데이터셋과 데이터베이스&lt;br/&gt;(현재 장 ✅)"]
-    CH3 --&gt; CH4["📙 4장: 데이터 수집과 전처리"]</div>
-<p>다음 장에서는 실제 세상의 지저분한 데이터를 수집하고, 분석할 수 있는 깨끗한 상태로 만드는 <strong>데이터 전처리</strong>를 배웁니다. 오늘 만든 데이터셋에 빈 값이나 오타가 섞여 있다면 어떻게 처리할까요? 다음 장에서 만나봅시다! 🚀</p>
+<details><summary>정답 확인</summary>
+
+**ⓑ, ⓓ**
+
+ⓐ과 ⓒ는 데이터셋(파일 하나)이고, ⓑ과 ⓓ는 저장·검색·관리 기능을 갖춘 데이터베이스 시스템입니다.
+
+</details>
+
+<hr />
+<p><strong>3. (심화) <code>df.shape</code>의 결과가 <code>(1200, 8)</code>이었습니다. 이 데이터셋에는 몇 개의 레코드와 몇 개의 필드가 있나요?</strong></p>
+<details><summary>정답 확인</summary>
+
+**1,200개의 레코드(행)** 와 **8개의 필드(열)** 가 있습니다. `shape`는 항상 **(행 수, 열 수)** 순서로 출력됩니다.
+
+</details>
+
+<hr />
+<blockquote>
+<p>🏆 <strong>도전 과제:</strong> <a href="https://data.go.kr">공공데이터포털(data.go.kr)</a>에서 관심 있는 주제의 CSV 파일을 하나 다운로드하고, 코랩에 업로드한 뒤 <code>head()</code>, <code>shape</code>, <code>columns</code>를 실행해 보세요. 어떤 필드가 있고, 레코드는 몇 개인지 정리해 봅시다!</p>
+</blockquote>
+<hr />
+<h2 id="_6">🔗 다음 장 미리보기<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><strong>Chapter 04</strong>에서는 데이터의 <strong>유형(정형·비정형·반정형)</strong> 을 배웁니다. 오늘 다룬 깔끔한 표 형태의 데이터만 있는 게 아니에요. 사진, 동영상, 채팅 텍스트처럼 정리되지 않은 데이터는 어떻게 다룰까요? 다음 시간에 알아봅시다! 🚀</p>
 
 
 
